@@ -1,0 +1,904 @@
+[
+  {
+    "TeamId": 1,
+    "TeamName": "Sky High Ballers",
+    "LeagueName": "Washington Park",
+    "CaptainName": "Olive Yew",
+    "CaptainPhone": "555-555-0001",
+    "CaptainEmail": "oliveyew@email.com",
+    "MaxTeamSize": 10,
+    "Players": [
+      {
+        "PlayerId": 1,
+        "PlayerEmail": "ajepson0@4shared.com",
+        "PlayerName": "Annalise Jepson",
+        "PlayerPhone": "597-816-4956"
+      },
+      {
+        "PlayerId": 2,
+        "PlayerEmail": "ahardstaff1@fda.gov",
+        "PlayerName": "Abagail Hardstaff",
+        "PlayerPhone": "102-754-7137"
+      },
+      {
+        "PlayerId": 3,
+        "PlayerEmail": "rjowett2@ed.gov",
+        "PlayerName": "Rose Jowett",
+        "PlayerPhone": "372-296-6081"
+      },
+      {
+        "PlayerId": 4,
+        "PlayerEmail": "odunbobbin3@spiegel.de",
+        "PlayerName": "Olympie Dunbobbin",
+        "PlayerPhone": "169-321-4566"
+      },
+      {
+        "PlayerId": 5,
+        "PlayerEmail": "hsiuda4@de.vu",
+        "PlayerName": "Hermia Siuda",
+        "PlayerPhone": "360-694-6367"
+      },
+      {
+        "PlayerId": 6,
+        "PlayerEmail": "ssmurfitt5@angelfire.com",
+        "PlayerName": "Stephenie Smurfitt",
+        "PlayerPhone": "905-317-8232"
+      },
+      {
+        "PlayerId": 7,
+        "PlayerEmail": "aradbond6@vinaora.com",
+        "PlayerName": "Alexandro Radbond",
+        "PlayerPhone": "926-132-5708"
+      },
+      {
+        "PlayerId": 8,
+        "PlayerEmail": "amoretto7@hexun.com",
+        "PlayerName": "Adela Moretto",
+        "PlayerPhone": "485-965-6753"
+      },
+      {
+        "PlayerId": 9,
+        "PlayerEmail": "ngeist8@amazon.co.uk",
+        "PlayerName": "Nonna Geist",
+        "PlayerPhone": "767-541-5020"
+      },
+      {
+        "PlayerId": 10,
+        "PlayerEmail": "oliveyew@email.com",
+        "PlayerName": "Olive Yew",
+        "PlayerPhone": "555-555-0001"
+      }
+    ]
+  },
+  {
+    "TeamId": 2,
+    "TeamName": "Chicks N Kicks",
+    "LeagueName": "Ritterhouse Square",
+    "CaptainName": "Maureen Biologist",
+    "CaptainPhone": "555-555-0002",
+    "CaptainEmail": "biologist1@email.com",
+    "MaxTeamSize": 10,
+    "Players": [
+      {
+        "PlayerId": 11,
+        "PlayerEmail": "biologist1@email.com",
+        "PlayerName": "Maureen Biologist",
+        "PlayerPhone": "555-555-0002"
+      },
+      {
+        "PlayerId": 12,
+        "PlayerEmail": "dcumberbatchb@telegraph.co.uk",
+        "PlayerName": "Dur Cumberbatch",
+        "PlayerPhone": "163-973-0966"
+      },
+      {
+        "PlayerId": 13,
+        "PlayerEmail": "mlhommeauc@marketwatch.com",
+        "PlayerName": "Morse L'Hommeau",
+        "PlayerPhone": "582-794-2759"
+      },
+      {
+        "PlayerId": 14,
+        "PlayerEmail": "okilld@imgur.com",
+        "PlayerName": "Olwen Kill",
+        "PlayerPhone": "123-533-6393"
+      },
+      {
+        "PlayerId": 15,
+        "PlayerEmail": "idisneye@github.io",
+        "PlayerName": "Ivar Disney",
+        "PlayerPhone": "311-133-7940"
+      },
+      {
+        "PlayerId": 16,
+        "PlayerEmail": "scecchif@rakuten.co.jp",
+        "PlayerName": "Sibby Cecchi",
+        "PlayerPhone": "454-223-7648"
+      }
+    ]
+  },
+  {
+    "TeamId": 3,
+    "TeamName": "Ace of Bases",
+    "LeagueName": "Washington Park",
+    "CaptainName": "Peg Legge",
+    "CaptainPhone": "555-555-0003",
+    "CaptainEmail": "peglegge@email.com",
+    "MaxTeamSize": 10,
+    "Players": [
+      {
+        "PlayerId": 17,
+        "PlayerEmail": "peglegge@email.com",
+        "PlayerName": "Peg Legge",
+        "PlayerPhone": "555-555-0003"
+      },
+      {
+        "PlayerId": 18,
+        "PlayerEmail": "epagetth@pen.io",
+        "PlayerName": "Ebony Pagett",
+        "PlayerPhone": "837-246-9912"
+      },
+      {
+        "PlayerId": 19,
+        "PlayerEmail": "bervini@networksolutions.com",
+        "PlayerName": "Brianna Ervin",
+        "PlayerPhone": "715-553-7135"
+      },
+      {
+        "PlayerId": 20,
+        "PlayerEmail": "sreubelj@scribd.com",
+        "PlayerName": "Stacia Reubel",
+        "PlayerPhone": "215-597-1185"
+      },
+      {
+        "PlayerId": 21,
+        "PlayerEmail": "lcornishk@cocolog-nifty.com",
+        "PlayerName": "Lawrence Cornish",
+        "PlayerPhone": "665-906-9430"
+      },
+      {
+        "PlayerId": 22,
+        "PlayerEmail": "lyoulel@mozilla.org",
+        "PlayerName": "Leigh Youle",
+        "PlayerPhone": "497-384-9967"
+      },
+      {
+        "PlayerId": 23,
+        "PlayerEmail": "mschulerm@state.gov",
+        "PlayerName": "Mirabelle Schuler",
+        "PlayerPhone": "959-477-3064"
+      },
+      {
+        "PlayerId": 24,
+        "PlayerEmail": "dsantryn@mozilla.com",
+        "PlayerName": "Daria Santry",
+        "PlayerPhone": "587-865-0561"
+      },
+      {
+        "PlayerId": 25,
+        "PlayerEmail": "jloebero@nifty.com",
+        "PlayerName": "Junia Loeber",
+        "PlayerPhone": "250-312-6278"
+      },
+      {
+        "PlayerId": 26,
+        "PlayerEmail": "dnicholasp@mapy.cz",
+        "PlayerName": "Dylan Nicholas",
+        "PlayerPhone": "139-339-9565"
+      }
+    ]
+  },
+  {
+    "TeamId": 4,
+    "TeamName": "Saved by the Ball",
+    "LeagueName": "Washington Park",
+    "CaptainName": "Allie Grater",
+    "CaptainPhone": "555-555-0004",
+    "CaptainEmail": "alliegrater@email.com",
+    "MaxTeamSize": 10,
+    "Players": [
+      {
+        "PlayerId": 27,
+        "PlayerEmail": "alliegrater@email.com",
+        "PlayerName": "Allie Grater",
+        "PlayerPhone": "555-555-0004"
+      },
+      {
+        "PlayerId": 28,
+        "PlayerEmail": "jdudmanr@zdnet.com",
+        "PlayerName": "Javier Dudman",
+        "PlayerPhone": "519-725-2184"
+      },
+      {
+        "PlayerId": 29,
+        "PlayerEmail": "swynnes@icio.us",
+        "PlayerName": "Siouxie Wynne",
+        "PlayerPhone": "944-158-2856"
+      },
+      {
+        "PlayerId": 30,
+        "PlayerEmail": "jernket@ustream.tv",
+        "PlayerName": "Janette Ernke",
+        "PlayerPhone": "801-641-7905"
+      },
+      {
+        "PlayerId": 31,
+        "PlayerEmail": "jmatveichevu@wikimedia.org",
+        "PlayerName": "Johnathan Matveichev",
+        "PlayerPhone": "754-667-7373"
+      },
+      {
+        "PlayerId": 32,
+        "PlayerEmail": "kcowperthwaitev@cnet.com",
+        "PlayerName": "Kelcey Cowperthwaite",
+        "PlayerPhone": "415-554-3684"
+      },
+      {
+        "PlayerId": 33,
+        "PlayerEmail": "klakeyw@skype.com",
+        "PlayerName": "Kaspar Lakey",
+        "PlayerPhone": "483-645-9318"
+      },
+      {
+        "PlayerId": 34,
+        "PlayerEmail": "eharriskinex@goo.gl",
+        "PlayerName": "Erina Harriskine",
+        "PlayerPhone": "978-844-9753"
+      }
+    ]
+  },
+  {
+    "TeamId": 5,
+    "TeamName": "New Kicks On The Block",
+    "LeagueName": "Washington Park",
+    "CaptainName": "Hugo First",
+    "CaptainPhone": "555-555-0005",
+    "CaptainEmail": "hugofirst@email.com",
+    "MaxTeamSize": 10,
+    "Players": [
+      {
+        "PlayerId": 35,
+        "PlayerEmail": "hugofirst@email.com",
+        "PlayerName": "Hugo First",
+        "PlayerPhone": "555-555-0005"
+      },
+      {
+        "PlayerId": 36,
+        "PlayerEmail": "aflacknellz@angelfire.com",
+        "PlayerName": "Alexi Flacknell",
+        "PlayerPhone": "730-847-2446"
+      },
+      {
+        "PlayerId": 37,
+        "PlayerEmail": "rduetschens10@illinois.edu",
+        "PlayerName": "Ronny Duetschens",
+        "PlayerPhone": "470-277-1646"
+      },
+      {
+        "PlayerId": 38,
+        "PlayerEmail": "werskine11@bluehost.com",
+        "PlayerName": "Wainwright Erskine",
+        "PlayerPhone": "511-711-7373"
+      }
+    ]
+  },
+  {
+    "TeamId": 6,
+    "TeamName": "We Do Kickin' Right",
+    "LeagueName": "Brewery District",
+    "CaptainName": "Anita Bath",
+    "CaptainPhone": "555-555-0006",
+    "CaptainEmail": "anitabath@email.com",
+    "MaxTeamSize": 10,
+    "Players": [
+      {
+        "PlayerId": 39,
+        "PlayerEmail": "anitabath@email.com",
+        "PlayerName": "Anita Bath",
+        "PlayerPhone": "555-555-0006"
+      },
+      {
+        "PlayerId": 40,
+        "PlayerEmail": "hhercules13@seattletimes.com",
+        "PlayerName": "Harland Hercules",
+        "PlayerPhone": "200-775-9393"
+      },
+      {
+        "PlayerId": 41,
+        "PlayerEmail": "cportman14@bravesites.com",
+        "PlayerName": "Collete Portman",
+        "PlayerPhone": "318-145-6526"
+      },
+      {
+        "PlayerId": 42,
+        "PlayerEmail": "mreinard15@cargocollective.com",
+        "PlayerName": "Micky Reinard",
+        "PlayerPhone": "576-342-6687"
+      },
+      {
+        "PlayerId": 43,
+        "PlayerEmail": "jcoils16@reverbnation.com",
+        "PlayerName": "Jobina Coils",
+        "PlayerPhone": "459-992-8470"
+      },
+      {
+        "PlayerId": 44,
+        "PlayerEmail": "kcescon17@myspace.com",
+        "PlayerName": "Kin Cescon",
+        "PlayerPhone": "751-127-6016"
+      },
+      {
+        "PlayerId": 45,
+        "PlayerEmail": "kheindrick18@1688.com",
+        "PlayerName": "Kerry Heindrick",
+        "PlayerPhone": "733-552-6285"
+      },
+      {
+        "PlayerId": 46,
+        "PlayerEmail": "nmaleney19@upenn.edu",
+        "PlayerName": "Nanci Maleney",
+        "PlayerPhone": "334-969-9711"
+      }
+    ]
+  },
+  {
+    "TeamId": 7,
+    "TeamName": "Fresh Prince of Ball Air",
+    "LeagueName": "Brewery District",
+    "CaptainName": "Colin Sik",
+    "CaptainPhone": "555-555-0007",
+    "CaptainEmail": "colinsik@email.com",
+    "MaxTeamSize": 10,
+    "Players": [
+      {
+        "PlayerId": 47,
+        "PlayerEmail": "colinsik@email.com",
+        "PlayerName": "Colin Sik",
+        "PlayerPhone": "555-555-0007"
+      },
+      {
+        "PlayerId": 48,
+        "PlayerEmail": "bemmert1b@webnode.com",
+        "PlayerName": "Bernarr Emmert",
+        "PlayerPhone": "796-741-0456"
+      },
+      {
+        "PlayerId": 49,
+        "PlayerEmail": "scorten1c@ed.gov",
+        "PlayerName": "Siana Corten",
+        "PlayerPhone": "175-757-8401"
+      },
+      {
+        "PlayerId": 50,
+        "PlayerEmail": "dclymo1d@mac.com",
+        "PlayerName": "Drucill Clymo",
+        "PlayerPhone": "553-422-6045"
+      },
+      {
+        "PlayerId": 51,
+        "PlayerEmail": "btitman1e@slashdot.org",
+        "PlayerName": "Benita Titman",
+        "PlayerPhone": "438-220-0212"
+      },
+      {
+        "PlayerId": 52,
+        "PlayerEmail": "vgladtbach1f@reuters.com",
+        "PlayerName": "Vilhelmina Gladtbach",
+        "PlayerPhone": "710-931-3227"
+      },
+      {
+        "PlayerId": 53,
+        "PlayerEmail": "ahoulson1g@cnbc.com",
+        "PlayerName": "Arlyne Houlson",
+        "PlayerPhone": "604-781-4918"
+      },
+      {
+        "PlayerId": 54,
+        "PlayerEmail": "dirvine1h@jiathis.com",
+        "PlayerName": "Deloris Irvine",
+        "PlayerPhone": "617-852-8662"
+      }
+    ]
+  },
+  {
+    "TeamId": 8,
+    "TeamName": "Don't Stop Ballieving",
+    "LeagueName": "Brewery District",
+    "CaptainName": "Lee Nonmi",
+    "CaptainPhone": "555-555-0008",
+    "CaptainEmail": "leenonmi@email.com",
+    "MaxTeamSize": 10,
+    "Players": [
+      {
+        "PlayerId": 55,
+        "PlayerEmail": "leenonmi@email.com",
+        "PlayerName": "Lee Nonmi",
+        "PlayerPhone": "555-555-0008"
+      },
+      {
+        "PlayerId": 56,
+        "PlayerEmail": "ojemmett1j@oakley.com",
+        "PlayerName": "Orel Jemmett",
+        "PlayerPhone": "532-364-7814"
+      },
+      {
+        "PlayerId": 57,
+        "PlayerEmail": "twhittlesea1k@ucsd.edu",
+        "PlayerName": "Teddie Whittlesea",
+        "PlayerPhone": "340-204-2780"
+      },
+      {
+        "PlayerId": 58,
+        "PlayerEmail": "gbubbings1l@merriam-webster.com",
+        "PlayerName": "Gabriela Bubbings",
+        "PlayerPhone": "922-664-7195"
+      },
+      {
+        "PlayerId": 59,
+        "PlayerEmail": "rrooms1m@mac.com",
+        "PlayerName": "Rheba Rooms",
+        "PlayerPhone": "242-559-8682"
+      },
+      {
+        "PlayerId": 60,
+        "PlayerEmail": "zbarkly1n@intel.com",
+        "PlayerName": "Zolly Barkly",
+        "PlayerPhone": "795-751-4536"
+      },
+      {
+        "PlayerId": 61,
+        "PlayerEmail": "lcosterd1o@adobe.com",
+        "PlayerName": "Ladonna Costerd",
+        "PlayerPhone": "924-626-8586"
+      },
+      {
+        "PlayerId": 62,
+        "PlayerEmail": "mfolkard1p@soundcloud.com",
+        "PlayerName": "Myranda Folkard",
+        "PlayerPhone": "495-521-8742"
+      },
+      {
+        "PlayerId": 63,
+        "PlayerEmail": "obarmby1q@businesswire.com",
+        "PlayerName": "Osmond Barmby",
+        "PlayerPhone": "796-296-6804"
+      }
+    ]
+  },
+  {
+    "TeamId": 9,
+    "TeamName": "One Kick Wonders",
+    "LeagueName": "Brewery District",
+    "CaptainName": "Fran Tick",
+    "CaptainPhone": "555-555-0009",
+    "CaptainEmail": "frantick@email.com",
+    "MaxTeamSize": 10,
+    "Players": [
+      {
+        "PlayerId": 64,
+        "PlayerEmail": "frantick@email.com",
+        "PlayerName": "Fran Tick",
+        "PlayerPhone": "555-555-0009"
+      },
+      {
+        "PlayerId": 65,
+        "PlayerEmail": "ppaice1s@google.co.jp",
+        "PlayerName": "Prisca Paice",
+        "PlayerPhone": "591-377-3296"
+      },
+      {
+        "PlayerId": 66,
+        "PlayerEmail": "cchastaing1t@theatlantic.com",
+        "PlayerName": "Collette Chastaing",
+        "PlayerPhone": "999-302-8825"
+      }
+    ]
+  },
+  {
+    "TeamId": 10,
+    "TeamName": "Club Foot",
+    "LeagueName": "Cooper River",
+    "CaptainName": "Tex Ryta",
+    "CaptainPhone": "555-555-0010",
+    "CaptainEmail": "texryta@email.com",
+    "MaxTeamSize": 10,
+    "Players": [
+      {
+        "PlayerId": 67,
+        "PlayerEmail": "texryta@email.com",
+        "PlayerName": "Tex Ryta",
+        "PlayerPhone": "555-555-0010"
+      },
+      {
+        "PlayerId": 68,
+        "PlayerEmail": "ltyer1v@canalblog.com",
+        "PlayerName": "Lorie Tyer",
+        "PlayerPhone": "934-811-8367"
+      },
+      {
+        "PlayerId": 69,
+        "PlayerEmail": "dwitt1w@ca.gov",
+        "PlayerName": "De witt Kolinsky",
+        "PlayerPhone": "648-360-6833"
+      },
+      {
+        "PlayerId": 70,
+        "PlayerEmail": "mdollen1x@ifeng.com",
+        "PlayerName": "Mercy Dollen",
+        "PlayerPhone": "430-908-0727"
+      },
+      {
+        "PlayerId": 71,
+        "PlayerEmail": "dlilleycrop1y@fc2.com",
+        "PlayerName": "Dyana Lilleycrop",
+        "PlayerPhone": "307-737-9042"
+      },
+      {
+        "PlayerId": 72,
+        "PlayerEmail": "cguppy1z@hubpages.com",
+        "PlayerName": "Christopher Guppy",
+        "PlayerPhone": "229-615-4662"
+      },
+      {
+        "PlayerId": 73,
+        "PlayerEmail": "ggarroch20@adobe.com",
+        "PlayerName": "Goober Garroch",
+        "PlayerPhone": "953-829-9677"
+      }
+    ]
+  },
+  {
+    "TeamId": 11,
+    "TeamName": "Our Kicks Don't Lie",
+    "LeagueName": "Cooper River",
+    "CaptainName": "Wiley Waites",
+    "CaptainPhone": "555-555-0011",
+    "CaptainEmail": "wileywaites@email.com",
+    "MaxTeamSize": 10,
+    "Players": [
+      {
+        "PlayerId": 74,
+        "PlayerEmail": "wileywaites@email.com",
+        "PlayerName": "Wiley Waites",
+        "PlayerPhone": "555-555-0011"
+      },
+      {
+        "PlayerId": 75,
+        "PlayerEmail": "khatto22@ucla.edu",
+        "PlayerName": "Krishna Hatto",
+        "PlayerPhone": "327-914-3072"
+      },
+      {
+        "PlayerId": 76,
+        "PlayerEmail": "pmccloy23@behance.net",
+        "PlayerName": "Phebe McCloy",
+        "PlayerPhone": "982-518-7004"
+      },
+      {
+        "PlayerId": 77,
+        "PlayerEmail": "esneden24@blog.com",
+        "PlayerName": "Erin Sneden",
+        "PlayerPhone": "773-156-5617"
+      },
+      {
+        "PlayerId": 78,
+        "PlayerEmail": "fharnott25@wp.com",
+        "PlayerName": "Francyne Harnott",
+        "PlayerPhone": "566-938-9965"
+      },
+      {
+        "PlayerId": 79,
+        "PlayerEmail": "edowell26@slideshare.net",
+        "PlayerName": "Elvin Dowell",
+        "PlayerPhone": "712-731-5142"
+      },
+      {
+        "PlayerId": 80,
+        "PlayerEmail": "gashworth27@walmart.com",
+        "PlayerName": "Georgie Ashworth",
+        "PlayerPhone": "240-458-1035"
+      },
+      {
+        "PlayerId": 81,
+        "PlayerEmail": "gcumberpatch28@last.fm",
+        "PlayerName": "Genna Cumberpatch",
+        "PlayerPhone": "213-592-6768"
+      },
+      {
+        "PlayerId": 82,
+        "PlayerEmail": "prodliff29@mac.com",
+        "PlayerName": "Perkin Rodliff",
+        "PlayerPhone": "901-854-0717"
+      },
+      {
+        "PlayerId": 83,
+        "PlayerEmail": "tstraker2a@admin.ch",
+        "PlayerName": "Tadd Straker",
+        "PlayerPhone": "873-818-7275"
+      }
+    ]
+  },
+  {
+    "TeamId": 12,
+    "TeamName": "Toejammers",
+    "LeagueName": "Cooper River",
+    "CaptainName": "Anne Gloindian",
+    "CaptainPhone": "555-555-0012",
+    "CaptainEmail": "gloindian@email.com",
+    "MaxTeamSize": 10,
+    "Players": [
+      {
+        "PlayerId": 84,
+        "PlayerEmail": "gloindian@email.com",
+        "PlayerName": "Anne Gloindian",
+        "PlayerPhone": "555-555-0012"
+      },
+      {
+        "PlayerId": 85,
+        "PlayerEmail": "irevett2c@phpbb.com",
+        "PlayerName": "Isidora Revett",
+        "PlayerPhone": "829-136-4138"
+      },
+      {
+        "PlayerId": 86,
+        "PlayerEmail": "geyer2d@springer.com",
+        "PlayerName": "Georgeanna Eyer",
+        "PlayerPhone": "831-955-8538"
+      },
+      {
+        "PlayerId": 87,
+        "PlayerEmail": "tticksall2e@abc.net.au",
+        "PlayerName": "Thorndike Ticksall",
+        "PlayerPhone": "885-973-0178"
+      },
+      {
+        "PlayerId": 88,
+        "PlayerEmail": "ctoombs2f@who.int",
+        "PlayerName": "Clio Toombs",
+        "PlayerPhone": "839-845-9692"
+      },
+      {
+        "PlayerId": 89,
+        "PlayerEmail": "jjakoub2g@example.com",
+        "PlayerName": "Joscelin Jakoub",
+        "PlayerPhone": "401-804-2250"
+      }
+    ]
+  },
+  {
+    "TeamId": 13,
+    "TeamName": "Miami Feet",
+    "LeagueName": "Cooper River",
+    "CaptainName": "Abby Normal",
+    "CaptainPhone": "555-555-0013",
+    "CaptainEmail": "abbynormal@email.com",
+    "MaxTeamSize": 10,
+    "Players": [
+      {
+        "PlayerId": 90,
+        "PlayerEmail": "abbynormal@email.com",
+        "PlayerName": "Abby Normal",
+        "PlayerPhone": "555-555-0013"
+      },
+      {
+        "PlayerId": 91,
+        "PlayerEmail": "phedlestone2i@parallels.com",
+        "PlayerName": "Pauly Hedlestone",
+        "PlayerPhone": "557-566-0354"
+      },
+      {
+        "PlayerId": 92,
+        "PlayerEmail": "tmacian2j@seattletimes.com",
+        "PlayerName": "Townsend MacIan",
+        "PlayerPhone": "781-686-8205"
+      },
+      {
+        "PlayerId": 93,
+        "PlayerEmail": "kfolli2k@yahoo.co.jp",
+        "PlayerName": "Kip Folli",
+        "PlayerPhone": "768-208-8884"
+      },
+      {
+        "PlayerId": 94,
+        "PlayerEmail": "cbart2l@tinyurl.com",
+        "PlayerName": "Claybourne Bart",
+        "PlayerPhone": "170-959-7417"
+      },
+      {
+        "PlayerId": 95,
+        "PlayerEmail": "celsworth2m@soundcloud.com",
+        "PlayerName": "Calla Elsworth",
+        "PlayerPhone": "251-276-7347"
+      },
+      {
+        "PlayerId": 96,
+        "PlayerEmail": "rcastillon2n@hostgator.com",
+        "PlayerName": "Royal Castillon",
+        "PlayerPhone": "921-625-4517"
+      },
+      {
+        "PlayerId": 97,
+        "PlayerEmail": "esaffill2o@tiny.cc",
+        "PlayerName": "Elbertine Saffill",
+        "PlayerPhone": "475-159-2025"
+      }
+    ]
+  },
+  {
+    "TeamId": 14,
+    "TeamName": "I’d Kick It",
+    "LeagueName": "Ritterhouse Square",
+    "CaptainName": "Neil Down",
+    "CaptainPhone": "555-555-0014",
+    "CaptainEmail": "neildown@email.com",
+    "MaxTeamSize": 10,
+    "Players": [
+      {
+        "PlayerId": 98,
+        "PlayerEmail": "neildown@email.com",
+        "PlayerName": "Neil Down",
+        "PlayerPhone": "555-555-0014"
+      },
+      {
+        "PlayerId": 99,
+        "PlayerEmail": "ppinson2q@un.org",
+        "PlayerName": "Phillipe Pinson",
+        "PlayerPhone": "600-727-8865"
+      },
+      {
+        "PlayerId": 100,
+        "PlayerEmail": "jleyninye2r@jiathis.com",
+        "PlayerName": "Josiah Leyninye",
+        "PlayerPhone": "118-277-8543"
+      },
+      {
+        "PlayerId": 101,
+        "PlayerEmail": "fphillput2s@cargocollective.com",
+        "PlayerName": "Fanechka Phillput",
+        "PlayerPhone": "812-683-0935"
+      },
+      {
+        "PlayerId": 102,
+        "PlayerEmail": "fmartyns2t@nbcnews.com",
+        "PlayerName": "Flss Martyns",
+        "PlayerPhone": "987-703-9275"
+      },
+      {
+        "PlayerId": 103,
+        "PlayerEmail": "edixcey2u@apache.org",
+        "PlayerName": "Edmund Dixcey",
+        "PlayerPhone": "445-228-8979"
+      },
+      {
+        "PlayerId": 104,
+        "PlayerEmail": "imartschke2v@networkadvertising.org",
+        "PlayerName": "Izzy Martschke",
+        "PlayerPhone": "457-408-0757"
+      },
+      {
+        "PlayerId": 105,
+        "PlayerEmail": "ffosdyke2w@purevolume.com",
+        "PlayerName": "Florencia Fosdyke",
+        "PlayerPhone": "678-950-8610"
+      }
+    ]
+  },
+  {
+    "TeamId": 15,
+    "TeamName": "Kick it & Bounce",
+    "LeagueName": "Ritterhouse Square",
+    "CaptainName": "Al Annon",
+    "CaptainPhone": "555-555-0015",
+    "CaptainEmail": "alannon@email.com",
+    "MaxTeamSize": 10,
+    "Players": [
+      {
+        "PlayerId": 106,
+        "PlayerEmail": "alannon@email.com",
+        "PlayerName": "Al Annon",
+        "PlayerPhone": "555-555-0015"
+      },
+      {
+        "PlayerId": 107,
+        "PlayerEmail": "czemler2y@yelp.com",
+        "PlayerName": "Chevalier Zemler",
+        "PlayerPhone": "111-399-4707"
+      },
+      {
+        "PlayerId": 108,
+        "PlayerEmail": "hniess2z@photobucket.com",
+        "PlayerName": "Hunfredo Niess",
+        "PlayerPhone": "810-125-3874"
+      },
+      {
+        "PlayerId": 109,
+        "PlayerEmail": "abispo30@discovery.com",
+        "PlayerName": "Andy Bispo",
+        "PlayerPhone": "106-992-3873"
+      },
+      {
+        "PlayerId": 110,
+        "PlayerEmail": "nhiscoe31@1688.com",
+        "PlayerName": "Nicolis Hiscoe",
+        "PlayerPhone": "862-163-3034"
+      },
+      {
+        "PlayerId": 111,
+        "PlayerEmail": "vcantrill32@dagondesign.com",
+        "PlayerName": "Valene Cantrill",
+        "PlayerPhone": "147-866-4150"
+      },
+      {
+        "PlayerId": 112,
+        "PlayerEmail": "halejandro33@icq.com",
+        "PlayerName": "Hedvige Alejandro",
+        "PlayerPhone": "825-623-8062"
+      },
+      {
+        "PlayerId": 113,
+        "PlayerEmail": "lwanklyn34@yellowpages.com",
+        "PlayerName": "Lavina Wanklyn",
+        "PlayerPhone": "530-358-3955"
+      },
+      {
+        "PlayerId": 114,
+        "PlayerEmail": "bolongain35@auda.org.au",
+        "PlayerName": "Belicia O'Longain",
+        "PlayerPhone": "790-283-8128"
+      }
+    ]
+  },
+  {
+    "TeamId": 16,
+    "TeamName": "Alive and Kicking",
+    "LeagueName": "Ritterhouse Square",
+    "CaptainName": "Saul Goodmate",
+    "CaptainPhone": "555-555-0016",
+    "CaptainEmail": "saulgoodmate@email.com",
+    "MaxTeamSize": 10,
+    "Players": [
+      {
+        "PlayerId": 115,
+        "PlayerEmail": "saulgoodmate@email.com",
+        "PlayerName": "Saul Goodmate",
+        "PlayerPhone": "555-555-0016"
+      },
+      {
+        "PlayerId": 116,
+        "PlayerEmail": "rbuzza37@adobe.com",
+        "PlayerName": "Rolfe Buzza",
+        "PlayerPhone": "847-111-3682"
+      },
+      {
+        "PlayerId": 117,
+        "PlayerEmail": "rjevons38@arstechnica.com",
+        "PlayerName": "Randal Jevons",
+        "PlayerPhone": "773-803-5766"
+      },
+      {
+        "PlayerId": 118,
+        "PlayerEmail": "gcooley39@squarespace.com",
+        "PlayerName": "Gareth Cooley",
+        "PlayerPhone": "506-172-2917"
+      },
+      {
+        "PlayerId": 119,
+        "PlayerEmail": "okubasiewicz3a@ezinearticles.com",
+        "PlayerName": "Opal Kubasiewicz",
+        "PlayerPhone": "604-569-0518"
+      },
+      {
+        "PlayerId": 120,
+        "PlayerEmail": "bbrandes3b@51.la",
+        "PlayerName": "Balduin Brandes",
+        "PlayerPhone": "265-873-5095"
+      },
+      {
+        "PlayerId": 121,
+        "PlayerEmail": "cridoutt3c@tmall.com",
+        "PlayerName": "Cordey Ridoutt",
+        "PlayerPhone": "858-265-9076"
+      }
+    ]
+  }
+]

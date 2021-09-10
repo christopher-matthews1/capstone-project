@@ -1,0 +1,20 @@
+nav {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: #F49F0A;
+    padding: .5em;
+    width: 99%;
+    border: 1px solid black;
+    height: 50px;
+    text-align: center;
+}
+section {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-columns: repeat(5, 5em);
+}
+
+ .login {
+    grid-column: -2;
+}

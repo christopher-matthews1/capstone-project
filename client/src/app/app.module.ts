@@ -11,7 +11,7 @@ import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { TeamsByLeagueComponent } from './teams-by-league/teams-by-league.component';
 import { AllTeamsComponent } from './all-teams/all-teams.component';
-import { AllTeamsTeamComponent } from './all-teams-team/all-teams-team.component';
+import { TeamDetailsShortComponent } from './team-details-short/team-details-short.component';
 import { TeamComponent } from './team/team.component';
 import { PlayerComponent } from './player/player.component';
 
@@ -26,7 +26,7 @@ import { PlayerComponent } from './player/player.component';
     AboutComponent,
     TeamsByLeagueComponent,
     AllTeamsComponent,
-    AllTeamsTeamComponent,
+    TeamDetailsShortComponent,
     TeamComponent,
     PlayerComponent
   ],

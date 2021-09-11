@@ -14,6 +14,7 @@ import { AllTeamsComponent } from './all-teams/all-teams.component';
 import { TeamDetailsShortComponent } from './team-details-short/team-details-short.component';
 import { TeamComponent } from './team/team.component';
 import { PlayerComponent } from './player/player.component';
+import { LocationComponent } from './location/location.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { PlayerComponent } from './player/player.component';
     AllTeamsComponent,
     TeamDetailsShortComponent,
     TeamComponent,
-    PlayerComponent
+    PlayerComponent,
+    LocationComponent
   ],
   imports: [
     BrowserModule,

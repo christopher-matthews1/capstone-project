@@ -4,6 +4,11 @@ body {
     margin: 0;
 }
 
+h2 {
+    font-size: 2em;
+    color: #00A6A6;
+}
+
 #wrapper {
     min-height: 100%;
     width: 100%;

@@ -1,0 +1,14 @@
+img {
+    width: 100%;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 30% 60%;
+    justify-content: space-around; 
+}
+
+.players {
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+}

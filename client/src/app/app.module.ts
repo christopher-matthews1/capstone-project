@@ -9,7 +9,9 @@ import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
-import { TeamsComponent } from './teams/teams.component';
+import { TeamsByLeagueComponent } from './teams-by-league/teams-by-league.component';
+import { AllTeamsComponent } from './all-teams/all-teams.component';
+import { TeamComponent } from './team/team.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { TeamsComponent } from './teams/teams.component';
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    TeamsComponent
+    TeamsByLeagueComponent,
+    AllTeamsComponent,
+    TeamComponent
   ],
   imports: [
     BrowserModule,

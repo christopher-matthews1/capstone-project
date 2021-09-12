@@ -7,6 +7,7 @@ import { AllTeamsComponent } from './all-teams/all-teams.component';
 import { TeamComponent } from './team/team.component';
 import { LocationDetailsComponent } from './location-details/location-details.component';
 import { HomeComponent } from './home/home.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 const fallbackRoute: Route = {
   path: '**', component: HomeComponent
@@ -21,6 +22,7 @@ const routes: Routes = [{
       { path: 'location/location-name', component: LocationDetailsComponent },
       { path: 'teams', component: AllTeamsComponent },
       { path: 'teams/team', component: TeamComponent },
+      { path: 'sign-up', component: SignUpComponent },
       fallbackRoute
   ]
 }

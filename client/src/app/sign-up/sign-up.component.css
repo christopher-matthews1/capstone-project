@@ -1,0 +1,18 @@
+img {
+    width: 20%;
+}
+
+img.big {
+    width: 100%;
+}
+
+section {
+    display: grid;
+    grid-template-columns: 30% 60%;
+    justify-content: space-around; 
+}
+
+p {
+    font-size: 1.5em;
+    color: #F08700;
+}

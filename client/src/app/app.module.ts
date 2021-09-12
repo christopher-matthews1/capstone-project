@@ -16,6 +16,7 @@ import { TeamComponent } from './team/team.component';
 import { PlayerComponent } from './player/player.component';
 import { LocationDetailsComponent } from './location-details/location-details.component';
 import { HomeComponent } from './home/home.component';
+import { SignUpComponent } from './sign-up/sign-up.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { HomeComponent } from './home/home.component';
     TeamComponent,
     PlayerComponent,
     LocationComponent,
-    LocationDetailsComponent
+    LocationDetailsComponent,
+    SignUpComponent
   ],
   imports: [
     BrowserModule,

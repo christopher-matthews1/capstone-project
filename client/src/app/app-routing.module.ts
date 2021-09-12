@@ -20,8 +20,11 @@ const routes: Routes = [{
       { path: 'about', component: AboutComponent },
       { path: 'location', component: LocationComponent },
       { path: 'location/location-name', component: LocationDetailsComponent },
+      // { path: 'location/:location-name', component: LocationDetailsComponent },
+      // may need to move specific route higher than general route
       { path: 'teams', component: AllTeamsComponent },
       { path: 'teams/team', component: TeamComponent },
+      // { path: 'teams/:team', component: TeamComponent },
       { path: 'sign-up', component: SignUpComponent },
       fallbackRoute
   ]

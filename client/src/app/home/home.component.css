@@ -2,8 +2,20 @@ img {
     width: 100%;
 }
 
+article {
+    padding: 2em;
+    color: #F08700;
+}
+
+h4 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.5em; 
+}
+
 section {
     display: grid;
-    grid-template-columns: repeat(4, 20%);
-    justify-content: space-around; 
+    grid-template-columns: 40% 60%;
 }

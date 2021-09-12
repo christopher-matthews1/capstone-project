@@ -7,8 +7,3 @@ section {
     grid-template-columns: 30% 60%;
     justify-content: space-around; 
 }
-
-p {
-    font-size: 1.5em;
-    color: #F08700;
-}

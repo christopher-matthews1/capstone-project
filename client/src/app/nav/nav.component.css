@@ -23,6 +23,10 @@ section {
     grid-column: -2;
 }
 
+.link {
+    cursor: pointer;
+}
+
 /* .active {
     background-color: #EFCA08;
 } */

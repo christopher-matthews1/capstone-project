@@ -26,7 +26,7 @@ const routes: Routes = [{
       // { path: 'location/:location-name', component: LocationDetailsComponent },
       // may need to move specific route higher than general route
       { path: 'teams', component: AllTeamsComponent },
-      { path: 'teams/team', component: TeamComponent },
+      { path: 'teams/we-do-kickin-right', component: TeamComponent },
       // { path: 'teams/:team', component: TeamComponent },
       { path: 'sign-up', component: SignUpComponent },
       fallbackRoute

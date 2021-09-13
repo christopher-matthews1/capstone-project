@@ -9,11 +9,7 @@ export class RouteService {
   constructor(private router: Router) { }
 
   getRoute(): String {
-    //Gets route without leading forward-slash
-    return this.router.url.substring(1);
-  }
-
-  getTeamRoute(): String {
+    //Gets route without leading forward-slash for id/anchor purposes
     return this.router.url.substring(1);
   }
   

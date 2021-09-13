@@ -8,10 +8,12 @@ import { RouteService } from '../services/route.service';
 })
 export class TeamComponent implements OnInit {
 
+  teamRoute: String;
+
   constructor(private routeService: RouteService) { }
 
   ngOnInit(): void {
-    
+    this.teamRoute = this.routeService.getRoute();
   }
 
 }

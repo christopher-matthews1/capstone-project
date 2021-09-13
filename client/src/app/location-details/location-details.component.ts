@@ -12,6 +12,7 @@ export class LocationDetailsComponent implements OnInit {
 
   locationName: String;
   locationRoute: String;
+  test = 7;
   router: Router;
 
   constructor(private _router: Router, private locationService: LocationService, private routeService: RouteService) { 

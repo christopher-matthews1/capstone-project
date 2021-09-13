@@ -1,18 +1,19 @@
+p {
+    font-weight: bold;
+}
+
 nav {
     position: fixed;
-    padding-top: 60px;
     top: 0;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 25em auto 5em;
     background-color: #F49F0A;
     padding: .5em;
     width: 100%;
     border: 1px solid black;
-    height: 50px;
-    text-align: center;
     box-sizing: border-box;
 }
-section {
+section.nav {
     display: grid;
     justify-items: center;
     align-items: center;
@@ -20,6 +21,9 @@ section {
 }
 
  .login {
+    display: grid;
+    justify-items: center;
+    align-items: center;
     grid-column: -2;
 }
 

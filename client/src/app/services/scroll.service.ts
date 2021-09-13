@@ -21,6 +21,6 @@ export class ScrollService {
           block: "start",
           inline: "nearest"
         });
-    }, 200);
+    }, 500);
   }
 }

@@ -10,14 +10,10 @@ import { ScrollService } from '../services/scroll.service';
 })
 export class NavComponent implements OnInit {
 
-  constructor(private scrollService: ScrollService, private router: Router) {}
+  constructor(private scrollService: ScrollService) {}
 
   ngOnInit() {
   }
-
-  // getRoute(): String {
-  //   return this.router.url;
-  // }
 
   scrollToContent() {
       this.scrollService.scrollToContent();

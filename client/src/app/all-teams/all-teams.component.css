@@ -1,0 +1,9 @@
+img {
+    width: 70%
+}
+
+section {
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    justify-content: space-around; 
+}

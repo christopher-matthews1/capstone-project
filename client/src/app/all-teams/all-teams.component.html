@@ -1,4 +1,10 @@
 <h2 id="teams">Teams</h2>
 <section>
-    <app-teams-by-league></app-teams-by-league>
+    <div *ngFor="let league of allLeagues">
+        <img src="{{league.image}}" alt="{{league.leagueName}} Photo">
+        <h3>{{league.leagueName}}</h3>
+        <div *ngFor="let team of allTeams">
+            <app-team-details-short></app-team-details-short>
+        </div>
+    </div>
 </section>

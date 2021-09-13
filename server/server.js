@@ -73,17 +73,17 @@ function getNextId(counterType)  // use 'team' or 'player' or 'user' as counterT
 
 function isValidteam(team)
 {
-    if (team.TeamName == undefined || team.TeamName.trim() == "")
+    if (team.teamName == undefined || team.teamName.trim() == "")
        return 1;
-    if (team.LeagueName == undefined || team.LeagueName.trim() == "")
+    if (team.leagueName == undefined || team.leagueName.trim() == "")
        return 2;   
-    if (team.CaptainName == undefined || team.CaptainName.trim() == "")
+    if (team.captainName == undefined || team.captainName.trim() == "")
        return 3;  
-    if (team.CaptainPhone == undefined || team.CaptainPhone.trim() == "")
+    if (team.captainPhone == undefined || team.captainPhone.trim() == "")
        return 4; 
-    if (team.CaptainEmail == undefined || team.CaptainEmail.trim() == "")
+    if (team.captainEmail == undefined || team.captainEmail.trim() == "")
        return 5;        
-    if (team.MaxTeamSize == undefined || isNaN(team.MaxTeamSize))
+    if (team.maxTeamSize == undefined || isNaN(team.maxTeamSize))
        return 6; 
 
     return -1;
@@ -91,11 +91,11 @@ function isValidteam(team)
 
 function isValidplayer(player)
 {
-    if (player.PlayerEmail == undefined || player.PlayerEmail.trim() == "")
+    if (player.playerEmail == undefined || player.playerEmail.trim() == "")
        return 1;
-    if (player.PlayerName == undefined || player.PlayerName.trim() == "")
+    if (player.playerName == undefined || player.playerName.trim() == "")
        return 2;     
-    if (player.PlayerPhone == undefined || player.PlayerPhone.trim() == "")
+    if (player.playerPhone == undefined || player.playerPhone.trim() == "")
        return 3; 
 
     return -1;
@@ -153,7 +153,7 @@ app.get("/api/teams/:id", function (req, res) {
     let data = fs.readFileSync( __dirname + "/data/teams.json", "utf8");
     data = JSON.parse(data);
 
-    let match = data.find(element => element.TeamId == id);
+    let match = data.find(element => element.teamId == id);
     if (match == null)
 	{
 		res.status(404).send("Team Not Found");
@@ -173,7 +173,7 @@ app.get("/api/teams/byleague/:id", function (req, res) {
     let orgData = fs.readFileSync( __dirname + "/data/leagues.json", "utf8");
     orgData = JSON.parse(orgData);
 
-    let league = orgData.find(element => element.LeagueId.toLowerCase() == id.toLowerCase());
+    let league = orgData.find(element => element.leagueId.toLowerCase() == id.toLowerCase());
     if (league == null)
     {
         res.status(404).send("League Not Found");
@@ -184,7 +184,7 @@ app.get("/api/teams/byleague/:id", function (req, res) {
     data = JSON.parse(data);
 
     // find the matching teams for a specific league
-    let matches = data.filter(element => element.LeagueName == league.LeagueName);
+    let matches = data.filter(element => element.leagueName == league.leagueName);
 
     console.log("Returned data is: ");
     console.log(matches);
@@ -192,16 +192,16 @@ app.get("/api/teams/byleague/:id", function (req, res) {
 });
 
 // GET A SPECIFIC player IN A SPECIFIC team
-app.get("/api/teams/:teamId/players/:playerid", function (req, res) {
-    let TeamId = req.params.teamId;
-    let PlayerId = req.params.playerid;
-    console.log("Received a GET request for player " + PlayerId + " in team " + TeamId);                      
+app.get("/api/teams/:teamId/players/:playerId", function (req, res) {
+    let teamId = req.params.teamId;
+    let playerId = req.params.playerId;
+    console.log("Received a GET request for player " + playerId + " in team " + teamId);                      
 
     let data = fs.readFileSync( __dirname + "/data/teams.json", "utf8");
     data = JSON.parse(data);
 
     // find the team
-    let matchingteam = data.find(element => element.TeamId == TeamId);
+    let matchingteam = data.find(element => element.teamId == teamId);
     if (matchingteam == null)
 	{
 		res.status(404).send("Team Not Found");
@@ -209,7 +209,7 @@ app.get("/api/teams/:teamId/players/:playerid", function (req, res) {
     }
 
     // find the player 
-    let match = matchingteam.Players.find(m => m.PlayerId == PlayerId );
+    let match = matchingteam.players.find(m => m.playerId == playerId );
     console.log(match);
     if (match == null)
 	{
@@ -229,14 +229,14 @@ app.post("/api/teams", urlencodedParser, function (req, res) {
 
     // assemble team information so we can validate it
     let team = {
-        TeamId: getNextId("team"),  // assign id to team
-		TeamName: req.body.TeamName,
-		LeagueName: req.body.LeagueName,
-		CaptainName: req.body.CaptainName,
-		CaptainPhone: req.body.CaptainPhone,
-		CaptainEmail: req.body.CaptainEmail,
-		MaxTeamSize: 10,
-        Players : []
+        teamId: getNextId("team"),  // assign id to team
+		teamName: req.body.teamName,
+		leagueName: req.body.leagueName,
+		captainName: req.body.captainName,
+		captainPhone: req.body.captainPhone,
+		captainEmail: req.body.captainEmail,
+		maxTeamSize: 10,
+        players : []
     };
 
     console.log("Performing validation...");
@@ -260,7 +260,7 @@ app.post("/api/teams", urlencodedParser, function (req, res) {
     console.log(team);
     
     //res.status(201).send();
-    res.contentType('application/json').end( JSON.stringify(team) );  // return the new team w it's TeamId
+    res.contentType('application/json').end( JSON.stringify(team) );  // return the new team w it's teamId
  });
 
  // EDIT A team
@@ -270,13 +270,13 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
 
     // assemble team information so we can validate it
     let team = {
-        TeamId: req.body.TeamId,
-		TeamName: req.body.TeamName,
-		LeagueName: req.body.LeagueName,
-		CaptainName: req.body.CaptainName,
-		CaptainPhone: req.body.CaptainPhone,
-		CaptainEmail: req.body.CaptainEmail,
-        MaxTeamSize: 10
+        teamId: req.body.teamId,
+		teamName: req.body.teamName,
+		leagueName: req.body.leagueName,
+		captainName: req.body.captainName,
+		captainPhone: req.body.captainPhone,
+		captainEmail: req.body.captainEmail,
+        maxTeamSize: 10
     };
 
     console.log("Performing validation...");
@@ -292,7 +292,7 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
     data = JSON.parse( data );
 
     // find the team
-    let match = data.find(element => element.TeamId == req.body.TeamId);
+    let match = data.find(element => element.teamId == req.body.teamId);
     if (match == null)
 	{
 		res.status(404).send("Team Not Found");
@@ -300,11 +300,11 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
     }
     
     // update the team
-    match.TeamName = req.body.TeamName;
-    match.LeagueName = req.body.LeagueName;
-    match.CaptainName = req.body.CaptainName;
-    match.CaptainPhone = req.body.CaptainPhone;
-    match.CaptainEmail = req.body.CaptainEmail;
+    match.teamName = req.body.teamName;
+    match.leagueName = req.body.leagueName;
+    match.captainName = req.body.captainName;
+    match.captainPhone = req.body.captainPhone;
+    match.captainEmail = req.body.captainEmail;
 
     fs.writeFileSync(__dirname + "/data/teams.json", JSON.stringify(data));
    
@@ -322,7 +322,7 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
     data = JSON.parse( data );
 
     // find the index number of the team in the array
-    let foundAt = data.findIndex( element => element.TeamId == id );
+    let foundAt = data.findIndex( element => element.teamId == id );
 
     // delete the team if found
     if (foundAt != -1)
@@ -345,10 +345,10 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
 
     // assemble player information so we can validate it
     let player = {
-        PlayerId: getNextId("player"),   // assign new id
-        PlayerEmail: req.body.PlayerEmail,
-		PlayerName: req.body.PlayerName,
-        PlayerPhone: req.body.PlayerPhone
+        playerId: getNextId("player"),   // assign new id
+        playerEmail: req.body.playerEmail,
+		playerName: req.body.playerName,
+        playerPhone: req.body.playerPhone
     };
 
     console.log("Performing player validation...");
@@ -364,7 +364,7 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
     data = JSON.parse( data );
 
     // find the team
-    let match = data.find(element => element.TeamId == id);
+    let match = data.find(element => element.teamId == id);
     if (match == null)
 	{
 		res.status(404).send("team Not Found");
@@ -372,12 +372,12 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
     }
 
     // add the player
-    if ( Number(match.MaxTeamSize) === match.Players.length )
+    if ( Number(match.maxTeamSize) === match.players.length )
     {
         res.status(409).send("team is already full. Can not add new players.");
 		return;
     }
-    match.Players.push(player);
+    match.players.push(player);
 
     fs.writeFileSync(__dirname + "/data/teams.json", JSON.stringify(data));
    
@@ -393,10 +393,10 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
 
     // assemble player information so we can validate it
     let player = {
-        PlayerId: req.body.PlayerId,
-        PlayerEmail: req.body.PlayerEmail,
-		PlayerName: req.body.PlayerName,
-        PlayerPhone: req.body.PlayerPhone
+        playerId: req.body.playerId,
+        playerEmail: req.body.playerEmail,
+		playerName: req.body.playerName,
+        playerPhone: req.body.playerPhone
     };
 
     console.log("Performing player validation...");
@@ -413,7 +413,7 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
     data = JSON.parse( data );
 
     // find the team
-    let matchingteam = data.find(element => element.TeamId == id);
+    let matchingteam = data.find(element => element.teamId == id);
     if (matchingteam == null)
 	{
 		res.status(404).send("team Not Found");
@@ -421,7 +421,7 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
     }
 
     // find the player
-    let match = matchingteam.Players.find( m => m.PlayerId == req.body.PlayerId );
+    let match = matchingteam.players.find( m => m.playerId == req.body.playerId );
     if (match == null)
 	{
 		res.status(404).send("player Not Found");
@@ -429,9 +429,9 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
     }
 
     // update the player
-    match.PlayerEmail = req.body.PlayerEmail;
-    match.PlayerName = req.body.PlayerName;    
-    match.PlayerPhone = req.body.PlayerPhone;
+    match.playerEmail = req.body.playerEmail;
+    match.playerName = req.body.playerName;    
+    match.playerPhone = req.body.playerPhone;
 
     fs.writeFileSync(__dirname + "/data/teams.json", JSON.stringify(data));
    
@@ -440,16 +440,16 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
  });
 
  // DELETE A player IN A team
- app.delete("/api/teams/:teamId/players/:playerid", urlencodedParser, function (req, res) {
-    let TeamId = req.params.teamId;
-    let PlayerId = req.params.playerid;
-    console.log("Received a DELETE request for player " + PlayerId + " in team " + TeamId);
+ app.delete("/api/teams/:teamId/players/:playerId", urlencodedParser, function (req, res) {
+    let teamId = req.params.teamId;
+    let playerId = req.params.playerId;
+    console.log("Received a DELETE request for player " + playerId + " in team " + teamId);
 
     // find the team
     let data = fs.readFileSync( __dirname + "/data/teams.json", "utf8");
     data = JSON.parse( data );
 
-    let matchingteam = data.find(element => element.TeamId == TeamId);
+    let matchingteam = data.find(element => element.teamId == teamId);
     if (matchingteam == null)
 	{
 		res.status(404).send("team Not Found");
@@ -457,12 +457,12 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
     }
 
     // find the player
-    let foundAt = matchingteam.Players.findIndex( m => m.PlayerId == PlayerId );
+    let foundAt = matchingteam.players.findIndex( m => m.playerId == playerId );
 
     // delete the player if found
     if (foundAt != -1)   
     {
-        matchingteam.Players.splice(foundAt, 1);       
+        matchingteam.players.splice(foundAt, 1);       
     }
 
     fs.writeFileSync(__dirname + "/data/teams.json", JSON.stringify(data));

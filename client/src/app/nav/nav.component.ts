@@ -1,4 +1,7 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { ScrollService } from '../services/scroll.service';
 
 @Component({
   selector: 'app-nav',
@@ -7,9 +10,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavComponent implements OnInit {
 
-  constructor() { }
+  constructor(private scrollService: ScrollService, private router: Router) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
+  }
+
+  // getRoute(): String {
+  //   return this.router.url;
+  // }
+
+  scrollToContent() {
+      this.scrollService.scrollToContent();
   }
 
 }

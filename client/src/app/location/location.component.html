@@ -1,19 +1,19 @@
-<h2 [hidden]="(this.router.url === '/sign-up')">Locations</h2>
+<h2 id="location" [hidden]="(this.router.url === '/sign-up')">Locations</h2>
 <section>
     <div>
-        <img routerLink="/location/location-name" src="assets/images/locations/washington-park.png" alt="Washington Park">
-        <h3 routerLink="/location/location-name">Washington Park</h3>
+        <img routerLink="/location/washington-park" src="assets/images/location/washington-park.png" alt="Washington Park" (click)="scrollToContent()">
+        <h3 routerLink="/location/washington-park" (click)="scrollToContent()">Washington Park</h3>
     </div>
     <div>
-        <img routerLink="/location/location-name" src="assets/images/locations/brewery-park.png" alt="Brewery District">
-        <h3 routerLink="/location/location-name">Brewery District</h3>
+        <img routerLink="/location/brewery-park" src="assets/images/location/brewery-park.png" alt="Brewery District" (click)="scrollToContent()">
+        <h3 routerLink="/location/brewery-park" (click)="scrollToContent()">Brewery District</h3>
     </div>
     <div>
-        <img routerLink="/location/location-name" src="assets/images/locations/rittenhouse-park.png" alt="Rittenhouse Square">
-        <h3 routerLink="/location/location-name">Rittenhouse Square</h3>
+        <img routerLink="/location/rittenhouse-park" src="assets/images/location/rittenhouse-park.png" alt="Rittenhouse Square" (click)="scrollToContent()">
+        <h3 routerLink="/location/rittenhouse-park" (click)="scrollToContent()">Rittenhouse Square</h3>
     </div>
     <div>
-        <img routerLink="/location/location-name" src="assets/images/locations/cooper-river-park.png" alt="Cooper River">
-        <h3 routerLink="/location/location-name">Cooper River</h3>
+        <img routerLink="/location/cooper-river-park" src="assets/images/location/cooper-river-park.png" alt="Cooper River" (click)="scrollToContent()">
+        <h3 routerLink="/location/cooper-river-park" (click)="scrollToContent()">Cooper River</h3>
     </div>
 </section>

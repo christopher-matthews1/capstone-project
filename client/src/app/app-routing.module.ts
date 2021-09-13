@@ -19,7 +19,10 @@ const routes: Routes = [{
       { path: '', component: HomeComponent },
       { path: 'about', component: AboutComponent },
       { path: 'location', component: LocationComponent },
-      { path: 'location/location-name', component: LocationDetailsComponent },
+      { path: 'location/washington-park', component: LocationDetailsComponent },
+      { path: 'location/brewery-park', component: LocationDetailsComponent },
+      { path: 'location/rittenhouse-park', component: LocationDetailsComponent },
+      { path: 'location/cooper-river-park', component: LocationDetailsComponent },
       // { path: 'location/:location-name', component: LocationDetailsComponent },
       // may need to move specific route higher than general route
       { path: 'teams', component: AllTeamsComponent },
@@ -32,7 +35,9 @@ const routes: Routes = [{
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

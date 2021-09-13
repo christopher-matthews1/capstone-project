@@ -2,8 +2,22 @@ img {
     width: 70%
 }
 
+h4 {
+    color: #F08700;
+}
+
 section {
     display: grid;
+}
+
+section.league {
     grid-template-columns: repeat(4, 25%);
-    justify-content: space-around; 
+}
+
+/* section.team { */
+    /* grid-template-columns: repeat(2, 50%); */
+/* } */
+
+.team-name {
+    cursor: pointer;
 }

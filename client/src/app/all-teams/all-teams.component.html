@@ -1,10 +1,14 @@
 <h2 id="teams">Teams</h2>
-<section>
+<section class="league">
     <div *ngFor="let league of allLeagues">
         <img src="{{league.image}}" alt="{{league.leagueName}} Photo">
         <h3>{{league.leagueName}}</h3>
-        <div *ngFor="let team of allTeams">
-            <app-team-details-short></app-team-details-short>
-        </div>
+        <section class="team" *ngFor="let team of getTeamByLeague(league.leagueName)">
+            <h4 class="team-name" routerLink="{{team.teamRoute}}" routerLinkActive="active" (click)="scrollToContent()">{{team.teamName}}</h4>
+            <div>
+                <p>Captain: {{team.captainName}}</p>
+                <p>Team Size: {{team.players.length}}/10</p>
+            </div>
+        </section>
     </div>
 </section>

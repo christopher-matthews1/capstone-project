@@ -12,5 +12,9 @@ export class RouteService {
     //Gets route without leading forward-slash
     return this.router.url.substring(1);
   }
+
+  getTeamRoute(): String {
+    return this.router.url.substring(1);
+  }
   
 }

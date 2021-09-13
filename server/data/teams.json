@@ -2,6 +2,7 @@
   {
     "teamId": 1,
     "teamName": "Sky High Ballers",
+    "teamRoute": "sky-high-ballers",
     "leagueName": "Washington Park",
     "captainName": "Olive Yew",
     "captainPhone": "555-555-0001",
@@ -73,6 +74,7 @@
   {
     "teamId": 2,
     "teamName": "Chicks N Kicks",
+    "teamRoute": "chick-n-kicks",
     "leagueName": "Ritterhouse Square",
     "captainName": "Maureen Biologist",
     "captainPhone": "555-555-0002",
@@ -118,138 +120,9 @@
     ]
   },
   {
-    "teamId": 3,
-    "teamName": "Ace of Bases",
-    "leagueName": "Washington Park",
-    "captainName": "Peg Legge",
-    "captainPhone": "555-555-0003",
-    "captainEmail": "peglegge@email.com",
-    "maxTeamSize": 10,
-    "players": [
-      {
-        "playerId": 17,
-        "playerEmail": "peglegge@email.com",
-        "playerName": "Peg Legge",
-        "playerPhone": "555-555-0003"
-      },
-      {
-        "playerId": 18,
-        "playerEmail": "epagetth@pen.io",
-        "playerName": "Ebony Pagett",
-        "playerPhone": "837-246-9912"
-      },
-      {
-        "playerId": 19,
-        "playerEmail": "bervini@networksolutions.com",
-        "playerName": "Brianna Ervin",
-        "playerPhone": "715-553-7135"
-      },
-      {
-        "playerId": 20,
-        "playerEmail": "sreubelj@scribd.com",
-        "playerName": "Stacia Reubel",
-        "playerPhone": "215-597-1185"
-      },
-      {
-        "playerId": 21,
-        "playerEmail": "lcornishk@cocolog-nifty.com",
-        "playerName": "Lawrence Cornish",
-        "playerPhone": "665-906-9430"
-      },
-      {
-        "playerId": 22,
-        "playerEmail": "lyoulel@mozilla.org",
-        "playerName": "Leigh Youle",
-        "playerPhone": "497-384-9967"
-      },
-      {
-        "playerId": 23,
-        "playerEmail": "mschulerm@state.gov",
-        "playerName": "Mirabelle Schuler",
-        "playerPhone": "959-477-3064"
-      },
-      {
-        "playerId": 24,
-        "playerEmail": "dsantryn@mozilla.com",
-        "playerName": "Daria Santry",
-        "playerPhone": "587-865-0561"
-      },
-      {
-        "playerId": 25,
-        "playerEmail": "jloebero@nifty.com",
-        "playerName": "Junia Loeber",
-        "playerPhone": "250-312-6278"
-      },
-      {
-        "playerId": 26,
-        "playerEmail": "dnicholasp@mapy.cz",
-        "playerName": "Dylan Nicholas",
-        "playerPhone": "139-339-9565"
-      }
-    ]
-  },
-  {
-    "teamId": 4,
-    "teamName": "Saved by the Ball",
-    "leagueName": "Washington Park",
-    "captainName": "Allie Grater",
-    "captainPhone": "555-555-0004",
-    "captainEmail": "alliegrater@email.com",
-    "maxTeamSize": 10,
-    "players": [
-      {
-        "playerId": 27,
-        "playerEmail": "alliegrater@email.com",
-        "playerName": "Allie Grater",
-        "playerPhone": "555-555-0004"
-      },
-      {
-        "playerId": 28,
-        "playerEmail": "jdudmanr@zdnet.com",
-        "playerName": "Javier Dudman",
-        "playerPhone": "519-725-2184"
-      },
-      {
-        "playerId": 29,
-        "playerEmail": "swynnes@icio.us",
-        "playerName": "Siouxie Wynne",
-        "playerPhone": "944-158-2856"
-      },
-      {
-        "playerId": 30,
-        "playerEmail": "jernket@ustream.tv",
-        "playerName": "Janette Ernke",
-        "playerPhone": "801-641-7905"
-      },
-      {
-        "playerId": 31,
-        "playerEmail": "jmatveichevu@wikimedia.org",
-        "playerName": "Johnathan Matveichev",
-        "playerPhone": "754-667-7373"
-      },
-      {
-        "playerId": 32,
-        "playerEmail": "kcowperthwaitev@cnet.com",
-        "playerName": "Kelcey Cowperthwaite",
-        "playerPhone": "415-554-3684"
-      },
-      {
-        "playerId": 33,
-        "playerEmail": "klakeyw@skype.com",
-        "playerName": "Kaspar Lakey",
-        "playerPhone": "483-645-9318"
-      },
-      {
-        "playerId": 34,
-        "playerEmail": "eharriskinex@goo.gl",
-        "playerName": "Erina Harriskine",
-        "playerPhone": "978-844-9753"
-      }
-    ]
-  },
-  {
     "teamId": 5,
     "teamName": "New Kicks On The Block",
+    "teamRoute": "new-kicks-on-the-block",
     "leagueName": "Washington Park",
     "captainName": "Hugo First",
     "captainPhone": "555-555-0005",
@@ -285,6 +158,7 @@
   {
     "teamId": 6,
     "teamName": "We Do Kickin' Right",
+    "teamRoute": "we-do-kickin-right",
     "leagueName": "Brewery District",
     "captainName": "Anita Bath",
     "captainPhone": "555-555-0006",
@@ -344,6 +218,7 @@
   {
     "teamId": 7,
     "teamName": "Fresh Prince of Ball Air",
+    "teamRoute": "fresh-prince-of-ball-air",
     "leagueName": "Brewery District",
     "captainName": "Colin Sik",
     "captainPhone": "555-555-0007",
@@ -403,6 +278,7 @@
   {
     "teamId": 8,
     "teamName": "Don't Stop Ballieving",
+    "teamRoute": "dont-stop-ballieving",
     "leagueName": "Brewery District",
     "captainName": "Lee Nonmi",
     "captainPhone": "555-555-0008",
@@ -468,6 +344,7 @@
   {
     "teamId": 9,
     "teamName": "One Kick Wonders",
+    "teamRoute": "one-kick-wonders",
     "leagueName": "Brewery District",
     "captainName": "Fran Tick",
     "captainPhone": "555-555-0009",
@@ -497,7 +374,8 @@
   {
     "teamId": 10,
     "teamName": "Club Foot",
-    "leagueName": "Cooper River",
+    "teamRoute": "club-foot",
+    "leagueName": "Cooper River Park",
     "captainName": "Tex Ryta",
     "captainPhone": "555-555-0010",
     "captainEmail": "texryta@email.com",
@@ -550,7 +428,8 @@
   {
     "teamId": 11,
     "teamName": "Our Kicks Don't Lie",
-    "leagueName": "Cooper River",
+    "teamRoute": "our-kick-dont-lie",
+    "leagueName": "Cooper River Park",
     "captainName": "Wiley Waites",
     "captainPhone": "555-555-0011",
     "captainEmail": "wileywaites@email.com",
@@ -621,7 +500,8 @@
   {
     "teamId": 12,
     "teamName": "Toejammers",
-    "leagueName": "Cooper River",
+    "teamRoute": "toejammers",
+    "leagueName": "Cooper River Park",
     "captainName": "Anne Gloindian",
     "captainPhone": "555-555-0012",
     "captainEmail": "gloindian@email.com",
@@ -668,7 +548,8 @@
   {
     "teamId": 13,
     "teamName": "Miami Feet",
-    "leagueName": "Cooper River",
+    "teamRoute": "miami-feet",
+    "leagueName": "Cooper River Park",
     "captainName": "Abby Normal",
     "captainPhone": "555-555-0013",
     "captainEmail": "abbynormal@email.com",
@@ -727,6 +608,7 @@
   {
     "teamId": 14,
     "teamName": "I’d Kick It",
+    "teamRoute": "id-kick-it",
     "leagueName": "Ritterhouse Square",
     "captainName": "Neil Down",
     "captainPhone": "555-555-0014",
@@ -786,6 +668,7 @@
   {
     "teamId": 15,
     "teamName": "Kick it & Bounce",
+    "teamRoute": "kick-it-and-bounce",
     "leagueName": "Ritterhouse Square",
     "captainName": "Al Annon",
     "captainPhone": "555-555-0015",
@@ -845,59 +728,6 @@
         "playerEmail": "bolongain35@auda.org.au",
         "playerName": "Belicia O'Longain",
         "playerPhone": "790-283-8128"
-      }
-    ]
-  },
-  {
-    "teamId": 16,
-    "teamName": "Alive and Kicking",
-    "leagueName": "Ritterhouse Square",
-    "captainName": "Saul Goodmate",
-    "captainPhone": "555-555-0016",
-    "captainEmail": "saulgoodmate@email.com",
-    "maxTeamSize": 10,
-    "players": [
-      {
-        "playerId": 115,
-        "playerEmail": "saulgoodmate@email.com",
-        "playerName": "Saul Goodmate",
-        "playerPhone": "555-555-0016"
-      },
-      {
-        "playerId": 116,
-        "playerEmail": "rbuzza37@adobe.com",
-        "playerName": "Rolfe Buzza",
-        "playerPhone": "847-111-3682"
-      },
-      {
-        "playerId": 117,
-        "playerEmail": "rjevons38@arstechnica.com",
-        "playerName": "Randal Jevons",
-        "playerPhone": "773-803-5766"
-      },
-      {
-        "playerId": 118,
-        "playerEmail": "gcooley39@squarespace.com",
-        "playerName": "Gareth Cooley",
-        "playerPhone": "506-172-2917"
-      },
-      {
-        "playerId": 119,
-        "playerEmail": "okubasiewicz3a@ezinearticles.com",
-        "playerName": "Opal Kubasiewicz",
-        "playerPhone": "604-569-0518"
-      },
-      {
-        "playerId": 120,
-        "playerEmail": "bbrandes3b@51.la",
-        "playerName": "Balduin Brandes",
-        "playerPhone": "265-873-5095"
-      },
-      {
-        "playerId": 121,
-        "playerEmail": "cridoutt3c@tmall.com",
-        "playerName": "Cordey Ridoutt",
-        "playerPhone": "858-265-9076"
       }
     ]
   }

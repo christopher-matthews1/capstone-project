@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { LocationService } from '../services/location.service';
+import { RouteService } from '../services/route.service';
 
 @Component({
   selector: 'app-location-details',
@@ -12,27 +14,13 @@ export class LocationDetailsComponent implements OnInit {
   locationRoute: String;
   router: Router;
 
-  constructor(private _router: Router) { 
+  constructor(private _router: Router, private locationService: LocationService, private routeService: RouteService) { 
     this.router = _router;
   }
 
-  getRoute(): String {
-    //Gets route without leading forward-slash
-    return this.router.url.substring(1);
-  }
-
-  getLocationName(): String {
-    //Gets dashed name, removes dash and caps the first letter of each word
-    return this.locationRoute
-                  .substring(9)
-                  .split('-')
-                  .map((firstLetter) => firstLetter.charAt(0).toUpperCase() + firstLetter.substring(1))
-                  .join(' ');
-  }
-
   ngOnInit(): void {
-    this.locationRoute = this.getRoute();
-    this.locationName = this.getLocationName();
+    this.locationRoute = this.routeService.getRoute();
+    this.locationName = this.locationService.getLocationName();
     
   }
 

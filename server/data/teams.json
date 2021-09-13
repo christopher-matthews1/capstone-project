@@ -1,4 +1,4 @@
-[
+{ "teams": [
   {
     "TeamId": 1,
     "TeamName": "Sky High Ballers",
@@ -902,3 +902,4 @@
     ]
   }
 ]
+}

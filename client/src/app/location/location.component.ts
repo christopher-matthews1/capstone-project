@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { League } from '../models/League';
+import { LeagueService } from '../services/league.service';
 import { ScrollService } from '../services/scroll.service';
 
 @Component({
@@ -8,18 +10,22 @@ import { ScrollService } from '../services/scroll.service';
   styleUrls: ['./location.component.css']
 })
 export class LocationComponent implements OnInit {
+  allLeagues: League[];
 
   router: Router;
 
-  constructor(private _router: Router, private scrollService: ScrollService) {
+  constructor(private _router: Router, private scrollService: ScrollService, private leagueService: LeagueService) {
     this.router = _router;
    }
 
   ngOnInit(): void {
+    this.leagueService.getLeagues().subscribe((response: any) => {
+      this.allLeagues = response;
+    });
   }
 
   scrollToContent() {
     this.scrollService.scrollToContent();
-}
+  }
 
 }

@@ -4,7 +4,7 @@
         <img src="{{league.image}}" alt="{{league.leagueName}} Photo">
         <h3>{{league.leagueName}}</h3>
         <section class="team" *ngFor="let team of getTeamByLeague(league.leagueName)">
-            <h4 class="team-name" routerLink="{{team.teamRoute}}" routerLinkActive="active" (click)="scrollToContent()">{{team.teamName}}</h4>
+            <h4 class="team-name" routerLink="{{team.teamRoute}}" (click)="scrollToContent()">{{team.teamName}}</h4>
             <div>
                 <p>Captain: {{team.captainName}}</p>
                 <p>Team Size: {{team.players.length}}/10</p>

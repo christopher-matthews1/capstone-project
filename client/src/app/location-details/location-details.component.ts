@@ -16,7 +16,6 @@ export class LocationDetailsComponent implements OnInit {
   locationRoute: String;
   locationDescription: String;
   allLeagues: League[];
-  errorMessage;
   router: Router;
 
   constructor(private _router: Router, private locationService: LocationService, private routeService: RouteService, private leagueService: LeagueService) { 
@@ -36,9 +35,7 @@ export class LocationDetailsComponent implements OnInit {
     this.locationName = this.locationService.getLocationName();
     this.leagueService.getLeagues().subscribe((response: any) => {
       this.allLeagues = response;
-      console.log(this.allLeagues);
     });
-    console.log(this.allLeagues);
   }
 
 }

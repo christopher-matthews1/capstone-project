@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+
+import { Player } from '../models/Player';
 import { RouteService } from '../services/route.service';
 
 @Component({
@@ -8,6 +10,9 @@ import { RouteService } from '../services/route.service';
 })
 export class TeamComponent implements OnInit {
 
+  teamName;
+
+  teamPlayers: Player[];  
   teamRoute: String;
 
   constructor(private routeService: RouteService) { }

@@ -1,24 +1,28 @@
 [
 	{
 		"leagueName": "Washington Park",
+		"leagueRoute": "washington-park",
 		"leagueId": "1",
 		"description": "This league is in Old City and plays at Washingtion Park which is located at the corner of Chestnut St and S 5th st.",
 		"image": "assets/images/location/washington-park.png"
 	},
 	{
 		"leagueName": "Brewery District",
+		"leagueRoute": "brewery-district",
 		"leagueId": "2",
 		"description": "This league is north of Center City, located in the Brewery District. The field is located at Fitler Park on NW 23rd st.",
 		"image": "assets/images/location/brewery-district.png"
     },
     {
 		"leagueName": "Cooper River Park",
+		"leagueRoute": "cooper-river-park",
 		"leagueId": "3",
 		"description": "This league is played at Cooper River Park, located in Center City. The park enterance is on the corner of Pine st and Walnut st.",
 		"image": "assets/images/location/cooper-river-park.png"
 	},
 	{
 		"leagueName": "Ritterhouse Square",
+		"leagueRoute": "rittenhouse-square",
 		"leagueId": "4",
 		"description": "This league plays at Ritterhouse Square, located south of Center City. Ritterhouse Square is between South st and Broad st.",
 		"image": "assets/images/location/rittenhouse-square.png"

@@ -20,7 +20,6 @@ export class AllTeamsComponent implements OnInit {
   ngOnInit(): void {
     this.leagueService.getLeagues().subscribe((response: any) => {
       this.allLeagues = response;
-      console.log(this.allLeagues);
     });
     this.teamService.getTeams().subscribe((response: any) => {
       this.allTeams = response;

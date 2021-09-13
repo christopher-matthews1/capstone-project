@@ -1,5 +1,9 @@
 h1 {
-    font-size: 4em;
+    margin: .5em;
+    font-size: 6em;
+    font-family: 'Carter One', cursive;
+    /* font-family: 'Oleo Script', cursive; */
+    /* font-family: 'Simonetta', cursive; */
     color: #F08700;
 }
 

@@ -21,10 +21,10 @@
 		"image": "assets/images/location/cooper-river-park.png"
 	},
 	{
-		"leagueName": "Ritterhouse Square",
+		"leagueName": "Rittenhouse Square",
 		"leagueRoute": "rittenhouse-square",
 		"leagueId": "4",
-		"description": "This league plays at Ritterhouse Square, located south of Center City. Ritterhouse Square is between South st and Broad st.",
+		"description": "This league plays at Rittenhouse Square, located south of Center City. Rittenhouse Square is between South st and Broad st.",
 		"image": "assets/images/location/rittenhouse-square.png"
 	}
 ]

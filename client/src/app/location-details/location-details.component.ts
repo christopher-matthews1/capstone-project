@@ -26,16 +26,10 @@ export class LocationDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.leagueService.getLeagues();
     this.leagueService.data.subscribe(data => {
       this.allLeagues = data;
-      console.log(data);
     })
-
-    this.locationRoute = this.routeService.getRoute();
-  }
-
-  test() {
-    console.log(this.locationRoute);
   }
 
   getLeague() {

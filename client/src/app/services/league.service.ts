@@ -28,11 +28,9 @@ export class LeagueService {
     //--------------TESTING-----------------
 
   getLeagues() {
-    // const results: Observable<League> = 
     this.http.get<League[]>(this.LeagueUrl).subscribe(results => {
       this.data.next(results);
     })
-    // return results
   }
 
   // getLeagueById(LeagueId: string):Observable<League> {

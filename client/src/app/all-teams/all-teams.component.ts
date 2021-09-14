@@ -15,24 +15,32 @@ export class AllTeamsComponent implements OnInit {
   allTeams: Team[];
   teamNameDashed: String;
 
-  constructor(private leagueService: LeagueService, private teamService: TeamService, private scrollService: ScrollService) {}
+  constructor(private leagueService: LeagueService, private teamService: TeamService) {}
 
   ngOnInit(): void {
+
+    // OLD WAY
     // this.leagueService.getLeagues().subscribe((response: any) => {
     //   this.allLeagues = response;
     // });
+
+    // NEW WAY
+    this.leagueService.getLeagues();
     this.leagueService.data.subscribe(data => {
       this.allLeagues = data;
-      console.log(data);
     })
+
+    // OLD WAY
     this.teamService.getTeams().subscribe((response: any) => {
       this.allTeams = response;
     });
-  }
 
-  scrollToContent() {
-    this.scrollService.scrollToContent();
-}
+    // NEW WAY
+    // this.teamService.getTeams();
+    // this.teamService.data.subscribe(data => {
+    //   this.allTeams = data;
+    // });
+  }
 
   getTeamNameDashed(teamName): String {
     return teamName.toLowerCase().split(' ').join('-');

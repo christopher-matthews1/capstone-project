@@ -13,7 +13,7 @@ import { TeamService } from '../services/team.service';
 })
 export class TeamComponent implements OnInit {
 
-  teamName;
+  teamObject;
   allTeams;
   allLeagues;
   activatedRoute: ActivatedRouteSnapshot;
@@ -29,19 +29,19 @@ export class TeamComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // OLD WAY
     // this.leagueService.getLeagues().subscribe((response: any) => {
     //   this.allLeagues = response;
     // });
+
+    // NEW WAY
+    this.leagueService.getLeagues();
     this.leagueService.data.subscribe(data => {
       this.allLeagues = data;
-      console.log(data);
     })
     this.teamService.getTeams().subscribe((response: any) => {
       this.allTeams = response;
     });
-
-    this.anchorRoute = this.routeService.getRoute();
-    console.log(this.anchorRoute)
   }
 
   // Perfect world: Find the team that matches the route, then find the league the matches the teams league.
@@ -53,9 +53,12 @@ export class TeamComponent implements OnInit {
   // }
 
   getTeamData(property) {
-    let teamObject = this.allTeams.find(team => team.teamRoute === this.activatedRoute.params.teamName);
-    console.log(teamObject[property])
-    return teamObject[property];
+    console.log(this.teamObject)
+    return this.teamObject[property];
+  }
+
+  getTeamName() {
+    return this.teamObject.teamName;
   }
 
 

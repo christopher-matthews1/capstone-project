@@ -1,7 +1,7 @@
 <h2 id="location" [hidden]="(this.router.url === '/sign-up')">Locations</h2>
 <section>
     <div *ngFor="let leagues of allLeagues">
-        <img routerLink="/location/{{leagues.leagueRoute}}" src="assets/images/location/{{leagues.leagueRoute}}.png" alt="{{leagues.leagueName}}" (click)="scrollToContent()">
-        <h3 routerLink="/location/{{leagues.leagueRoute}}" (click)="scrollToContent()">{{leagues.leagueName}}</h3>
+        <img routerLink="/location/{{leagues.leagueRoute}}" src="assets/images/location/{{leagues.leagueRoute}}.png" alt="{{leagues.leagueName}}">
+        <h3 routerLink="/location/{{leagues.leagueRoute}}">{{leagues.leagueName}}</h3>
     </div>
 </section>

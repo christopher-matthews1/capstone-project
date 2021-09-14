@@ -9,23 +9,23 @@ import { TeamService } from '../services/team.service';
   templateUrl: './teams-by-league.component.html',
   styleUrls: ['./teams-by-league.component.css']
 })
-export class TeamsByLeagueComponent implements OnInit {
+export class TeamsByLeagueComponent {
   allLeagues: League[];
   allTeams: Team[];
 
   constructor(private leagueService: LeagueService, private teamService: TeamService) { }
 
-  ngOnInit(): void {
-    this.leagueService.getLeagues().subscribe((response: any) => {
-      this.allLeagues = response;
-      console.log(this.allLeagues);
-    });
-    for(let league of this.allLeagues) {
-      this.teamService.getTeamById(league.leagueId).subscribe((response: any) => {
-        this.allLeagues = response;
-        console.log(this.allLeagues);
-      });
-    }
-  }
+  // ngOnInit(): void {
+  //   this.leagueService.getLeagues().subscribe((response: any) => {
+  //     this.allLeagues = response;
+  //     console.log(this.allLeagues);
+  //   });
+  //   for(let league of this.allLeagues) {
+  //     this.teamService.getTeamById(league.leagueId).subscribe((response: any) => {
+  //       this.allLeagues = response;
+  //       console.log(this.allLeagues);
+  //     });
+  //   }
+  // }
 
 }

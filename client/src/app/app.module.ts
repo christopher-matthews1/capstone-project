@@ -18,6 +18,8 @@ import { LocationDetailsComponent } from './location-details/location-details.co
 import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { HttpClientModule } from '@angular/common/http';
+import { AddTeamComponent } from './add-team/add-team.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -35,12 +37,15 @@ import { HttpClientModule } from '@angular/common/http';
     PlayerComponent,
     LocationComponent,
     LocationDetailsComponent,
-    SignUpComponent
+    SignUpComponent,
+    AddTeamComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

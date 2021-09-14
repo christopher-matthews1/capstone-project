@@ -1,0 +1,21 @@
+<form [formGroup]="teamForm" (ngSubmit)="onSubmit(teamForm.value)">
+    <label for="teamName">Team Name</label>
+    <input type="text" id="teamName" formControlName="teamName">
+    <label  for="leagueName">League Name</label>
+    <!-- TODO: have league populate given the location that was clicked on -->
+    <select id="leagueName" formControlName="leagueName">
+        <option value="Washington Park">Washington Park</option>
+        <option value="Brewery District">Brewery District</option>
+        <option value="Cooper River Park">Cooper River Park</option>
+        <option value="Rittenhouse Square">Rittenhouse Square</option>
+    </select>
+    <label for="captainName">Captain Name</label>
+    <input type="text" id="captainName" formControlName="captainName">
+    <label for="captainPhone">Captain Phone</label>
+    <input type="text" id="captainPhone" formControlName="captainPhone">
+    <label for="captainEmail">Captain Email</label>
+    <input type="text" id="captainEmail" formControlName="captainEmail">
+
+    <input type="button" id="cancel-register-team" value="Cancel" routerLink='/teams'>
+    <input type="submit" id="register-team" value="Create Team!">
+</form>

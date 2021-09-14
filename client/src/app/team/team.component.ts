@@ -29,9 +29,13 @@ export class TeamComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.leagueService.getLeagues().subscribe((response: any) => {
-      this.allLeagues = response;
-    });
+    // this.leagueService.getLeagues().subscribe((response: any) => {
+    //   this.allLeagues = response;
+    // });
+    this.leagueService.data.subscribe(data => {
+      this.allLeagues = data;
+      console.log(data);
+    })
     this.teamService.getTeams().subscribe((response: any) => {
       this.allTeams = response;
     });

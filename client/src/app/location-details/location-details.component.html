@@ -6,7 +6,8 @@
     </div>
     <div>
         <p [innerText]="getLeagueData('description')"></p>
-        <button>Join a team!</button>
-        <button>Create a team!</button>
+        <a routerLink="add-team" (click)="addTeam(getLeague())">
+            <input type="button" value="Create a team!">
+        </a>
     </div>
 </section>

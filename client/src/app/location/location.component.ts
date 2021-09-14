@@ -19,9 +19,13 @@ export class LocationComponent implements OnInit {
    }
 
   ngOnInit(): void {
-    this.leagueService.getLeagues().subscribe((response: any) => {
-      this.allLeagues = response;
-    });
+    // this.leagueService.getLeagues().subscribe((response: any) => {
+    //   this.allLeagues = response;
+    // });
+    this.leagueService.data.subscribe(data => {
+      this.allLeagues = data;
+      console.log(data);
+    })
   }
 
   scrollToContent() {

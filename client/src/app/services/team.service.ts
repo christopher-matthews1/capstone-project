@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Team } from '../models/Team';
 
 @Injectable({
@@ -16,6 +16,22 @@ export class TeamService {
   }
 
   errorMessage: string;
+
+  //--------------TESTING-----------------
+
+  data = new BehaviorSubject<Team>({} as any);
+  currentData = this.data.asObservable();
+
+  sendSelectedTeam(data): void {
+    this.data.next(data);
+  }
+
+  addTeam(team: Team) {
+    const results: Observable<Team> = this.http.post<Team>(`${this.teamsUrl}`, team, this.jsonContentTypeHeaders);
+    return results;
+  }
+
+  //--------------TESTING-----------------
 
   getTeams():Observable<Team> {
     const results: Observable<Team> = this.http.get<Team>(this.teamsUrl);

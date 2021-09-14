@@ -231,6 +231,7 @@ app.post("/api/teams", urlencodedParser, function (req, res) {
     let team = {
         teamId: getNextId("team"),  // assign id to team
 		teamName: req.body.teamName,
+        teamRoute: req.body.teamRoute,
 		leagueName: req.body.leagueName,
 		captainName: req.body.captainName,
 		captainPhone: req.body.captainPhone,

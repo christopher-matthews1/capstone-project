@@ -22,10 +22,9 @@ export class LocationComponent implements OnInit {
     // this.leagueService.getLeagues().subscribe((response: any) => {
     //   this.allLeagues = response;
     // });
-    this.leagueService.getLeagues();
-    this.leagueService.data.subscribe(data => {
+    this.leagueService.getLeagues().subscribe((data: any) => {
       this.allLeagues = data;
-    })
+    });
   }
 
   // scrollToContent() {

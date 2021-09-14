@@ -20,19 +20,19 @@ export class AllTeamsComponent implements OnInit {
   ngOnInit(): void {
 
     // OLD WAY
-    // this.leagueService.getLeagues().subscribe((response: any) => {
-    //   this.allLeagues = response;
-    // });
+    this.leagueService.getLeagues().subscribe((data: any) => {
+      this.allLeagues = data;
+    });
 
     // NEW WAY
-    this.leagueService.getLeagues();
-    this.leagueService.data.subscribe(data => {
-      this.allLeagues = data;
-    })
+    // this.leagueService.getLeagues();
+    // this.leagueService.data.subscribe(data => {
+    //   this.allLeagues = data;
+    // })
 
     // OLD WAY
-    this.teamService.getTeams().subscribe((response: any) => {
-      this.allTeams = response;
+    this.teamService.getTeams().subscribe((data: any) => {
+      this.allTeams = data;
     });
 
     // NEW WAY

@@ -13,7 +13,6 @@ import { TeamService } from '../services/team.service';
 export class LocationDetailsComponent implements OnInit {
 
   leagueObject: League;
-  locationDescription: String;
   router: Router;
   activatedRoute: ActivatedRouteSnapshot;
 
@@ -23,8 +22,8 @@ export class LocationDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.leagueService.getLeagues();
-    this.leagueService.data.subscribe(data => {
+    // this.leagueService.getLeagues();
+    this.leagueService.getLeagues().subscribe((data: any) => {
       this.leagueObject = data.find(league => league.leagueRoute === this.activatedRoute.params.leagueName)
     })
   }

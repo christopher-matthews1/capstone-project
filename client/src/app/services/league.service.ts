@@ -8,7 +8,7 @@ import { League } from '../models/League';
 })
 export class LeagueService {
 
-  LeagueUrl = 'http://localhost:8082/api/leagues';
+  leagueUrl = 'http://localhost:8082/api/leagues';
 
   jsonContentTypeHeaders = {
     headers: new HttpHeaders().set('Content-Type', 'application/json')
@@ -27,10 +27,16 @@ export class LeagueService {
   
     //--------------TESTING-----------------
 
-  getLeagues() {
-    this.http.get<League[]>(this.LeagueUrl).subscribe(results => {
-      this.data.next(results);
-    })
+  // getLeagues() {
+  //   this.http.get<League[]>(this.LeagueUrl).subscribe(results => {
+  //     this.data.next(results);
+  //   })
+  // }
+
+  getLeagues():Observable<League> {
+    const results: Observable<League> = this.http.get<League>(this.leagueUrl);
+    console.log(`getTeams() returned ${results}`);
+    return results
   }
 
   // getLeagueById(LeagueId: string):Observable<League> {

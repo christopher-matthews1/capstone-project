@@ -30,18 +30,20 @@ export class TeamComponent implements OnInit {
 
   ngOnInit(): void {
     // OLD WAY
-    // this.leagueService.getLeagues().subscribe((response: any) => {
-    //   this.allLeagues = response;
-    // });
+    this.leagueService.getLeagues().subscribe((response: any) => {
+      this.allLeagues = response;
+      console.log(response);
+    });
 
     // NEW WAY
-    this.leagueService.getLeagues();
-    this.leagueService.data.subscribe(data => {
-      this.allLeagues = data;
-    })
+    // this.leagueService.getLeagues();
+    // this.leagueService.data.subscribe(data => {
+    //   this.allLeagues = data;
+    // })
 
     this.teamService.getTeams().subscribe((response: any) => {
       this.allTeams = response;
+
       this.teamObject = response.find(team => team.teamRoute === this.activatedRoute.params.teamName)
     });
   }

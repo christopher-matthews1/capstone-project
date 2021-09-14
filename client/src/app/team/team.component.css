@@ -12,3 +12,7 @@ section {
     display: grid;
     grid-template-columns: repeat(3,auto);
 }
+.players>div {
+    /* width: clamp(350px,5vw,500px); */
+    text-align: left;
+}

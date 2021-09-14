@@ -1,27 +1,16 @@
-<h2 id="{{anchorRoute}}">Team Name</h2>
+<h2 [id]="'teams/' + getTeamData('teamRoute')" [innerText]="getTeamData('teamName')"></h2>
 <section>
     <div>
-        <img src="assets/images/location/washington-park.png" alt="Location Photo">
-        <h3>Washington Park</h3>
+        <!-- Somehow add interpolation to the image. This is soooooo janky-->
+        <img [src]="'assets/images/location/' + getLeagueNameDashed(getTeamData('leagueName')) + '.png'" [alt]="getTeamData('leagueName')">
+        <h3 [innerText]="getTeamData('leagueName')"></h3>
     </div>
     <div class="players">
-        <!-- <div *ngFor="let player of teamPlayers">
-            <section>
-                <h4>Player: player.playerName</h4>
-                <p>Email: player.playerEmail</p>
-                <p>Phone Number: player.playerPhone</p>
-                <p>Edit - Delete (for captain)</p>
-            </section>
-        </div> -->
-        <app-player></app-player>
-        <app-player></app-player>
-        <app-player></app-player>
-        <app-player></app-player>
-        <app-player></app-player>
-        <app-player></app-player>
-        <app-player></app-player>
-        <app-player></app-player>
-        <app-player></app-player>
-        <app-player></app-player>
+        <div *ngFor="let player of getTeamData('players')">
+            <h4>Player: {{player.playerName}}</h4>
+            <p>Email: {{player.playerEmail}}</p>
+            <p>Phone Number: {{player.playerPhone}}</p>
+            <p>Edit - Delete (for captain)</p>
+        </div>
     </div>
 </section>

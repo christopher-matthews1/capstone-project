@@ -19,11 +19,7 @@ const routes: Routes = [{
       { path: '', component: HomeComponent },
       { path: 'about', component: AboutComponent },
       { path: 'location', component: LocationComponent },
-      { path: 'location/washington-park', component: LocationDetailsComponent },
-      { path: 'location/brewery-district', component: LocationDetailsComponent },
-      { path: 'location/rittenhouse-square', component: LocationDetailsComponent },
-      { path: 'location/cooper-river-park', component: LocationDetailsComponent },
-      // { path: 'location/:location-name', component: LocationDetailsComponent },
+      { path: 'location/:leagueName', component: LocationDetailsComponent },
       // may need to move specific route higher than general route
       { path: 'teams', component: AllTeamsComponent },
       { path: 'teams/:teamName', component: TeamComponent },

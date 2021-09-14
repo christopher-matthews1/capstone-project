@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
 import { League } from '../models/League';
 import { LeagueService } from '../services/league.service';
 import { LocationService } from '../services/location.service';
@@ -12,30 +12,32 @@ import { RouteService } from '../services/route.service';
 })
 export class LocationDetailsComponent implements OnInit {
 
-  locationName: String;
   locationRoute: String;
   locationDescription: String;
   allLeagues: League[];
   router: Router;
+  activatedRoute: ActivatedRouteSnapshot;
 
-  constructor(private _router: Router, private locationService: LocationService, private routeService: RouteService, private leagueService: LeagueService) { 
+  constructor(private _router: Router, private routeService: RouteService, private leagueService: LeagueService, private _activatedRoute: ActivatedRoute) { 
     this.router = _router;
+    this.activatedRoute = _activatedRoute.snapshot;
   }
 
-  // getLeagueDescription(): String {
-  //   return this.locationDescription = this.allLeagues.find(location => {
-  //     console.log(location.leagueName);
-  //     console.log(this.locationName);
-  //     location.leagueName == this.locationName;
-  //   }).description;
-  // }
-
   ngOnInit(): void {
-    this.locationRoute = this.routeService.getRoute();
-    this.locationName = this.locationService.getLocationName();
     this.leagueService.getLeagues().subscribe((response: any) => {
       this.allLeagues = response;
     });
+    this.locationRoute = this.routeService.getRoute();
+  }
+
+  test() {
+    console.log(this.locationRoute);
+  }
+
+  getLeagueData(property) {
+    let leagueObject = this.allLeagues.find(league => league.leagueRoute === this.activatedRoute.params.leagueName);
+    console.log(leagueObject[property])
+    return leagueObject[property];
   }
 
 }

@@ -10,10 +10,13 @@ export class LocationService {
 
   getLocationName(): String {
     //Gets dashed name, removes dash and caps the first letter of each word
-    return this.router.url
+    let route = this.router.url
                   .substring(10)
                   .split('-')
                   .map((firstLetter) => firstLetter.charAt(0).toUpperCase() + firstLetter.substring(1))
                   .join(' ');
+    console.log(route);
+    return route;
   }
+
 }

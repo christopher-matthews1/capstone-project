@@ -1,12 +1,12 @@
 <!-- <h2 id="location/location-name">Rittenhouse Square</h2> -->
-<h2 [innerText]="getLeagueData('leagueName')"></h2>
+<h2 innerText={{leagueObject.leagueName}}></h2>
 <section>
     <div>
-        <img [src]="getLeagueData('image')" [alt]="getLeagueData('leagueName')">
+        <img src={{leagueObject.image}} alt={{leagueObject.leagueName}}>
     </div>
     <div>
-        <p [innerText]="getLeagueData('description')"></p>
-        <a routerLink="add-team" (click)="addTeam(getLeague())">
+        <p innerText={{leagueObject.description}}></p>
+        <a routerLink="add-team" (click)="addTeam(leagueObject)">
             <input type="button" value="Create a team!">
         </a>
     </div>

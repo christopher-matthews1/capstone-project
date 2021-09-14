@@ -39,8 +39,10 @@ export class TeamComponent implements OnInit {
     this.leagueService.data.subscribe(data => {
       this.allLeagues = data;
     })
+
     this.teamService.getTeams().subscribe((response: any) => {
       this.allTeams = response;
+      this.teamObject = response.find(team => team.teamRoute === this.activatedRoute.params.teamName)
     });
   }
 

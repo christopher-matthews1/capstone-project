@@ -266,6 +266,7 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
   let team = {
     teamId: req.body.teamId,
     teamName: req.body.teamName,
+    teamRoute: req.body.teamRoute,
     leagueName: req.body.leagueName,
     coachName: req.body.coachName,
     coachPhone: req.body.coachPhone,
@@ -293,6 +294,7 @@ app.put("/api/teams", urlencodedParser, function (req, res) {
 
   // update the team
   match.teamName = req.body.teamName;
+  match.teamRoute = req.body.teamRoute;
   match.leagueName = req.body.leagueName;
   match.coachName = req.body.coachName;
   match.coachPhone = req.body.coachPhone;

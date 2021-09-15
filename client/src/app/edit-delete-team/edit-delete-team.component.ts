@@ -27,6 +27,7 @@ export class EditDeleteTeamComponent implements OnInit {
     this.teamForm = formBuilder.group({
       teamId: null,
       teamName: [null, [Validators.required]],
+      teamRoute: null,
       leagueName: null,
       coachName: [null, [Validators.required]],
       coachPhone: [null, [Validators.required]],
@@ -62,6 +63,7 @@ export class EditDeleteTeamComponent implements OnInit {
     if (this.teamForm.valid) {
       team.teamId = this.teamObject.teamId;
       team.leagueName = this.leagueObject.leagueName;
+      team.teamRoute = this.getTeamRoute(team);
       // TODO Route to team after joining
       alert(`Successfully edited: ${this.teamForm.value.teamName}`);
       this.teamService
@@ -77,5 +79,15 @@ export class EditDeleteTeamComponent implements OnInit {
     this.teamService
       .deleteTeamById(teamId)
       .subscribe((data) => this.router.navigateByUrl("/teams"));
+  }
+
+  getTeamRoute(team: Team) {
+    // TODO Fix regex spaces issue
+    let teamName = team.teamName
+      .toLowerCase()
+      .replace(/[^a-z0-9 ]/g, "")
+      .split(" ")
+      .join("-");
+    return teamName;
   }
 }

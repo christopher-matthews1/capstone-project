@@ -1,5 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -9,17 +11,13 @@ import { MainComponent } from './main/main.component';
 import { FooterComponent } from './footer/footer.component';
 import { LocationComponent } from './location/location.component';
 import { AboutComponent } from './about/about.component';
-import { TeamsByLeagueComponent } from './teams-by-league/teams-by-league.component';
 import { AllTeamsComponent } from './all-teams/all-teams.component';
-import { TeamDetailsShortComponent } from './team-details-short/team-details-short.component';
 import { TeamComponent } from './team/team.component';
 import { PlayerComponent } from './player/player.component';
 import { LocationDetailsComponent } from './location-details/location-details.component';
 import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
-import { HttpClientModule } from '@angular/common/http';
 import { AddTeamComponent } from './add-team/add-team.component';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JoinTeamComponent } from './join-team/join-team.component';
 import { EditDeletePlayerComponent } from './edit-delete-player/edit-delete-player.component';
 import { EditDeleteTeamComponent } from './edit-delete-team/edit-delete-team.component';
@@ -33,9 +31,7 @@ import { EditDeleteTeamComponent } from './edit-delete-team/edit-delete-team.com
     FooterComponent,
     HomeComponent,
     AboutComponent,
-    TeamsByLeagueComponent,
     AllTeamsComponent,
-    TeamDetailsShortComponent,
     TeamComponent,
     PlayerComponent,
     LocationComponent,

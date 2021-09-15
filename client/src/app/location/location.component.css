@@ -13,3 +13,8 @@ section {
     grid-template-columns: repeat(4, 20%);
     justify-content: space-around; 
 }
+
+p {
+    font-style: italic;
+    font-size: .8em;
+}

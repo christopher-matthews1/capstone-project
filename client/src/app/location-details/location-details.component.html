@@ -1,15 +1,13 @@
-<h2 innerText={{leagueObject.leagueName}}></h2>
-<section>
+<h2 *ngIf="leagueObject" innerText={{leagueObject.leagueName}}></h2>
+<section *ngIf="leagueObject">
     <div>
         <img src={{leagueObject.image}} alt={{leagueObject.leagueName}}>
     </div>
     <div>
         <p innerText={{leagueObject.description}}></p>
-        <a routerLink="add-team" (click)="addTeam(leagueObject)">
-            <input type="button" value="Create a team!">
-        </a>
-        <a routerLink="join-team" (click)="joinTeam(leagueObject)">
-            <input type="button" value="Join a Team!">
-        </a>
+        <div class="buttons">
+            <input type="button" value="Create a team!" routerLink="add-team" (click)="addTeam(leagueObject)">
+            <input type="button" value="Join a Team!" routerLink="join-team" (click)="joinTeam(leagueObject)">
+        </div>
     </div>
 </section>

@@ -35,7 +35,6 @@ export class LeagueService {
 
   getLeagues():Observable<League> {
     const results: Observable<League> = this.http.get<League>(this.leagueUrl);
-    console.log(`getTeams() returned ${results}`);
     return results
   }
 

@@ -26,24 +26,3 @@ input[type=text], select {
     box-sizing: border-box;
     text-align: left;
   }
-  
-  div.buttons>* {
-    width: 50%;
-    background-color: #F08700;
-    color: white;
-    padding: 1em 2em;
-    margin: 1em 0;
-    border: none;
-    border-radius: .5em;
-    cursor: pointer;
-  }
-  
-  div.buttons>*:hover {
-    background-color: #F49F0A;
-  }
-  
-  div.buttons {
-    display: grid;
-    grid-template-columns: 50% 50%;
-    justify-items: center;
-  }

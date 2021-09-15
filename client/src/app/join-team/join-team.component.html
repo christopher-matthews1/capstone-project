@@ -1,21 +1,28 @@
 <h2>Join a Team!</h2>
 <!-- <h2>Join a {{team.teamName}}!</h2> -->
+<section *ngIf="leagueObject">
+    <aside>
+        <img src={{leagueObject.image}} alt={{leagueObject.leagueName}}>
+        <h3>{{leagueObject.leagueName}}</h3>
+    </aside>
+    <div>
+        <form [formGroup]="playerForm" (ngSubmit)="onSubmit(playerForm.value)">
+            <label for="playerName">Player Name</label>
+            <input type="text" id="playerName" formControlName="playerName">
+            <label for="playerEmail">Player Email</label>
+            <input type="text" id="playerEmail" formControlName="playerEmail">
+            <label for="playerPhone">Player Phone</label>
+            <input type="text" id="playerPhone" formControlName="playerPhone">
 
-<form [formGroup]="playerForm" (ngSubmit)="onSubmit(playerForm.value)">
-    <label for="playerName">Player Name</label>
-    <input type="text" id="playerName" formControlName="playerName">
-    <label for="playerEmail">Player Email</label>
-    <input type="text" id="playerEmail" formControlName="playerEmail">
-    <label for="playerPhone">Player Phone</label>
-    <input type="text" id="playerPhone" formControlName="playerPhone">
-
-
-    <select id="teamId" formControlName="teamId">
-        <option *ngFor="let team of allTeams" [ngValue]="team.teamId">{{team.teamName}}</option>
-    </select>
-
-
-    <input type="button" id="cancel-join-team" value="Cancel" routerLink='/teams'>
-    <!-- <input type="button" id="cancel-register-team" value="Cancel" routerLink='/teams/{{team.teamRoute}}'> -->
-    <input type="submit" id="register-team" value="Join Team!">
-</form>
+            <label for="teamName">Team</label>
+            <select id="teamId" formControlName="teamId">
+                <option *ngFor="let team of leagueTeams" [ngValue]="team.teamId">{{team.teamName}}</option>
+            </select>
+            <div></div>
+            <div class="buttons">
+                <input type="submit" id="register-team" value="Join Team!">
+                <input type="button" id="cancel-join-team" value="Cancel" routerLink='/teams'>
+            </div>
+        </form>
+    </div>  
+</section>

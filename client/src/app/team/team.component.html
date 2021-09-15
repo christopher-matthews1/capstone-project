@@ -1,5 +1,5 @@
-<h2 innerText={{teamObject.teamName}}></h2>
-<section>
+<h2 *ngIf="teamObject" innerText={{teamObject.teamName}}></h2>
+<section *ngIf="teamObject">
     <div>
         <!-- Somehow add interpolation to the image. This is soooooo janky-->
         <img [src]="'assets/images/location/' + getLeagueNameDashed(teamObject.leagueName) + '.png'" alt={{teamObject.leagueName}}>

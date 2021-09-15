@@ -48,6 +48,8 @@ export class AllTeamsComponent implements OnInit {
 
   getTeamByLeague(leagueName): Team[] {
     //Saying property undenfied but still works.....
-    return this.allTeams.filter(teams => leagueName === teams.leagueName)
+    if (typeof this.allTeams !== 'undefined') {
+      return this.allTeams.filter(teams => leagueName === teams.leagueName)
+    }
   }
 }

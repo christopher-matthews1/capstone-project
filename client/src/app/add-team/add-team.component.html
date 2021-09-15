@@ -1,5 +1,5 @@
 <h2>Create a Team!</h2>
-<section>
+<section *ngIf="leagueObject">
     <aside>
         <img src={{leagueObject.image}} alt={{leagueObject.leagueName}}>
         <h3>{{leagueObject.leagueName}}</h3>

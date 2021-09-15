@@ -30,7 +30,6 @@ export class AddTeamComponent implements OnInit {
   ngOnInit(): void {
     this.leagueService.getLeagues().subscribe((data: any) => {
       this.leagueObject = data.find(league => league.leagueRoute === this.activatedRoute.params.leagueName)
-      console.log(this.leagueObject);
     })
   }
 

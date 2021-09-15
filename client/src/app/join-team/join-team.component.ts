@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
+import { League } from '../models/League';
 import { Player } from '../models/Player';
 import { Team } from '../models/Team';
+import { LeagueService } from '../services/league.service';
 import { TeamService } from '../services/team.service';
 
 @Component({
@@ -12,34 +14,45 @@ import { TeamService } from '../services/team.service';
 })
 export class JoinTeamComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private teamService: TeamService,  private router: Router) {
+  constructor(private formBuilder: FormBuilder, private teamService: TeamService, private leagueService: LeagueService, private _activatedRoute: ActivatedRoute, private router: Router) {
     this.playerForm = formBuilder.group({
       'playerName' : [null, [Validators.required]],
       'playerPhone' : [null, [Validators.required]],
       'playerEmail' : [null, [Validators.required]],
       'teamId' : [null, [Validators.required]]
     });
+    this.activatedRoute = _activatedRoute.snapshot
    }
 
-  allTeams: Team[];
+  activatedRoute: ActivatedRouteSnapshot;
+  leagueTeams: Team[];
   playerForm: FormGroup;
+  leagueObject: League;
 
   ngOnInit(): void {
     this.teamService.getTeams().subscribe((data: any) => {
-      this.allTeams = data;
+      // Filter for teams that match the location and are not full
+      this.leagueTeams = data.filter(teams => teams.leagueName === this.getLocationName() && teams.players.length != 10);
     });
+      // Finds the league that matches the path
+    this.leagueService.getLeagues().subscribe((data: any) => {
+      this.leagueObject = data.find(league => league.leagueRoute === this.activatedRoute.params.leagueName)
+    })
+  }
+
+  getLocationName(): String {
+    //Gets dashed name, removes dash and caps the first letter of each word
+    let teams = this.activatedRoute.params.leagueName
+                  .split('-')
+                  .map((firstLetter) => firstLetter.charAt(0).toUpperCase() + firstLetter.substring(1))
+                  .join(' ');
+    return teams;
   }
 
   onSubmit(player): void {
     let teamId = player.teamId;
-    let playerInfo = {
-      playerName: player.playerName,
-      playerPhone: player.playerPhone,
-      playerEmail: player.playerEmail
-    }
-
     // TODO Route to team after joining
-    this.teamService.addPlayerById(playerInfo, teamId).subscribe(team => this.router.navigateByUrl('/teams'));
+    this.teamService.addPlayerById(player, teamId).subscribe(team => this.router.navigateByUrl('/teams'));
   }
 
 }

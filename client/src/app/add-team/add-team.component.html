@@ -1,25 +1,30 @@
 <h2>Create a Team!</h2>
 <section>
-    <aside>
-        <img src={{leagueObject?.image}} alt={{leagueObject?.leagueName}}>
-        <h3>{{leagueObject?.leagueName}}</h3>
-        <p class="descriptionShort">{{leagueObject?.descriptionShort}}</p>
-    </aside>
-    <div>
-        <form [formGroup]="teamForm" (ngSubmit)="onSubmit(teamForm.value)">
-            <label for="teamName">Team Name:</label>
-            <input type="text" id="teamName" formControlName="teamName">
-            <label for="captainName">Captain Name:</label>
-            <input type="text" id="captainName" formControlName="captainName">
-            <label for="captainPhone">Captain Phone:</label>
-            <input type="text" id="captainPhone" formControlName="captainPhone">
-            <label for="captainEmail">Captain Email:</label>
-            <input type="text" id="captainEmail" formControlName="captainEmail">
-            <div></div>
-        <div class="buttons">
-            <input type="submit" id="register-team" value="Create Team!">
-            <input type="button" id="cancel-register-team" value="Cancel" routerLink='/teams'>
-        </div>
-        </form>
-    </div>
+  <aside>
+    <img src="{{ leagueObject?.image }}" alt="{{ leagueObject?.leagueName }}" />
+    <h3>{{ leagueObject?.leagueName }}</h3>
+    <p class="descriptionShort">{{ leagueObject?.descriptionShort }}</p>
+  </aside>
+  <div>
+    <form [formGroup]="teamForm" (ngSubmit)="onSubmit(teamForm.value)">
+      <label for="teamName">Team Name:</label>
+      <input type="text" id="teamName" formControlName="teamName" />
+      <label for="coachName">Coach Name:</label>
+      <input type="text" id="coachName" formControlName="coachName" />
+      <label for="coachPhone">Coach Phone:</label>
+      <input type="text" id="coachPhone" formControlName="coachPhone" />
+      <label for="coachEmail">Coach Email:</label>
+      <input type="text" id="coachEmail" formControlName="coachEmail" />
+      <div></div>
+      <div class="buttons">
+        <input type="submit" id="register-team" value="Create Team!" />
+        <input
+          type="button"
+          id="cancel-register-team"
+          value="Cancel"
+          routerLink="/teams"
+        />
+      </div>
+    </form>
+  </div>
 </section>

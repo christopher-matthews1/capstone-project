@@ -1,64 +1,81 @@
-import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
-import { League } from '../models/League';
-import { Player } from '../models/Player';
-import { Team } from '../models/Team';
-import { LeagueService } from '../services/league.service';
-import { TeamService } from '../services/team.service';
+import { Component, OnInit } from "@angular/core";
+import { FormBuilder, FormGroup, Validators } from "@angular/forms";
+import {
+  ActivatedRoute,
+  ActivatedRouteSnapshot,
+  Router,
+} from "@angular/router";
+import { League } from "../models/League";
+import { Player } from "../models/Player";
+import { Team } from "../models/Team";
+import { LeagueService } from "../services/league.service";
+import { TeamService } from "../services/team.service";
 
 @Component({
-  selector: 'app-edit-delete-team',
-  templateUrl: './edit-delete-team.component.html',
-  styleUrls: ['./edit-delete-team.component.css']
+  selector: "app-edit-delete-team",
+  templateUrl: "./edit-delete-team.component.html",
+  styleUrls: ["./edit-delete-team.component.css"],
 })
 export class EditDeleteTeamComponent implements OnInit {
-
-  constructor(private formBuilder: FormBuilder, private teamService: TeamService, private leagueService: LeagueService, private _activatedRoute: ActivatedRoute, private router: Router) {
+  constructor(
+    private formBuilder: FormBuilder,
+    private teamService: TeamService,
+    private leagueService: LeagueService,
+    private _activatedRoute: ActivatedRoute,
+    private router: Router
+  ) {
     this.teamForm = formBuilder.group({
-      'teamId' : null,
-      'teamName' : [null, [Validators.required]],
-      'leagueName' : null,
-      'captainName' : [null, [Validators.required]],
-      'captainPhone' : [null, [Validators.required]],
-      'captainEmail' : [null, [Validators.required]]
+      teamId: null,
+      teamName: [null, [Validators.required]],
+      leagueName: null,
+      coachName: [null, [Validators.required]],
+      coachPhone: [null, [Validators.required]],
+      coachEmail: [null, [Validators.required]],
     });
-    this.activatedRoute = _activatedRoute.snapshot
-   }
+    this.activatedRoute = _activatedRoute.snapshot;
+  }
 
-   teamObject: Team;
-   leagueObject: League;
-   teamForm: FormGroup;
+  teamObject: Team;
+  leagueObject: League;
+  teamForm: FormGroup;
 
-   activatedRoute: ActivatedRouteSnapshot;
-   
+  activatedRoute: ActivatedRouteSnapshot;
+
   ngOnInit(): void {
     // Filter for teams that match the location and are not full
     let routeParams = this.activatedRoute.params;
     this.teamService.getTeams().subscribe((data: any) => {
-      this.teamObject = data.find(team => team.teamRoute === routeParams.teamName);
+      this.teamObject = data.find(
+        (team) => team.teamRoute === routeParams.teamName
+      );
       // Finds the league that matches the path
       this.leagueService.getLeagues().subscribe((data: any) => {
-        this.leagueObject = data.find(league => league.leagueName === this.teamObject.leagueName)
-      })
-      this.teamForm.patchValue(this.teamObject)
+        this.leagueObject = data.find(
+          (league) => league.leagueName === this.teamObject.leagueName
+        );
+      });
+      this.teamForm.patchValue(this.teamObject);
     });
   }
 
   onSubmit(team: Team): void {
-    if(this.teamForm.valid) {
+    if (this.teamForm.valid) {
       team.teamId = this.teamObject.teamId;
       team.leagueName = this.leagueObject.leagueName;
       // TODO Route to team after joining
-      alert(`Successfully edited: ${this.teamForm.value.teamName}`)
-      this.teamService.editTeam(team).subscribe(data => this.router.navigateByUrl('/teams'));
+      alert(`Successfully edited: ${this.teamForm.value.teamName}`);
+      this.teamService
+        .editTeam(team)
+        .subscribe((data) => this.router.navigateByUrl("/teams"));
     } else {
-      alert("Please complete all fields.")
+      alert("Please complete all fields.");
     }
   }
 
   deleteTeam() {
     let teamId = this.teamObject.teamId;
-    this.teamService.deleteTeamById(teamId).subscribe(data => this.router.navigateByUrl('/teams'));
+    this.teamService
+      .deleteTeamById(teamId)
+      .subscribe((data) => this.router.navigateByUrl("/teams"));
   }
 }

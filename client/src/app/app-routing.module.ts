@@ -10,6 +10,7 @@ import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { AddTeamComponent } from './add-team/add-team.component';
 import { JoinTeamComponent } from './join-team/join-team.component';
+import { EditDeleteComponent } from './edit-delete/edit-delete.component';
 
 const fallbackRoute: Route = {
   path: '**', component: HomeComponent,
@@ -28,6 +29,7 @@ const routes: Routes = [{
       { path: 'location/:leagueName/join-team', component: JoinTeamComponent },
       { path: 'teams', component: AllTeamsComponent },
       { path: 'teams/:teamName', component: TeamComponent },
+      { path: 'teams/:teamName/:playerName', component: EditDeleteComponent },
       { path: 'sign-up', component: SignUpComponent },
       fallbackRoute
   ]

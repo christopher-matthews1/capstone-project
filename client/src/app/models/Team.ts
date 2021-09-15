@@ -1,4 +1,5 @@
 export class Team {
+    teamId: number;
     teamName: string;
     teamRoute: string;
     leagueName: string;

@@ -37,6 +37,16 @@ export class TeamService {
     return results;
   }
 
+  editPlayerById(player: Player, teamId: number) {
+    const results: Observable<Team> = this.http.put<Team>(`${this.teamsUrl}/${teamId}/players`, player, this.jsonContentTypeHeaders);
+    return results;
+  }
+
+  deletePlayerById(teamId: number, playerId: number) {
+    const results: Observable<Team> = this.http.delete<Team>(`${this.teamsUrl}/${teamId}/players/${playerId}`);
+    return results;
+  }
+
   // getTeams() {
   //   this.http.get<Team[]>(this.teamsUrl).subscribe(results => {
   //     this.data.next(results);

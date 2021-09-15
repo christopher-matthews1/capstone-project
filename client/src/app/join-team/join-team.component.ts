@@ -35,27 +35,21 @@ export class JoinTeamComponent implements OnInit {
       this.leagueObject = data.find(league => league.leagueRoute === this.activatedRoute.params.leagueName)
       if(this.leagueObject === undefined) {
         this.router.navigateByUrl('/')
+      } else {
+        // Filter for teams that match the location and are not full
+        this.teamService.getTeams().subscribe((data: any) => {
+          this.leagueTeams = data.filter(teams => teams.leagueName === this.leagueObject.leagueName && teams.players.length != 10);
+        });
       }
     })
-    // Filter for teams that match the location and are not full
-    this.teamService.getTeams().subscribe((data: any) => {
-      this.leagueTeams = data.filter(teams => teams.leagueName === this.getLocationName() && teams.players.length != 10);
-    });
-  }
-
-  getLocationName(): String {
-    //Gets dashed name, removes dash and caps the first letter of each word
-    let teams = this.activatedRoute.params.leagueName
-                  .split('-')
-                  .map((firstLetter) => firstLetter.charAt(0).toUpperCase() + firstLetter.substring(1))
-                  .join(' ');
-    return teams;
   }
 
   onSubmit(player): void {
     if(this.playerForm.valid) {
       let teamId = player.teamId;
+      let team = this.leagueTeams.find(team => team.teamId === teamId)
       // TODO Route to team after joining
+      alert(`Successfully joined the team: ${team.teamName}`)
       this.teamService.addPlayerById(player, teamId).subscribe(team => this.router.navigateByUrl('/teams'));
     } else {
       alert("Please complete all fields.")

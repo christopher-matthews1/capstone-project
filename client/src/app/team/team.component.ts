@@ -29,6 +29,9 @@ export class TeamComponent implements OnInit {
   ngOnInit(): void {
     this.teamService.getTeams().subscribe((response: any) => {
       this.teamObject = response.find(team => team.teamRoute === this.activatedRoute.params.teamName)
+      this.teamObject.players.forEach((player: Player) => {
+        player.playerRoute = this.getPlayerRoute(player)
+      })
       if(this.teamObject === undefined) {
         this.router.navigateByUrl('/')
       } else {
@@ -37,5 +40,10 @@ export class TeamComponent implements OnInit {
         });
       }
     });
+  }
+
+  getPlayerRoute(player: Player): string {
+    console.log(player.playerName.toLowerCase().split(' ').join('-'));
+    return player.playerName.toLowerCase().split(' ').join('-');
   }
 }

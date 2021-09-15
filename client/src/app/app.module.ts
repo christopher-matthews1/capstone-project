@@ -21,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddTeamComponent } from './add-team/add-team.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JoinTeamComponent } from './join-team/join-team.component';
+import { EditDeleteComponent } from './edit-delete/edit-delete.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { JoinTeamComponent } from './join-team/join-team.component';
     LocationDetailsComponent,
     SignUpComponent,
     AddTeamComponent,
-    JoinTeamComponent
+    JoinTeamComponent,
+    EditDeleteComponent
   ],
   imports: [
     BrowserModule,

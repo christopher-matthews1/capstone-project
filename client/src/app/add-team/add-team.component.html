@@ -7,13 +7,13 @@
     </aside>
     <div>
         <form [formGroup]="teamForm" (ngSubmit)="onSubmit(teamForm.value)">
-            <label for="teamName">Team Name</label>
+            <label for="teamName">Team Name:</label>
             <input type="text" id="teamName" formControlName="teamName">
-            <label for="captainName">Captain Name</label>
+            <label for="captainName">Captain Name:</label>
             <input type="text" id="captainName" formControlName="captainName">
-            <label for="captainPhone">Captain Phone</label>
+            <label for="captainPhone">Captain Phone:</label>
             <input type="text" id="captainPhone" formControlName="captainPhone">
-            <label for="captainEmail">Captain Email</label>
+            <label for="captainEmail">Captain Email:</label>
             <input type="text" id="captainEmail" formControlName="captainEmail">
             <div></div>
         <div class="buttons">

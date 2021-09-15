@@ -2,11 +2,17 @@ h1 {
     margin: .5em;
     font-size: 6em;
     font-family: 'Carter One', cursive;
-    /* font-family: 'Oleo Script', cursive; */
-    /* font-family: 'Simonetta', cursive; */
     color: #F08700;
 }
 
-img {
-    width: 100%;
+@media (max-width: 850px) {
+    h1 {
+        font-size: 4em;
+    }
+}
+
+@media (max-width: 600px) {
+    h1 {
+        font-size: 3em;
+    }
 }

@@ -36,5 +36,5 @@ input[type=text], select {
   }
 
   div.buttons>* {
-      width: 70%;
+      width: 7em;
   }

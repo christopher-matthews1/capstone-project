@@ -37,3 +37,41 @@ div button {
 div button:hover {
     background-color: #F49F0A;
 }
+
+@media (max-width: 1350px) {
+    .players {
+        grid-template-columns: repeat(2,1fr);
+    }
+
+    div.button {
+        display: block;
+    }
+}
+
+@media (max-width: 850px) {
+    .players {
+        grid-template-columns: 1fr;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        grid-template-columns: 1fr;
+    }
+
+    section>div>img {
+        width: 50%;
+    }
+    .players>div {
+        text-align: center;
+        padding: .5em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+}

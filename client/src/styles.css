@@ -1,9 +1,13 @@
+html, body {
+    overflow-x: hidden;
+}
+
 body {
     font-family: Montserrat, Helvetica, sans-serif;
     padding: 0;
     margin: 0;
     cursor: default;
-    scroll-behavior: smooth;
+    /* min-width: 580px; */
 }
 
 h2 {
@@ -33,7 +37,7 @@ h4 {
 }
 
 div.buttons>* {
-    width: 50%;
+    width: 11em;
     background-color: #F08700;
     color: white;
     padding: 1em 2em;

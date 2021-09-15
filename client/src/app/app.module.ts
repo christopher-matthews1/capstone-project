@@ -20,6 +20,7 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { HttpClientModule } from '@angular/common/http';
 import { AddTeamComponent } from './add-team/add-team.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { JoinTeamComponent } from './join-team/join-team.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     LocationComponent,
     LocationDetailsComponent,
     SignUpComponent,
-    AddTeamComponent
+    AddTeamComponent,
+    JoinTeamComponent
   ],
   imports: [
     BrowserModule,

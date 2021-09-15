@@ -32,4 +32,8 @@ export class LocationDetailsComponent implements OnInit {
     this.teamService.sendSelectedTeam(league);
   }
 
+  joinTeam(league: League) {
+    this.teamService.sendSelectedTeam(league);
+  }
+
 }

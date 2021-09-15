@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { Router } from '@angular/router';
+import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
 import { League } from '../models/League';
 import { Team } from '../models/Team';
 import { LeagueService } from '../services/league.service';
@@ -13,27 +13,25 @@ import { TeamService } from '../services/team.service';
 })
 export class AddTeamComponent implements OnInit {
 
-  constructor(private formBuilder: FormBuilder, private teamService: TeamService, private leagueService: LeagueService, private router: Router) {
+  constructor(private formBuilder: FormBuilder, private teamService: TeamService, private leagueService: LeagueService, private router: Router, private _activatedRoute: ActivatedRoute) {
+    this.activatedRoute = _activatedRoute.snapshot;
     this.teamForm = formBuilder.group({
       'teamName' : [null, [Validators.required]],
-      // 'teamRoute' : null,
-      'leagueName' : [null, [Validators.required]],
       'captainName' : [null, [Validators.required]],
       'captainPhone' : [null, [Validators.required]],
       'captainEmail' : [null, [Validators.required]]
     });
    }
 
+  activatedRoute: ActivatedRouteSnapshot;
   teamForm: FormGroup;
-  // selectedLeague: League;
-
-  // I just! DOn?t 19K`']=$  
-  
+  leagueObject: League;
 
   ngOnInit(): void {
-  }
-
-  ngOnDestroy(): void {
+    this.leagueService.getLeagues().subscribe((data: any) => {
+      this.leagueObject = data.find(league => league.leagueRoute === this.activatedRoute.params.leagueName)
+      console.log(this.leagueObject);
+    })
   }
 
   getTeamRoute(team: Team) {
@@ -44,6 +42,7 @@ export class AddTeamComponent implements OnInit {
 
   onSubmit(team: Team): void {
     team.teamRoute = this.getTeamRoute(team);
+    team.leagueName = this.leagueObject.leagueName;
     this.teamService.addTeam(team).subscribe(league => this.router.navigateByUrl('/teams'));
   }
 

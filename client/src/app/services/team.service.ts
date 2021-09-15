@@ -1,6 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { Player } from '../models/Player';
 import { Team } from '../models/Team';
 
 @Injectable({
@@ -28,6 +29,11 @@ export class TeamService {
 
   addTeam(team: Team) {
     const results: Observable<Team> = this.http.post<Team>(`${this.teamsUrl}`, team, this.jsonContentTypeHeaders);
+    return results;
+  }
+
+  addPlayerById(player: Player, teamId: number) {
+    const results: Observable<Team> = this.http.post<Team>(`${this.teamsUrl}/${teamId}/players`, player, this.jsonContentTypeHeaders);
     return results;
   }
 

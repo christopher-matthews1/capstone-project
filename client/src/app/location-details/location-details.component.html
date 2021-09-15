@@ -1,4 +1,3 @@
-<!-- <h2 id="location/location-name">Rittenhouse Square</h2> -->
 <h2 innerText={{leagueObject.leagueName}}></h2>
 <section>
     <div>
@@ -8,6 +7,9 @@
         <p innerText={{leagueObject.description}}></p>
         <a routerLink="add-team" (click)="addTeam(leagueObject)">
             <input type="button" value="Create a team!">
+        </a>
+        <a routerLink="join-team" (click)="joinTeam(leagueObject)">
+            <input type="button" value="Join a Team!">
         </a>
     </div>
 </section>

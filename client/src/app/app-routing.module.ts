@@ -1,11 +1,11 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, Route } from '@angular/router';
 
-import { LocationComponent } from './location/location.component';
+import { LeaguesComponent } from './leagues/leagues.component';
 import { AboutComponent } from './about/about.component';
 import { AllTeamsComponent } from './all-teams/all-teams.component';
 import { TeamComponent } from './team/team.component';
-import { LocationDetailsComponent } from './location-details/location-details.component';
+import { LeagueDetailsComponent } from './league-details/league-details.component';
 import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { AddTeamComponent } from './add-team/add-team.component';
@@ -24,10 +24,10 @@ const routes: Routes = [{
   children: [
       { path: '', component: HomeComponent },
       { path: 'about', component: AboutComponent },
-      { path: 'location', component: LocationComponent },
-      { path: 'location/:leagueName', component: LocationDetailsComponent },
-      { path: 'location/:leagueName/add-team', component: AddTeamComponent },
-      { path: 'location/:leagueName/join-team', component: JoinTeamComponent },
+      { path: 'leagues', component: LeaguesComponent },
+      { path: 'leagues/:leagueName', component: LeagueDetailsComponent },
+      { path: 'leagues/:leagueName/add-team', component: AddTeamComponent },
+      { path: 'leagues/:leagueName/join-team', component: JoinTeamComponent },
       { path: 'teams', component: AllTeamsComponent },
       { path: 'teams/:teamName', component: TeamComponent },
       { path: 'teams/:teamName/edit-delete-team', component: EditDeleteTeamComponent },

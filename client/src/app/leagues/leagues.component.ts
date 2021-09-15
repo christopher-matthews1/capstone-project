@@ -5,11 +5,11 @@ import { LeagueService } from '../services/league.service';
 import { ScrollService } from '../services/scroll.service';
 
 @Component({
-  selector: 'app-location',
-  templateUrl: './location.component.html',
-  styleUrls: ['./location.component.css']
+  selector: 'app-leagues',
+  templateUrl: './leagues.component.html',
+  styleUrls: ['./leagues.component.css']
 })
-export class LocationComponent implements OnInit {
+export class LeaguesComponent implements OnInit {
   allLeagues: League[];
 
   router: Router;

@@ -6,11 +6,11 @@ import { LeagueService } from '../services/league.service';
 import { TeamService } from '../services/team.service';
 
 @Component({
-  selector: 'app-location-details',
-  templateUrl: './location-details.component.html',
-  styleUrls: ['./location-details.component.css']
+  selector: 'app-league-details',
+  templateUrl: './league-details.component.html',
+  styleUrls: ['./league-details.component.css']
 })
-export class LocationDetailsComponent implements OnInit {
+export class LeagueDetailsComponent implements OnInit {
 
   leagueObject: League;
   router: Router;

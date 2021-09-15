@@ -4,6 +4,9 @@
         <img src={{leagueObject?.image}} alt={{teamObject?.leagueName}}>
         <h2 innerText={{leagueObject?.leagueName}}></h2>
         <p class="descriptionShort" innerText={{leagueObject?.descriptionShort}}></p>
+        <div class="button">
+            <button routerLink="edit-delete-team">Edit - Delete Team</button>
+        </div>
     </div>
     <div class="players">
         <div *ngFor="let player of teamObject?.players">

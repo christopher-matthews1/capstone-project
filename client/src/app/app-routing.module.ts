@@ -29,6 +29,7 @@ const routes: Routes = [{
       { path: 'location/:leagueName/join-team', component: JoinTeamComponent },
       { path: 'teams', component: AllTeamsComponent },
       { path: 'teams/:teamName', component: TeamComponent },
+      { path: 'teams/:teamName/edit-delete-team', component: TeamComponent },
       { path: 'teams/:teamName/:playerName', component: EditDeleteComponent },
       { path: 'sign-up', component: SignUpComponent },
       fallbackRoute

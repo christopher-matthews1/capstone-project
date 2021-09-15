@@ -38,6 +38,9 @@ export class EditDeleteComponent implements OnInit {
     this.teamService.getTeams().subscribe((data: any) => {
       this.teamObject = data.find(team => team.teamRoute === routeParams.teamName);
       this.playerObject = this.teamObject.players.find((player: Player) => player.playerName.toLowerCase() === this.getPlayer(routeParams.playerName))
+      if(this.playerObject === undefined) {
+        this.router.navigateByUrl('/')
+      }
       // Finds the league that matches the path
       this.leagueService.getLeagues().subscribe((data: any) => {
         this.leagueObject = data.find(league => league.leagueName === this.teamObject.leagueName)

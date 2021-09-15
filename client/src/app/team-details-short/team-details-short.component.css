@@ -1,9 +1,0 @@
-section {
-    display: grid;
-    grid-template-columns: repeat(2, 50%);
-    justify-content: space-around; 
-}
-
-.team-name {
-    cursor: pointer;
-}

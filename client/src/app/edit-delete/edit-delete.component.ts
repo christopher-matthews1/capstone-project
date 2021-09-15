@@ -41,7 +41,6 @@ export class EditDeleteComponent implements OnInit {
       // Finds the league that matches the path
       this.leagueService.getLeagues().subscribe((data: any) => {
         this.leagueObject = data.find(league => league.leagueName === this.teamObject.leagueName)
-        console.log(this.leagueObject)
       })
       this.playerForm.patchValue(this.playerObject)
     });

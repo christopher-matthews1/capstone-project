@@ -43,7 +43,6 @@ export class TeamComponent implements OnInit {
   }
 
   getPlayerRoute(player: Player): string {
-    console.log(player.playerName.toLowerCase().split(' ').join('-'));
     return player.playerName.toLowerCase().split(' ').join('-');
   }
 }

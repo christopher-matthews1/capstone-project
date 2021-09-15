@@ -10,9 +10,30 @@ section {
 
 .players {
     display: grid;
-    grid-template-columns: repeat(3,auto);
+    grid-template-columns: repeat(3,1fr);
 }
 .players>div {
     /* width: clamp(350px,5vw,500px); */
     text-align: left;
+    padding: .5em;
+}
+
+div.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div button {
+    background-color: #F08700;
+    color: white;
+    padding: .5em 1em;
+    margin: .5em 0;
+    border: none;
+    border-radius: .5em;
+    cursor: pointer;
+}
+  
+div button:hover {
+    background-color: #F49F0A;
 }

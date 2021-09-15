@@ -10,7 +10,8 @@ import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { AddTeamComponent } from './add-team/add-team.component';
 import { JoinTeamComponent } from './join-team/join-team.component';
-import { EditDeleteComponent } from './edit-delete/edit-delete.component';
+import { EditDeletePlayerComponent } from './edit-delete-player/edit-delete-player.component';
+import { EditDeleteTeamComponent } from './edit-delete-team/edit-delete-team.component';
 
 const fallbackRoute: Route = {
   path: '**', component: HomeComponent,
@@ -29,8 +30,8 @@ const routes: Routes = [{
       { path: 'location/:leagueName/join-team', component: JoinTeamComponent },
       { path: 'teams', component: AllTeamsComponent },
       { path: 'teams/:teamName', component: TeamComponent },
-      { path: 'teams/:teamName/edit-delete-team', component: TeamComponent },
-      { path: 'teams/:teamName/:playerName', component: EditDeleteComponent },
+      { path: 'teams/:teamName/edit-delete-team', component: EditDeleteTeamComponent },
+      { path: 'teams/:teamName/:playerName', component: EditDeletePlayerComponent },
       { path: 'sign-up', component: SignUpComponent },
       fallbackRoute
   ]

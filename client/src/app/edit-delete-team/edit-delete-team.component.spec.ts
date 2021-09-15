@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { EditDeleteComponent } from './edit-delete.component';
+import { EditDeleteTeamComponent } from './edit-delete-team.component';
 
-describe('EditDeleteComponent', () => {
-  let component: EditDeleteComponent;
-  let fixture: ComponentFixture<EditDeleteComponent>;
+describe('EditDeleteTeamComponent', () => {
+  let component: EditDeleteTeamComponent;
+  let fixture: ComponentFixture<EditDeleteTeamComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ EditDeleteComponent ]
+      declarations: [ EditDeleteTeamComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(EditDeleteComponent);
+    fixture = TestBed.createComponent(EditDeleteTeamComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

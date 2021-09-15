@@ -1,0 +1,27 @@
+<h2>Edit Team</h2>
+<section>
+    <aside>
+        <img src={{leagueObject?.image}} alt={{leagueObject?.leagueName}}>
+        <h3>{{leagueObject?.leagueName}}</h3>
+        <p class="descriptionShort">{{leagueObject?.descriptionShort}}</p>
+    </aside>
+    <div>
+        <h4>Team: {{teamObject?.teamName}}</h4>
+        <form [formGroup]="teamForm" (ngSubmit)="onSubmit(teamForm.value)">
+            <label for="teamName">Team Name:</label>
+            <input type="text" id="teamName" formControlName="teamName">
+            <label for="captainName">Captain Name:</label>
+            <input type="text" id="captainName" formControlName="captainName">
+            <label for="captainEmail">Captain Email:</label>
+            <input type="text" id="captainEmail" formControlName="captainEmail">
+            <label for="captainPhone">Captain Phone:</label>
+            <input type="text" id="captainPhone" formControlName="captainPhone">
+            <div></div>
+            <div class="buttons">
+                <input type="submit" id="edit-player" value="Edit">
+                <input type="button" id="delete-player" value="Delete" (click)="deleteTeam()">
+                <input type="button" id="cancel" value="Cancel" routerLink='/teams'>
+            </div>
+        </form>
+    </div>  
+</section>

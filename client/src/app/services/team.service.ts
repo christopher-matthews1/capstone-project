@@ -32,6 +32,16 @@ export class TeamService {
     return results;
   }
 
+  editTeam(team: Team) {
+    const results: Observable<Team> = this.http.put<Team>(`${this.teamsUrl}`, team, this.jsonContentTypeHeaders);
+    return results;
+  }
+
+  deleteTeamById(teamId: number) {
+    const results: Observable<Team> = this.http.delete<Team>(`${this.teamsUrl}/${teamId}`);
+    return results;
+  }
+
   addPlayerById(player: Player, teamId: number) {
     const results: Observable<Team> = this.http.post<Team>(`${this.teamsUrl}/${teamId}/players`, player, this.jsonContentTypeHeaders);
     return results;

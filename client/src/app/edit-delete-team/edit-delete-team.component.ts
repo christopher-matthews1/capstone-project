@@ -4,31 +4,31 @@ import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router'
 import { League } from '../models/League';
 import { Player } from '../models/Player';
 import { Team } from '../models/Team';
-
 import { LeagueService } from '../services/league.service';
 import { TeamService } from '../services/team.service';
 
 @Component({
-  selector: 'app-edit-delete',
-  templateUrl: './edit-delete.component.html',
-  styleUrls: ['./edit-delete.component.css']
+  selector: 'app-edit-delete-team',
+  templateUrl: './edit-delete-team.component.html',
+  styleUrls: ['./edit-delete-team.component.css']
 })
-export class EditDeleteComponent implements OnInit {
+export class EditDeleteTeamComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder, private teamService: TeamService, private leagueService: LeagueService, private _activatedRoute: ActivatedRoute, private router: Router) {
-    this.playerForm = formBuilder.group({
-      'playerId' : null,
-      'playerName' : [null, [Validators.required]],
-      'playerPhone' : [null, [Validators.required]],
-      'playerEmail' : [null, [Validators.required]]
+    this.teamForm = formBuilder.group({
+      'teamId' : null,
+      'teamName' : [null, [Validators.required]],
+      'leagueName' : null,
+      'captainName' : [null, [Validators.required]],
+      'captainPhone' : [null, [Validators.required]],
+      'captainEmail' : [null, [Validators.required]]
     });
     this.activatedRoute = _activatedRoute.snapshot
    }
 
-   playerObject: Player;
    teamObject: Team;
    leagueObject: League;
-   playerForm: FormGroup;
+   teamForm: FormGroup;
 
    activatedRoute: ActivatedRouteSnapshot;
    
@@ -37,41 +37,28 @@ export class EditDeleteComponent implements OnInit {
     let routeParams = this.activatedRoute.params;
     this.teamService.getTeams().subscribe((data: any) => {
       this.teamObject = data.find(team => team.teamRoute === routeParams.teamName);
-      this.playerObject = this.teamObject.players.find((player: Player) => player.playerName.toLowerCase() === this.getPlayer(routeParams.playerName))
-      if(this.playerObject === undefined) {
-        this.router.navigateByUrl('/')
-      }
       // Finds the league that matches the path
       this.leagueService.getLeagues().subscribe((data: any) => {
         this.leagueObject = data.find(league => league.leagueName === this.teamObject.leagueName)
       })
-      this.playerForm.patchValue(this.playerObject)
+      this.teamForm.patchValue(this.teamObject)
     });
   }
 
-  onSubmit(player): void {
-    if(this.playerForm.valid) {
-      this.playerForm.value.playerId = this.playerObject.playerId;
-      let teamId = this.teamObject.teamId;
+  onSubmit(team: Team): void {
+    if(this.teamForm.valid) {
+      team.teamId = this.teamObject.teamId;
+      team.leagueName = this.leagueObject.leagueName;
       // TODO Route to team after joining
-      alert(`Successfully edited: ${this.playerForm.value.playerName}`)
-      this.teamService.editPlayerById(player, teamId).subscribe(data => this.router.navigateByUrl('/teams'));
+      alert(`Successfully edited: ${this.teamForm.value.teamName}`)
+      this.teamService.editTeam(team).subscribe(data => this.router.navigateByUrl('/teams'));
     } else {
       alert("Please complete all fields.")
     }
   }
 
-  deletePlayer() {
-    let playerId = this.playerObject.playerId;
+  deleteTeam() {
     let teamId = this.teamObject.teamId;
-    this.teamService.deletePlayerById(teamId, playerId).subscribe(data => this.router.navigateByUrl('/teams'));
+    this.teamService.deleteTeamById(teamId).subscribe(data => this.router.navigateByUrl('/teams'));
   }
-
-  getPlayer(playerRoute: string): string {
-    return playerRoute
-    .toLowerCase()
-      .split('-')
-      .join(' ');
-  }
-
 }

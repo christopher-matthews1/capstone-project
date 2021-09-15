@@ -21,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { AddTeamComponent } from './add-team/add-team.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { JoinTeamComponent } from './join-team/join-team.component';
-import { EditDeleteComponent } from './edit-delete/edit-delete.component';
+import { EditDeletePlayerComponent } from './edit-delete-player/edit-delete-player.component';
+import { EditDeleteTeamComponent } from './edit-delete-team/edit-delete-team.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { EditDeleteComponent } from './edit-delete/edit-delete.component';
     SignUpComponent,
     AddTeamComponent,
     JoinTeamComponent,
-    EditDeleteComponent
+    EditDeletePlayerComponent,
+    EditDeleteTeamComponent
   ],
   imports: [
     BrowserModule,

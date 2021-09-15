@@ -41,14 +41,25 @@ div.buttons>* {
     border: none;
     border-radius: .5em;
     cursor: pointer;
-  }
+}
   
-  div.buttons>*:hover {
+div.buttons>*:hover {
     background-color: #F49F0A;
-  }
+}
   
-  div.buttons {
+div.buttons {
     display: grid;
     grid-template-columns: 50% 50%;
     justify-items: center;
-  }
+}
+
+.descriptionShort {
+    color: black;
+    font-style: italic;
+    font-size: .8em;
+}
+
+.info {
+  font-size: 1.5em;
+  color: #00A6A6;
+}

@@ -3,5 +3,6 @@ export class League {
     leagueId: string;
     leagueRoute: string;
     description: string;
+    descriptionShort: string;
     image: string;
 }

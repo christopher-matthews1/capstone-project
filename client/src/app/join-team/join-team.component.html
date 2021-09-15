@@ -1,9 +1,10 @@
 <h2>Join a Team!</h2>
 <!-- <h2>Join a {{team.teamName}}!</h2> -->
-<section *ngIf="leagueObject">
+<section>
     <aside>
-        <img src={{leagueObject.image}} alt={{leagueObject.leagueName}}>
-        <h3>{{leagueObject.leagueName}}</h3>
+        <img src={{leagueObject?.image}} alt={{leagueObject?.leagueName}}>
+        <h3>{{leagueObject?.leagueName}}</h3>
+        <p class="descriptionShort">{{leagueObject?.descriptionShort}}</p>
     </aside>
     <div>
         <form [formGroup]="playerForm" (ngSubmit)="onSubmit(playerForm.value)">

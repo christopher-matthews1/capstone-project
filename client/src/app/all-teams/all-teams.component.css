@@ -13,3 +13,7 @@ section.league {
 .team-name {
     cursor: pointer;
 }
+
+:host ::ng-deep img.smallImg {
+    width: 70%;
+}

@@ -14,8 +14,7 @@ import { TeamService } from '../services/team.service';
 export class TeamComponent implements OnInit {
 
   teamObject;
-  allTeams;
-  allLeagues;
+  leagueObject;
   activatedRoute: ActivatedRouteSnapshot;
   teamPlayers: Player[];  
   anchorRoute: String;
@@ -24,15 +23,9 @@ export class TeamComponent implements OnInit {
     this.activatedRoute = _activatedRoute.snapshot;
   }
 
-  test() {
-    console.log(this.activatedRoute.params.teamName);
-  }
-
   ngOnInit(): void {
     // OLD WAY
-    this.leagueService.getLeagues().subscribe((response: any) => {
-      this.allLeagues = response;
-    });
+    
 
     // NEW WAY
     // this.leagueService.getLeagues();
@@ -41,9 +34,10 @@ export class TeamComponent implements OnInit {
     // })
 
     this.teamService.getTeams().subscribe((response: any) => {
-      this.allTeams = response;
-
       this.teamObject = response.find(team => team.teamRoute === this.activatedRoute.params.teamName)
+      this.leagueService.getLeagues().subscribe((response: any) => {
+        this.leagueObject = response.find(league => league.leagueName === this.teamObject.leagueName);
+      });
     });
   }
 
@@ -62,12 +56,6 @@ export class TeamComponent implements OnInit {
 
   getTeamName() {
     return this.teamObject.teamName;
-  }
-
-
-  getPlayersByTeam(teamName): Player[] {
-    //Saying property undenfied but still works.....
-    return this.allTeams.filter(teams => teamName === teams.teamName);
   }
 
   getLeagueNameDashed(leagueName): String {

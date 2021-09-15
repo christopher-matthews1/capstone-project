@@ -1,5 +1,5 @@
 img {
-    width: 70%
+    width: 50%
 }
 
 section {
@@ -9,10 +9,6 @@ section {
 section.league {
     grid-template-columns: repeat(4, 25%);
 }
-
-/* section.team { */
-    /* grid-template-columns: repeat(2, 50%); */
-/* } */
 
 .team-name {
     cursor: pointer;

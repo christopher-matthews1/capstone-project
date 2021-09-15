@@ -1,4 +1,4 @@
-<h2 id="location" [hidden]="(this.router.url === '/sign-up')">Locations</h2>
+<h2 id="location" [hidden]="!(this.router.url === '/location')">Locations</h2>
 <section>
     <div *ngFor="let leagues of allLeagues">
         <img routerLink="/location/{{leagues.leagueRoute}}" src="{{leagues.image}}" alt="{{leagues.leagueName}}">

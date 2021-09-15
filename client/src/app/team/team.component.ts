@@ -32,7 +32,6 @@ export class TeamComponent implements OnInit {
     // OLD WAY
     this.leagueService.getLeagues().subscribe((response: any) => {
       this.allLeagues = response;
-      console.log(response);
     });
 
     // NEW WAY

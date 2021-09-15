@@ -3,6 +3,10 @@ img {
     cursor: pointer;
 }
 
+.location {
+    width: 50%;
+}
+
 h3 {
     color: #F08700;
     cursor: pointer;

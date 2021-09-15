@@ -20,12 +20,12 @@ export class TeamService {
 
   //--------------TESTING-----------------
 
-  data = new BehaviorSubject<Team[]>({} as any);
-  currentData = this.data.asObservable();
+  // data = new BehaviorSubject<Team[]>({} as any);
+  // currentData = this.data.asObservable();
 
-  sendSelectedTeam(data): void {
-    this.data.next(data);
-  }
+  // sendSelectedTeam(data): void {
+  //   this.data.next(data);
+  // }
 
   addTeam(team: Team) {
     const results: Observable<Team> = this.http.post<Team>(`${this.teamsUrl}`, team, this.jsonContentTypeHeaders);

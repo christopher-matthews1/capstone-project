@@ -30,14 +30,17 @@ export class JoinTeamComponent implements OnInit {
   leagueObject: League;
 
   ngOnInit(): void {
-    this.teamService.getTeams().subscribe((data: any) => {
-      // Filter for teams that match the location and are not full
-      this.leagueTeams = data.filter(teams => teams.leagueName === this.getLocationName() && teams.players.length != 10);
-    });
-      // Finds the league that matches the path
+    // Finds the league that matches the path
     this.leagueService.getLeagues().subscribe((data: any) => {
       this.leagueObject = data.find(league => league.leagueRoute === this.activatedRoute.params.leagueName)
+      if(this.leagueObject === undefined) {
+        this.router.navigateByUrl('/')
+      }
     })
+    // Filter for teams that match the location and are not full
+    this.teamService.getTeams().subscribe((data: any) => {
+      this.leagueTeams = data.filter(teams => teams.leagueName === this.getLocationName() && teams.players.length != 10);
+    });
   }
 
   getLocationName(): String {
@@ -50,9 +53,13 @@ export class JoinTeamComponent implements OnInit {
   }
 
   onSubmit(player): void {
-    let teamId = player.teamId;
-    // TODO Route to team after joining
-    this.teamService.addPlayerById(player, teamId).subscribe(team => this.router.navigateByUrl('/teams'));
-  }
+    if(this.playerForm.valid) {
+      let teamId = player.teamId;
+      // TODO Route to team after joining
+      this.teamService.addPlayerById(player, teamId).subscribe(team => this.router.navigateByUrl('/teams'));
+    } else {
+      alert("Please complete all fields.")
+    }
+  } 
 
 }

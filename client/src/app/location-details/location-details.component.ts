@@ -25,15 +25,10 @@ export class LocationDetailsComponent implements OnInit {
     // this.leagueService.getLeagues();
     this.leagueService.getLeagues().subscribe((data: any) => {
       this.leagueObject = data.find(league => league.leagueRoute === this.activatedRoute.params.leagueName)
+      if(this.leagueObject === undefined) {
+        this.router.navigateByUrl('/')
+      }
     })
-  }
-
-  addTeam(league: League) {
-    this.teamService.sendSelectedTeam(league);
-  }
-
-  joinTeam(league: League) {
-    this.teamService.sendSelectedTeam(league);
   }
 
 }

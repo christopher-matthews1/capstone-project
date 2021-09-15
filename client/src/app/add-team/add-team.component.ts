@@ -30,7 +30,11 @@ export class AddTeamComponent implements OnInit {
   ngOnInit(): void {
     this.leagueService.getLeagues().subscribe((data: any) => {
       this.leagueObject = data.find(league => league.leagueRoute === this.activatedRoute.params.leagueName)
+      if(this.leagueObject === undefined) {
+        this.router.navigateByUrl('/')
+      }
     })
+    
   }
 
   getTeamRoute(team: Team) {
@@ -40,9 +44,14 @@ export class AddTeamComponent implements OnInit {
   }
 
   onSubmit(team: Team): void {
-    team.teamRoute = this.getTeamRoute(team);
-    team.leagueName = this.leagueObject.leagueName;
-    this.teamService.addTeam(team).subscribe(league => this.router.navigateByUrl('/teams'));
+    if(this.teamForm.valid) {
+      team.teamRoute = this.getTeamRoute(team);
+      team.leagueName = this.leagueObject.leagueName;
+      this.teamService.addTeam(team).subscribe(league => this.router.navigateByUrl('/teams'));
+    } else {
+      alert("Please complete all fields.")
+    }
+    
   }
 
 }

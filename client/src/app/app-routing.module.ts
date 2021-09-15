@@ -12,7 +12,9 @@ import { AddTeamComponent } from './add-team/add-team.component';
 import { JoinTeamComponent } from './join-team/join-team.component';
 
 const fallbackRoute: Route = {
-  path: '**', component: HomeComponent
+  path: '**', component: HomeComponent,
+  redirectTo: '', 
+  pathMatch: 'full'
 }
 
 const routes: Routes = [{
@@ -24,10 +26,8 @@ const routes: Routes = [{
       { path: 'location/:leagueName', component: LocationDetailsComponent },
       { path: 'location/:leagueName/add-team', component: AddTeamComponent },
       { path: 'location/:leagueName/join-team', component: JoinTeamComponent },
-      // may need to move specific route higher than general route
       { path: 'teams', component: AllTeamsComponent },
       { path: 'teams/:teamName', component: TeamComponent },
-      // { path: 'teams/:team', component: TeamComponent },
       { path: 'sign-up', component: SignUpComponent },
       fallbackRoute
   ]

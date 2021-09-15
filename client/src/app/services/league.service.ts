@@ -18,12 +18,12 @@ export class LeagueService {
 
     //--------------TESTING-----------------
 
-    data = new BehaviorSubject<League[]>({} as any);
-    currentData = this.data.asObservable();
+    // data = new BehaviorSubject<League[]>({} as any);
+    // currentData = this.data.asObservable();
   
-    sendSelectedLeague(data): void {
-      this.data.next(data);
-    }
+    // sendSelectedLeague(data): void {
+    //   this.data.next(data);
+    // }
   
     //--------------TESTING-----------------
 

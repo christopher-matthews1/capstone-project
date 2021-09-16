@@ -5,7 +5,6 @@ import { League } from '../models/League';
 import { Player } from '../models/Player';
 import { Team } from '../models/Team';
 import { LeagueService } from '../services/league.service';
-import { RouteService } from '../services/route.service';
 import { TeamService } from '../services/team.service';
 
 @Component({

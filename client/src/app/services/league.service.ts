@@ -1,6 +1,6 @@
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { League } from '../models/League';
 
 @Injectable({
@@ -10,39 +10,10 @@ export class LeagueService {
 
   leagueUrl = 'http://localhost:8082/api/leagues';
 
-  jsonContentTypeHeaders = {
-    headers: new HttpHeaders().set('Content-Type', 'application/json')
-  }
-
-  errorMessage: string;
-
-    //--------------TESTING-----------------
-
-    // data = new BehaviorSubject<League[]>({} as any);
-    // currentData = this.data.asObservable();
-  
-    // sendSelectedLeague(data): void {
-    //   this.data.next(data);
-    // }
-  
-    //--------------TESTING-----------------
-
-  // getLeagues() {
-  //   this.http.get<League[]>(this.LeagueUrl).subscribe(results => {
-  //     this.data.next(results);
-  //   })
-  // }
-
   getLeagues():Observable<League> {
     const results: Observable<League> = this.http.get<League>(this.leagueUrl);
     return results
   }
-
-  // getLeagueById(LeagueId: string):Observable<League> {
-  //   const results: Observable<League> = this.http.get<League>(`${this.LeagueUrl}/${LeagueId}`);
-  //   console.log(`getLeaguesById(${LeagueId}) returned ${results}`);
-  //   return results;
-  // }
 
   constructor(private http: HttpClient) { }
   

@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Player } from '../models/Player';
 import { Team } from '../models/Team';
 
@@ -10,22 +10,11 @@ import { Team } from '../models/Team';
 export class TeamService {
 
   teamsUrl = 'http://localhost:8082/api/teams';
-  teamsByLeague = 'localhost:8082/api/teams/byleague'
+  teamsByLeagueUrl = 'localhost:8082/api/teams/byleague'
 
   jsonContentTypeHeaders = {
     headers: new HttpHeaders().set('Content-Type', 'application/json')
   }
-
-  errorMessage: string;
-
-  //--------------TESTING-----------------
-
-  // data = new BehaviorSubject<Team[]>({} as any);
-  // currentData = this.data.asObservable();
-
-  // sendSelectedTeam(data): void {
-  //   this.data.next(data);
-  // }
 
   addTeam(team: Team) {
     const results: Observable<Team> = this.http.post<Team>(`${this.teamsUrl}`, team, this.jsonContentTypeHeaders);
@@ -57,14 +46,6 @@ export class TeamService {
     return results;
   }
 
-  // getTeams() {
-  //   this.http.get<Team[]>(this.teamsUrl).subscribe(results => {
-  //     this.data.next(results);
-  //   })
-  // }
-
-  //--------------TESTING-----------------
-
   getTeams():Observable<Team> {
     const results: Observable<Team> = this.http.get<Team>(this.teamsUrl);
     return results
@@ -76,7 +57,7 @@ export class TeamService {
   }
 
   getTeamByLeague(leagueId: string):Observable<Team> {
-    const results: Observable<Team> = this.http.get<Team>(`${this.teamsByLeague}/${leagueId}`);
+    const results: Observable<Team> = this.http.get<Team>(`${this.teamsByLeagueUrl}/${leagueId}`);
     return results;
   }
 

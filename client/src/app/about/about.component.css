@@ -7,3 +7,31 @@ section {
     grid-template-columns: 30% 60%;
     justify-content: space-around; 
 }
+
+@media (max-width: 850px) {
+    section {
+        grid-template-columns: repeat(2, 40%);
+    }
+
+    p {
+        font-size: 1em;
+    }
+}
+
+@media (max-width: 600px) {
+    section {
+        grid-template-columns: 1fr
+    }
+
+    img {
+        width: 80%;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    article {
+        padding: 10px;
+    }
+}

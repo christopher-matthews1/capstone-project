@@ -6,7 +6,7 @@
         <p class="descriptionShort">{{leagueObject?.descriptionShort}}</p>
     </aside>
     <div>
-        <form [formGroup]="playerForm" (ngSubmit)="onSubmit(playerForm.value)">
+        <form [formGroup]="playerForm" (ngSubmit)="onSubmit(playerForm.value)" autocomplete="off">
             <label for="playerName">Player Name:</label>
             <input type="text" id="playerName" formControlName="playerName">
             <label for="playerEmail">Player Email:</label>

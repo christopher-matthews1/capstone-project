@@ -75,3 +75,7 @@ select.ng-touched.ng-invalid {
     border: 2px solid #f00;
     border-radius: 4px;
   }
+
+input:focus, select:focus {
+    outline-color: #000;
+}

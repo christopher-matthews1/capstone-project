@@ -11,3 +11,34 @@ section {
     grid-template-columns: 30% 60%;
     justify-content: space-around; 
 }
+
+@media (max-width: 850px) {
+    section {
+        grid-template-columns: 1fr;
+
+    }
+    
+    img.big {
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.5em;
+    }
+    
+    p.info {
+        font-size: 1em;
+    }
+
+    article {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    img.big {
+        width: 80%;
+    }
+}

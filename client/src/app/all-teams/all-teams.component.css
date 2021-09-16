@@ -58,6 +58,10 @@ section.league {
         font-size: 1em;
     }
 
+    p.descriptionShort {
+        font-size: .8em;
+    }
+
     section.league {
         grid-template-columns: 1fr;
     }

@@ -43,7 +43,7 @@ export class EditDeleteTeamComponent implements OnInit {
   activatedRoute: ActivatedRouteSnapshot;
 
   ngOnInit(): void {
-    // Filter for teams that match the location and are not full
+    // Filter for teams that match the league and are not full
     let routeParams = this.activatedRoute.params;
     this.teamService.getTeams().subscribe((data: any) => {
       this.teamObject = data.find(

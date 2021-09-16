@@ -36,7 +36,7 @@ export class JoinTeamComponent implements OnInit {
       if(this.leagueObject === undefined) {
         this.router.navigateByUrl('/')
       } else {
-        // Filter for teams that match the location and are not full
+        // Filter for teams that match the league and are not full
         this.teamService.getTeams().subscribe((data: any) => {
           this.leagueTeams = data.filter(teams => teams.leagueName === this.leagueObject.leagueName && teams.players.length != 10);
         });

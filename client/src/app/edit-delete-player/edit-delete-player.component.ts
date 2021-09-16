@@ -37,15 +37,20 @@ export class EditDeletePlayerComponent implements OnInit {
     let routeParams = this.activatedRoute.params;
     this.teamService.getTeams().subscribe((data: any) => {
       this.teamObject = data.find(team => team.teamRoute === routeParams.teamName);
-      this.playerObject = this.teamObject.players.find((player: Player) => player.playerName.toLowerCase() === this.getPlayer(routeParams.playerName))
+      if(this.teamObject === undefined) {
+        this.router.navigateByUrl('/')
+      } else {
+        this.playerObject = this.teamObject.players.find((player: Player) => player.playerName.toLowerCase() === this.getPlayer(routeParams.playerName))
+      }
       if(this.playerObject === undefined) {
         this.router.navigateByUrl('/')
+      } else {
+        // Finds the league that matches the path
+        this.leagueService.getLeagues().subscribe((data: any) => {
+          this.leagueObject = data.find(league => league.leagueName === this.teamObject.leagueName)
+        })
+        this.playerForm.patchValue(this.playerObject);
       }
-      // Finds the league that matches the path
-      this.leagueService.getLeagues().subscribe((data: any) => {
-        this.leagueObject = data.find(league => league.leagueName === this.teamObject.leagueName)
-      })
-      this.playerForm.patchValue(this.playerObject)
     });
   }
 

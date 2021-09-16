@@ -29,12 +29,12 @@ export class TeamComponent implements OnInit {
   ngOnInit(): void {
     this.teamService.getTeams().subscribe((response: any) => {
       this.teamObject = response.find(team => team.teamRoute === this.activatedRoute.params.teamName)
-      this.teamObject.players.forEach((player: Player) => {
-        player.playerRoute = this.getPlayerRoute(player)
-      })
       if(this.teamObject === undefined) {
         this.router.navigateByUrl('/')
       } else {
+        this.teamObject.players.forEach((player: Player) => {
+          player.playerRoute = this.getPlayerRoute(player)
+        })
         this.leagueService.getLeagues().subscribe((response: any) => {
           this.leagueObject = response.find(league => league.leagueName === this.teamObject.leagueName);
         });

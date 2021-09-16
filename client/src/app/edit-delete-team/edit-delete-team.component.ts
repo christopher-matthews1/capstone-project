@@ -49,13 +49,17 @@ export class EditDeleteTeamComponent implements OnInit {
       this.teamObject = data.find(
         (team) => team.teamRoute === routeParams.teamName
       );
-      // Finds the league that matches the path
-      this.leagueService.getLeagues().subscribe((data: any) => {
-        this.leagueObject = data.find(
-          (league) => league.leagueName === this.teamObject.leagueName
-        );
-      });
-      this.teamForm.patchValue(this.teamObject);
+      if(this.teamObject === undefined) {
+        this.router.navigateByUrl('/')
+      } else {
+        // Finds the league that matches the path
+        this.leagueService.getLeagues().subscribe((data: any) => {
+          this.leagueObject = data.find(
+            (league) => league.leagueName === this.teamObject.leagueName
+          );
+        });
+        this.teamForm.patchValue(this.teamObject);
+      }
     });
   }
 

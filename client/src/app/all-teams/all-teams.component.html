@@ -10,7 +10,8 @@
       </h4>
       <div>
         <p>Coach: {{ team.coachName }}</p>
-        <p>Team Size: {{ team.players.length }}/10</p>
+        <p *ngIf="team.players.length === 10">Team Size: <span>FULL</span></p>
+        <p *ngIf="team.players.length !== 10">Team Size: {{ team.players.length }}/10</p>
       </div>
     </section>
   </div>

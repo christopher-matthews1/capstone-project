@@ -3,6 +3,10 @@ img {
     cursor: pointer;
 }
 
+span {
+    font-weight: bold;
+}
+
 h3 {
     cursor: pointer;
 }

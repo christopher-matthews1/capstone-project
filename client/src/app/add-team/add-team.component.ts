@@ -61,10 +61,12 @@ export class AddTeamComponent implements OnInit {
     if (this.teamForm.valid) {
       team.teamRoute = this.getTeamRoute(team);
       team.leagueName = this.leagueObject.leagueName;
-      alert(`Successfully added the team: ${this.teamForm.value.teamName}`);
-      this.teamService
+      if(confirm(`Create the team ${this.teamForm.value.teamName}?`)) {
+        alert(`Successfully created: ${this.teamForm.value.teamName}`)
+        this.teamService
         .addTeam(team)
         .subscribe((league) => this.router.navigateByUrl("/teams"));
+      }
     } else {
       alert("Please complete all fields.");
     }

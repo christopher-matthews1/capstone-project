@@ -59,8 +59,10 @@ export class EditDeletePlayerComponent implements OnInit {
       this.playerForm.value.playerId = this.playerObject.playerId;
       let teamId = this.teamObject.teamId;
       // TODO Route to team after joining
-      alert(`Successfully edited: ${this.playerForm.value.playerName}`)
-      this.teamService.editPlayerById(player, teamId).subscribe(data => this.router.navigateByUrl('/teams'));
+      if(confirm(`Edit the player ${this.playerObject.playerName}?`)) {
+        alert(`Successfully edited: ${this.playerForm.value.playerName}`)
+        this.teamService.editPlayerById(player, teamId).subscribe(data => this.router.navigateByUrl('/teams'));
+      }
     } else {
       alert("Please complete all fields.")
     }
@@ -69,8 +71,10 @@ export class EditDeletePlayerComponent implements OnInit {
   deletePlayer() {
     let playerId = this.playerObject.playerId;
     let teamId = this.teamObject.teamId;
-    alert(`Successfully deleted: ${this.playerObject.playerName}`)
-    this.teamService.deletePlayerById(teamId, playerId).subscribe(data => this.router.navigateByUrl('/teams'));
+    if(confirm(`Delete the player ${this.playerObject.playerName}?`)) {
+      alert(`Successfully deleted: ${this.playerObject.playerName}`)
+      this.teamService.deletePlayerById(teamId, playerId).subscribe(data => this.router.navigateByUrl('/teams'));
+    }
   }
 
   getPlayer(playerRoute: string): string {

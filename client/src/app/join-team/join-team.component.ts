@@ -49,8 +49,10 @@ export class JoinTeamComponent implements OnInit {
       let teamId = player.teamId;
       let team = this.leagueTeams.find(team => team.teamId === teamId)
       // TODO Route to team after joining
-      alert(`Successfully joined the team: ${team.teamName}`)
-      this.teamService.addPlayerById(player, teamId).subscribe(team => this.router.navigateByUrl('/teams'));
+      if(confirm(`Join the team ${team.teamName}?`)) {
+        alert(`Successfully joined the team: ${team.teamName}`)
+        this.teamService.addPlayerById(player, teamId).subscribe(team => this.router.navigateByUrl('/teams'));
+      }
     } else {
       alert("Please complete all fields.")
     }

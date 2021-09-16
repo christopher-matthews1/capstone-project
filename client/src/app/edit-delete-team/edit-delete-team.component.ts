@@ -69,10 +69,12 @@ export class EditDeleteTeamComponent implements OnInit {
       team.leagueName = this.leagueObject.leagueName;
       team.teamRoute = this.getTeamRoute(team);
       // TODO Route to team after joining
-      alert(`Successfully edited: ${this.teamForm.value.teamName}`);
-      this.teamService
-        .editTeam(team)
-        .subscribe((data) => this.router.navigateByUrl("/teams"));
+      if(confirm(`Edit the team ${this.teamObject.teamName}?`)) {
+        alert(`Successfully edited: ${this.teamForm.value.teamName}`);
+        this.teamService
+          .editTeam(team)
+          .subscribe((data) => this.router.navigateByUrl("/teams"));
+      }
     } else {
       alert("Please complete all fields.");
     }
@@ -80,9 +82,12 @@ export class EditDeleteTeamComponent implements OnInit {
 
   deleteTeam() {
     let teamId = this.teamObject.teamId;
-    this.teamService
-      .deleteTeamById(teamId)
-      .subscribe((data) => this.router.navigateByUrl("/teams"));
+    if(confirm(`Delete the team ${this.teamObject.teamName}?`)) {
+      alert(`Successfully deleted: ${this.teamObject.teamName}`)
+      this.teamService
+        .deleteTeamById(teamId)
+        .subscribe((data) => this.router.navigateByUrl("/teams"));
+    }
   }
 
   getTeamRoute(team: Team) {

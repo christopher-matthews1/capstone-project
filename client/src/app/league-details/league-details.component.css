@@ -7,3 +7,35 @@ section {
     grid-template-columns: 30% 60%;
     justify-content: space-around; 
 }
+
+@media (max-width: 600px) {
+    section {
+        grid-template-columns: 1fr;
+    }
+
+    img {
+        width: 50%;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    h3 {
+        display: none;
+    }
+
+    p.info {
+        font-size: 1em;
+    }
+
+    article {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
+    div.buttons {
+        grid-template-columns: 1fr;
+    }
+}

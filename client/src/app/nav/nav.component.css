@@ -52,6 +52,10 @@ section.webContainer {
     background-color: #F08700;
 }
 
+/* MAX SCREEN WIDTH 600PX */
+
+/* This changes the navbar to the mobile hamburger icon */
+
 @media (max-width: 600px) {
     nav.normal {
         display: none;
@@ -64,7 +68,18 @@ section.webContainer {
     .mobileContainer {
         background-color: #F49F0A;
     }
+    
+    .mobileContainer p {
+        user-select: none;
+        cursor: pointer;
+    }
 
+    .mobileContainer p.icon {
+        width: 2em;
+        font-size: 2em;
+        line-height: 0;
+    }
+    
     .mobileLinks p {
         padding: 10px;
         margin: 0;
@@ -76,16 +91,8 @@ section.webContainer {
     .mobileLinks p:hover {
         background-color: #F08700;
     }
-    .mobileContainer p {
-        user-select: none;
-        cursor: pointer;
-    }
 
-    .mobileContainer p.icon {
-        width: 2em;
-        font-size: 2em;
-        line-height: 0;
-    }
+    /* These are used with ngClass to toggle the mobileLink buttons */
 
     .mobileLinks p.display-none {
         display: none;

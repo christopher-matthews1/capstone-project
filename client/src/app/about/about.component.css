@@ -18,6 +18,8 @@ section {
     }
 }
 
+/* When the screen is 600px or less */
+
 @media (max-width: 600px) {
     section {
         grid-template-columns: 1fr

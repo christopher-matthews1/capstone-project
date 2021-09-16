@@ -23,11 +23,15 @@ p {
     font-size: .8em;
 }
 
+/* MAX SCREEN WIDTH 850PX */
+
 @media (max-width: 850px) {
     section {
         grid-template-columns: repeat(2, 40%);
     }
 }
+
+/* MAX SCREEN WIDTH 400PX */
 
 @media (max-width: 400px) {
     section {

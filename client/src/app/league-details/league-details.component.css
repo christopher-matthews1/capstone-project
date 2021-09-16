@@ -8,6 +8,8 @@ section {
     justify-content: space-around; 
 }
 
+/* MAX SCREEN WIDTH 600PX */
+
 @media (max-width: 600px) {
     section {
         grid-template-columns: 1fr;
@@ -33,6 +35,8 @@ section {
         padding: 10px;
     }
 }
+
+/* MAX SCREEN WIDTH 400PX */
 
 @media (max-width: 400px) {
     div.buttons {

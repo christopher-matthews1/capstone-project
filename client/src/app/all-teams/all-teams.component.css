@@ -14,6 +14,8 @@ section.league {
     cursor: pointer;
 }
 
+/* This makes the image in the leagues component smaller when I use that component in the all-teams component */
+
 :host ::ng-deep img.smallImg {
     width: 70%;
 }

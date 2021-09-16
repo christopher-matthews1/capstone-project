@@ -16,6 +16,8 @@ section {
     grid-template-columns: 40% 60%;
 }
 
+/* MAX SCREEN WIDTH 850PX */
+
 @media (max-width: 850px) {
     h2 {
         font-size: 2em;
@@ -33,6 +35,8 @@ section {
         grid-template-columns: 1fr;
     }
 }
+
+/* MAX SCREEN WIDTH 600PX */
 
 @media (max-width: 600px) {
     h2 {

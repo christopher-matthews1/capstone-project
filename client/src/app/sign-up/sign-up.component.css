@@ -12,6 +12,8 @@ section {
     justify-content: space-around; 
 }
 
+/* MAX SCREEN WIDTH 850PX */
+
 @media (max-width: 850px) {
     section {
         grid-template-columns: 1fr;
@@ -22,6 +24,8 @@ section {
         width: 50%;
     }
 }
+
+/* MAX SCREEN WIDTH 600PX */
 
 @media (max-width: 600px) {
     h2 {
@@ -36,6 +40,8 @@ section {
         padding: 10px;
     }
 }
+
+/* MAX SCREEN WIDTH 400PX */
 
 @media (max-width: 400px) {
     img.big {

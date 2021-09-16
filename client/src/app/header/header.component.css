@@ -5,11 +5,15 @@ h1 {
     color: #F08700;
 }
 
+/* MAX SCREEN WIDTH 850PX */
+
 @media (max-width: 850px) {
     h1 {
         font-size: 4em;
     }
 }
+
+/* MAX SCREEN WIDTH 600PX */
 
 @media (max-width: 600px) {
     h1 {

@@ -12,7 +12,6 @@ import { FooterComponent } from './footer/footer.component';
 import { AboutComponent } from './about/about.component';
 import { AllTeamsComponent } from './all-teams/all-teams.component';
 import { TeamComponent } from './team/team.component';
-import { PlayerComponent } from './player/player.component';
 import { LeagueDetailsComponent } from './league-details/league-details.component';
 import { HomeComponent } from './home/home.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
@@ -33,7 +32,6 @@ import { LeaguesComponent } from './leagues/leagues.component';
     AboutComponent,
     AllTeamsComponent,
     TeamComponent,
-    PlayerComponent,
     LeaguesComponent,
     LeagueDetailsComponent,
     SignUpComponent,

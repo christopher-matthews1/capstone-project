@@ -19,3 +19,9 @@ section.league {
 :host ::ng-deep img.smallImg {
     width: 70%;
 }
+
+@media (max-width: 400px) {
+    h2 {
+        font-size: 2em;
+    }
+}

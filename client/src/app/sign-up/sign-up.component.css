@@ -47,4 +47,10 @@ section {
     img.big {
         width: 80%;
     }
+
+/* Hide leagues component */
+
+    .leaguesComponent {
+        display: none;
+    }
 }

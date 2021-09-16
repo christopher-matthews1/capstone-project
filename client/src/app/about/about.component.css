@@ -26,14 +26,21 @@ section {
     }
 
     img {
-        width: 80%;
+        width: 50%;
     }
+
+    article {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 400px) {
 
     h2 {
         font-size: 2em;
     }
 
-    article {
-        padding: 10px;
+    img {
+        width: 80%;
     }
 }

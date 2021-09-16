@@ -39,6 +39,11 @@ section {
 /* MAX SCREEN WIDTH 400PX */
 
 @media (max-width: 400px) {
+
+    img {
+        width: 80%;
+    }
+
     div.buttons {
         grid-template-columns: 1fr;
     }

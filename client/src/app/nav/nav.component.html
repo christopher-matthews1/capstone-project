@@ -1,24 +1,38 @@
-<nav>
-    <section class="nav">
-        <div class="link" routerLink="">
+<nav class="web">
+    <section class="webContainer">
+        <div class="webLinks" routerLink="">
             <p>Home</p>
         </div>
-        <div class="link" routerLink="/leagues">
-           <p>Location</p>
+        <div class="webLinks" routerLink="/leagues">
+           <p>League</p>
         </div>
-        <div class="link" routerLink="/teams">
+        <div class="webLinks" routerLink="/teams">
             <p>Teams</p>
         </div>
-        <div class="link" routerLink="/about">
+        <div class="webLinks" routerLink="/about">
             <p>About</p>
         </div>
-        <div class="link" routerLink="/sign-up">
+        <div class="webLinks" routerLink="/sign-up">
             <p>Sign up!</p>
         </div>
     </section>
     <section class="login">
-        <div class="login link">
+        <div class="login webLinks" routerLink="">
             <p>Login</p>
         </div>
     </section>
+</nav>
+<nav class="mobile">
+    <div class="mobileContainer">
+        <p class="icon" (click)="displayToggle()">&#9776;</p>
+
+        <div class="mobileLinks">
+            <p [ngClass]="[display]" routerLink="" (click)="displayNone()">Home</p>
+            <p [ngClass]="[display]" routerLink="/leagues" (click)="displayNone()">Leagues</p>
+            <p [ngClass]="[display]" routerLink="/teams" (click)="displayNone()">Teams</p>
+            <p [ngClass]="[display]" routerLink="/about" (click)="displayNone()">About</p>
+            <p [ngClass]="[display]" routerLink="/sign-up" (click)="displayNone()">Sign up!</p>
+            <p [ngClass]="[display]" routerLink="" (click)="displayNone()">Login</p>
+        </div>
+      </div>
 </nav>

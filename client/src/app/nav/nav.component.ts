@@ -10,13 +10,28 @@ import { ScrollService } from '../services/scroll.service';
 })
 export class NavComponent implements OnInit {
 
+  display: string;
+
   constructor(private scrollService: ScrollService) {}
 
   ngOnInit() {
+    this.displayNone();
   }
 
-  scrollToContent() {
-      this.scrollService.scrollToContent();
+  displayBlock() {
+    this.display = 'display-block';
+  }
+
+  displayNone() {
+    this.display = 'display-none';
+  }
+
+  displayToggle() {
+    if(this.display === 'display-none') {
+      this.display = 'display-block';
+    } else {
+      this.display = 'display-none';
+    }
   }
 
 }

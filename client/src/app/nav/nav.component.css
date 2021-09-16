@@ -35,7 +35,21 @@ section.webContainer {
 }
 
 .webLinks {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 4em;
     cursor: pointer;
+}
+
+.webLinks:hover {
+    background-color: #F08700;
+    margin: 0;
+}
+
+.webLinks.active {
+    background-color: #F08700;
 }
 
 @media (max-width: 600px) {

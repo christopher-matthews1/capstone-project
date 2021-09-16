@@ -13,16 +13,23 @@ import { JoinTeamComponent } from './join-team/join-team.component';
 import { EditDeletePlayerComponent } from './edit-delete-player/edit-delete-player.component';
 import { EditDeleteTeamComponent } from './edit-delete-team/edit-delete-team.component';
 
+const homeRoute: Route = { 
+  path: '',
+  redirectTo: '/home',
+  pathMatch: 'full'
+}
+
 const fallbackRoute: Route = {
-  path: '**', component: HomeComponent,
-  redirectTo: '', 
+  path: '**',
+  redirectTo: '/home', 
   pathMatch: 'full'
 }
 
 const routes: Routes = [{
   path: '',
   children: [
-      { path: '', component: HomeComponent },
+      homeRoute,
+      { path: 'home', component: HomeComponent },
       { path: 'about', component: AboutComponent },
       { path: 'leagues', component: LeaguesComponent },
       { path: 'leagues/:leagueName', component: LeagueDetailsComponent },
@@ -35,8 +42,7 @@ const routes: Routes = [{
       { path: 'sign-up', component: SignUpComponent },
       fallbackRoute
   ]
-}
-];
+}];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, {

@@ -1,13 +1,9 @@
 <h2>Teams</h2>
-<app-leagues class="location"></app-leagues>
 <section class="league">
   <div *ngFor="let league of allLeagues">
-    <!-- <img src="{{league.image}}" alt="{{league.leagueName}} Photo">
-        <h3>{{league.leagueName}}</h3> -->
-    <section
-      class="team"
-      *ngFor="let team of getTeamByLeague(league.leagueName)"
-    >
+    <img routerLink="/leagues/{{league.leagueRoute}}" src="{{league.image}}" alt="{{league.leagueName}} Photo">
+        <h3 routerLink="/leagues/{{league.leagueRoute}}">{{league.leagueName}}</h3>
+    <section class="team" *ngFor="let team of getTeamByLeague(league.leagueName)">
       <h4 class="team-name" routerLink="{{ team.teamRoute }}">
         {{ team.teamName }}
       </h4>

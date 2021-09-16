@@ -1,8 +1,4 @@
 img {
-    width: 20%;
-}
-
-img.big {
     width: 100%;
 }
 
@@ -10,6 +6,10 @@ section {
     display: grid;
     grid-template-columns: 30% 60%;
     justify-content: space-around; 
+}
+
+div.buttons {
+    display: none;
 }
 
 /* MAX SCREEN WIDTH 850PX */
@@ -20,8 +20,27 @@ section {
 
     }
     
-    img.big {
+    img {
         width: 50%;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    article {
+        padding: 10px;
+    }
+
+    /* Hide leagues component */
+
+    .leaguesComponent {
+        display: none;
+    }
+
+    div.buttons {
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
 
@@ -35,22 +54,12 @@ section {
     p.info {
         font-size: 1em;
     }
-
-    article {
-        padding: 10px;
-    }
 }
 
 /* MAX SCREEN WIDTH 400PX */
 
 @media (max-width: 400px) {
-    img.big {
+    img {
         width: 80%;
-    }
-
-/* Hide leagues component */
-
-    .leaguesComponent {
-        display: none;
     }
 }

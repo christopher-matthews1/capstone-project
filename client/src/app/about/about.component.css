@@ -8,19 +8,9 @@ section {
     justify-content: space-around; 
 }
 
+/* MAX SCREEN WIDTH 850PX */
+
 @media (max-width: 850px) {
-    section {
-        grid-template-columns: repeat(2, 40%);
-    }
-
-    p {
-        font-size: 1em;
-    }
-}
-
-/* When the screen is 600px or less */
-
-@media (max-width: 600px) {
     section {
         grid-template-columns: 1fr
     }
@@ -29,10 +19,22 @@ section {
         width: 50%;
     }
 
+    p {
+        font-size: 1em;
+    }
+
     article {
         padding: 10px;
     }
 }
+
+/* MAX SCREEN WIDTH 600PX */
+
+@media (max-width: 600px) {
+
+}
+
+/* MAX SCREEN WIDTH 400PX */
 
 @media (max-width: 400px) {
 

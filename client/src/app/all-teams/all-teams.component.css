@@ -1,12 +1,22 @@
 img {
-    width: 50%
+    width: 50%;
+    cursor: pointer;
+}
+
+h3 {
+    cursor: pointer;
 }
 
 section {
     display: grid;
 }
 
+section>div {
+    padding-bottom: 1em;
+}
+
 section.league {
+    width: 100%;
     grid-template-columns: repeat(4, 25%);
 }
 
@@ -14,14 +24,45 @@ section.league {
     cursor: pointer;
 }
 
-/* This makes the image in the leagues component smaller when I use that component in the all-teams component */
+@media (max-width: 800px) {
+    section.league {
+        grid-template-columns: repeat(2, 40%);
+        justify-content: space-around;
+    }
+}
 
-:host ::ng-deep img.smallImg {
-    width: 70%;
+@media (max-width: 600px) {
+    h4 {
+        font-size: .9em;
+    }
+
+    p {
+        font-size: .8em;
+    }
+
+    img {
+        width: 100%;
+    }
 }
 
 @media (max-width: 400px) {
     h2 {
         font-size: 2em;
+    }
+
+    h4 {
+        font-size: 1em;
+    }
+
+    p {
+        font-size: 1em;
+    }
+
+    section.league {
+        grid-template-columns: 1fr;
+    }
+
+    img {
+        width: 80%
     }
 }

@@ -8,6 +8,10 @@ section {
     justify-content: space-around; 
 }
 
+header {
+    padding: 0 10px;
+}
+
 /* MAX SCREEN WIDTH 600PX */
 
 @media (max-width: 600px) {

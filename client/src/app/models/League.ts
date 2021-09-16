@@ -5,4 +5,5 @@ export class League {
     description: string;
     descriptionShort: string;
     image: string;
+    gameSchedule: string;
 }

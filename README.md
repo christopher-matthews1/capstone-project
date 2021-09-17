@@ -32,7 +32,7 @@ After the cloning is complete, you will need to open the code in the editor of y
 
 ## Step 4: Running the Project
 
-Once it is open you should see 4 folders: .vscode, client, docs, server, and this README.md file. If you do, right click on the client folder and select "Open in Integrated Terminal." Once there, run the command "npm install -g @angular/cli". This will install all the files you need to run the project. After that is finish you can run the command "ng serve" and if all goes well you should get a "Complied successfully" message. The app is running on localhost:4200! But....you still need to run the server to be able to use the site to it's fullest potential.
+Once it is open you should see 4 folders: .vscode, client, docs, server, and this README.md file. If you do, right click on the client folder and select "Open in Integrated Terminal." Once there, run the command "npm install". After that is finished run the command "npm install -g @angular/cli". This will install all the files you need to run the project. After that is finish you can run the command "ng serve" and if all goes well you should get a "Complied successfully" message. The app is running on localhost:4200! But....you still need to run the server to be able to use the site to it's fullest potential.
 
 ## Step 5: Running the Server
 

@@ -85,18 +85,18 @@ imageChange{
         }
 
         0%,100%  {
-            background-image: url("/../assets/images/photos/kickball1.jpg");
+            background-image: url('/assets/images/photos/kickball1.jpg');
         }
         20% {
-            background-image: url("/../assets/images/photos/kickball2.jpg");
+            background-image: url("/assets/images/photos/kickball2.jpg");
         }
         40% {
-            background-image: url("/../assets/images/photos/kickball3.jpg");
+            background-image: url("/assets/images/photos/kickball3.jpg");
         }
         60% {
-            background-image: url("/../assets/images/photos/kickball4.jpg");
+            background-image: url("/assets/images/photos/kickball4.jpg");
         }
         80% {
-            background-image: url("/../assets/images/photos/kickball5.jpg");
+            background-image: url("/assets/images/photos/kickball5.jpg");
         }
 }

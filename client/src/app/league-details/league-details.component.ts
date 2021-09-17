@@ -21,7 +21,6 @@ export class LeagueDetailsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    // this.leagueService.getLeagues();
     this.leagueService.getLeagues().subscribe((data: any) => {
       this.leagueObject = data.find(league => league.leagueRoute === this.activatedRoute.params.leagueName)
       if(this.leagueObject === undefined) {

@@ -72,9 +72,9 @@ Delete a player: /api/teams/:id/players/:id <br>
 
 The feature I would like to highlight in this application is its mobile friendliness. Regardless of what device you are using you will have no trouble accessing the content in a visually pleasing manor. Here are a few examples.
 
-# iPhone 5 <br><br>
+## iPhone 5 <br><br>
 ![Alt text](client/src/assets/images/readme-photos/iphone5.PNG?raw=true "Optional Title") <br>
-# iPhone 6 Plus <br><br>
+## iPhone 6 Plus <br><br>
 ![Alt text](client/src/assets/images/readme-photos/iphone6.PNG?raw=true "Optional Title") <br>
-# iPad <br><br>
+## iPad <br><br>
 ![Alt text](client/src/assets/images/readme-photos/ipad.PNG?raw=true "Optional Title") <br>

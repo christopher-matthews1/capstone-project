@@ -1,6 +1,20 @@
-## Thank you for checking out my application! 
+## Thank you for checking out my application!
 
-Below is a list of steps to get my application running in your browser for you to test and play around with. Enjoy!
+# Section 1: About the Application
+
+Here is a short description of my application and the technologies I used to create it.
+
+## Description
+
+My application is for registering and keeping track of a Kickball League. Users should be able to learn all they need about the league by browsing the page and if they decide to take part in the league the user has the options of joining a team in one of the leagues or creating there own.
+
+## Technologies Used
+
+This project uses Angular for the application and Node.js for the server.
+
+# Section 2: Install and Run the App
+
+Below is a list of steps to get my application running in your browser for you to test and play around with.
 
 ## Step 1: Prerequisites
 
@@ -27,3 +41,40 @@ The last thing you need to do is run the server. To do this, right click on the 
 ## Step 6: Open the App in the Browser
 
 From there just navigate to localhost:4200 in your web browser and you should see the application up and running.
+
+# Section 3: API Endpoints
+
+Here is a list of the endpoints I used in my application and what they did.
+
+## Get
+
+Get all the leagues: /api/leagues <br>
+Get all the teams: /api/teams <br>
+Get a team by ID: /api/teams/:id <br>
+Get all teams in a league by ID: /api/teams/byleague/:id <br>
+
+## Post
+
+Add a team to a league: /api/teams <br>
+Add a player to a team: /api/teams/:id/players <br>
+
+## Put
+
+Edit a team: /api/teams <br>
+Edit a player: /api/teams/:id/players <br>
+
+## Delete
+
+Delete a team: /api/teams/:id <br>
+Delete a player: /api/teams/:id/players/:id <br>
+
+# Section 4: Feature Highlight
+
+The feature I would like to highlight in this application is its mobile friendliness. Regardless of what device you are using you will have no trouble accessing the content in a visually pleasing manor. Here are a few examples.
+
+# iPhone 5 <br><br>
+![Alt text](client/src/assets/images/readme-photos/iphone5.PNG?raw=true "Optional Title") <br>
+# iPhone 6 Plus <br><br>
+![Alt text](client/src/assets/images/readme-photos/iphone6.PNG?raw=true "Optional Title") <br>
+# iPad <br><br>
+![Alt text](client/src/assets/images/readme-photos/ipad.PNG?raw=true "Optional Title") <br>

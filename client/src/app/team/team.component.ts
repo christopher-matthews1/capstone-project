@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
-import { League } from '../models/League';
 
+import { League } from '../models/League';
 import { Player } from '../models/Player';
 import { Team } from '../models/Team';
 import { LeagueService } from '../services/league.service';

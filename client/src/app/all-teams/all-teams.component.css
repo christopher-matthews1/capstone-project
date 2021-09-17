@@ -29,12 +29,16 @@ section.league {
     cursor: pointer;
 }
 
+/* MAX SCREEN WIDTH 800PX */
+
 @media (max-width: 800px) {
     section.league {
         grid-template-columns: repeat(2, 40%);
         justify-content: space-around;
     }
 }
+
+/* MAX SCREEN WIDTH 600PX */
 
 @media (max-width: 600px) {
     h4 {
@@ -49,6 +53,8 @@ section.league {
         width: 100%;
     }
 }
+
+/* MAX SCREEN WIDTH 400PX */
 
 @media (max-width: 400px) {
     h2 {

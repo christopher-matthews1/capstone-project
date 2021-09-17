@@ -1,11 +1,11 @@
 <h2>Join a Team!</h2>
 <section>
     <aside>
-        <img src={{leagueObject?.image}} alt={{leagueObject?.leagueName}}>
-        <h3>{{leagueObject?.leagueName}}</h3>
-        <p class="descriptionShort">{{leagueObject?.descriptionShort}}</p>
+        <img src="{{ leagueObject?.image }}" alt="{{ leagueObject?.leagueName }}">
+        <h3>{{ leagueObject?.leagueName }}</h3>
+        <p class="descriptionShort">{{ leagueObject?.descriptionShort }}</p>
     </aside>
-    <div>
+    <main>
         <form [formGroup]="playerForm" (ngSubmit)="onSubmit(playerForm.value)" autocomplete="off">
             <label for="playerName">Player Name:</label>
             <input type="text" id="playerName" formControlName="playerName">
@@ -16,13 +16,12 @@
 
             <label for="teamName">Team:</label>
             <select id="teamId" formControlName="teamId">
-                <option *ngFor="let team of leagueTeams" [ngValue]="team.teamId">{{team.teamName}}</option>
+                <option *ngFor="let team of leagueTeams" [ngValue]="team.teamId">{{ team.teamName }}</option>
             </select>
-            <div></div>
             <div class="buttons">
                 <input type="submit" id="join-team" value="Join Team!">
                 <input type="button" id="cancel-join-team" value="Cancel" routerLink='/leagues'>
             </div>
         </form>
-    </div>  
+    </main>  
 </section>

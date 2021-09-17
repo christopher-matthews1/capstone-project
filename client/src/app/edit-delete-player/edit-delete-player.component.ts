@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
+
 import { League } from '../models/League';
 import { Player } from '../models/Player';
 import { Team } from '../models/Team';
-
 import { LeagueService } from '../services/league.service';
 import { TeamService } from '../services/team.service';
 
@@ -33,7 +33,7 @@ export class EditDeletePlayerComponent implements OnInit {
    activatedRoute: ActivatedRouteSnapshot;
    
   ngOnInit(): void {
-    // Filter for teams that match the league and are not full
+    // Filters for teams that match the league and are not full
     let routeParams = this.activatedRoute.params;
     this.teamService.getTeams().subscribe((data: any) => {
       this.teamObject = data.find(team => team.teamRoute === routeParams.teamName);

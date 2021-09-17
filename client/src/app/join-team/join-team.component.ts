@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router';
+
 import { League } from '../models/League';
 import { Player } from '../models/Player';
 import { Team } from '../models/Team';

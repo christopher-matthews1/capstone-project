@@ -33,6 +33,7 @@ input[type=text], select {
 
   div.buttons {
     grid-template-columns: repeat(3,auto);
+    grid-column: 2;
   }
 
   div.buttons>* {

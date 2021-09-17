@@ -1,20 +1,20 @@
-<h2 innerText={{teamObject?.teamName}}></h2>
+<h2 innerText="{{ teamObject?.teamName }}"></h2>
 <section>
     <div>
-        <img src={{leagueObject?.image}} alt={{teamObject?.leagueName}}>
-        <h2 innerText={{leagueObject?.leagueName}}></h2>
-        <p class="descriptionShort" innerText={{leagueObject?.descriptionShort}}></p>
+        <img src="{{ leagueObject?.image }}" alt="{{ teamObject?.leagueName }}">
+        <h2 innerText="{{ leagueObject?.leagueName }}"></h2>
+        <p class="descriptionShort" innerText="{{ leagueObject?.descriptionShort }}"></p>
         <div class="button">
             <button routerLink="edit-delete-team">Edit - Delete Team</button>
         </div>
     </div>
     <div class="players">
         <div *ngFor="let player of teamObject?.players">
-            <h4>Player: {{player.playerName}}</h4>
-            <p>Email: {{player.playerEmail}}</p>
-            <p>Phone Number: {{player.playerPhone}}</p>
+            <h4>Player: {{ player.playerName }}</h4>
+            <p>Email: {{ player.playerEmail }}</p>
+            <p>Phone Number: {{ player.playerPhone }}</p>
             <div class="button">
-                <button routerLink="{{player.playerRoute}}">Edit - Delete</button>
+                <button routerLink="{{ player.playerRoute }}">Edit - Delete</button>
             </div>
         </div>
     </div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+
 import { League } from '../models/League';
 import { Team } from '../models/Team';
 import { LeagueService } from '../services/league.service';
@@ -25,12 +26,7 @@ export class AllTeamsComponent implements OnInit {
     });
   }
 
-  getTeamNameDashed(teamName): String {
-    return teamName.toLowerCase().split(' ').join('-');
-  }
-
   getTeamByLeague(leagueName): Team[] {
-    //Saying property undenfied but still works.....
     if (typeof this.allTeams !== 'undefined') {
       return this.allTeams.filter(teams => leagueName === teams.leagueName)
     }

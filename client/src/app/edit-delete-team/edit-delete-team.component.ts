@@ -1,12 +1,8 @@
 import { Component, OnInit } from "@angular/core";
 import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import {
-  ActivatedRoute,
-  ActivatedRouteSnapshot,
-  Router,
-} from "@angular/router";
+import { ActivatedRoute, ActivatedRouteSnapshot, Router } from "@angular/router";
+
 import { League } from "../models/League";
-import { Player } from "../models/Player";
 import { Team } from "../models/Team";
 import { LeagueService } from "../services/league.service";
 import { TeamService } from "../services/team.service";
@@ -39,7 +35,6 @@ export class EditDeleteTeamComponent implements OnInit {
   teamObject: Team;
   leagueObject: League;
   teamForm: FormGroup;
-
   activatedRoute: ActivatedRouteSnapshot;
 
   ngOnInit(): void {

@@ -1,16 +1,16 @@
 <header>
-    <h2 innerText={{leagueObject?.leagueName}}></h2>
+    <h2 innerText="{{ leagueObject?.leagueName }}"></h2>
     <h4>Game Schedule: {{leagueObject?.gameSchedule}}</h4>
     <p class="descriptionShort">Note: Games are 7 inninngs or 45 minutes</p>
 </header>
 <section>
     <div>
-        <img src={{leagueObject?.image}} alt={{leagueObject?.leagueName}}>
-        <h3>{{leagueObject?.leagueName}}</h3>
+        <img src="{{ leagueObject?.image }}" alt="{{ leagueObject?.leagueName }}">
+        <h3>{{ leagueObject?.leagueName }}</h3>
         <p class="descriptionShort">{{leagueObject?.descriptionShort}}</p>
     </div>
     <article>
-        <p class="info" innerText={{leagueObject?.description}}></p>
+        <p class="info" innerText="{{ leagueObject?.description }}"></p>
         <div class="buttons">
             <input type="button" value="Create a team!" routerLink="add-team">
             <input type="button" value="Join a Team!" routerLink="join-team">

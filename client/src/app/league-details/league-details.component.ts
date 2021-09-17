@@ -3,7 +3,6 @@ import { ActivatedRoute, ActivatedRouteSnapshot, Router } from '@angular/router'
 
 import { League } from '../models/League';
 import { LeagueService } from '../services/league.service';
-import { TeamService } from '../services/team.service';
 
 @Component({
   selector: 'app-league-details',
@@ -16,7 +15,7 @@ export class LeagueDetailsComponent implements OnInit {
   router: Router;
   activatedRoute: ActivatedRouteSnapshot;
 
-  constructor(private _router: Router, private leagueService: LeagueService, private _activatedRoute: ActivatedRoute, private teamService: TeamService) { 
+  constructor(private _router: Router, private leagueService: LeagueService, private _activatedRoute: ActivatedRoute) { 
     this.router = _router;
     this.activatedRoute = _activatedRoute.snapshot;
   }

@@ -45,4 +45,13 @@ p {
     h2 {
         font-size: 2em;
     }
+
+    div {
+        padding-top: 10px;
+        border-bottom: 2px solid #F08700;
+    }
+
+    div:last-child {
+        border: none;
+    }
 }

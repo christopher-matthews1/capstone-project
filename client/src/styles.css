@@ -61,6 +61,7 @@ div.buttons {
     font-style: italic;
     font-size: .8em;
     margin: 0 10px;
+    padding-bottom: 10px;
 }
 
 .info {

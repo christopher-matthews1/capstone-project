@@ -19,7 +19,7 @@ section>div {
     padding-bottom: 1em;
 }
 
-section.league {
+section.leagues {
     width: 100%;
     grid-template-columns: repeat(4, 24%);
     justify-content: space-around;
@@ -32,7 +32,7 @@ section.league {
 /* MAX SCREEN WIDTH 800PX */
 
 @media (max-width: 800px) {
-    section.league {
+    section.leagues {
         grid-template-columns: repeat(2, 40%);
     }
 }
@@ -72,11 +72,20 @@ section.league {
         font-size: .8em;
     }
 
-    section.league {
+    section.leagues {
         grid-template-columns: 1fr;
     }
 
     img {
         width: 80%
+    }
+
+    div.league {
+        padding-top: 10px;
+        border-bottom: 2px solid #F08700;
+    }
+
+    div.league:last-child {
+        border: none;
     }
 }

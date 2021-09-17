@@ -58,13 +58,13 @@ export class EditDeleteTeamComponent implements OnInit {
     });
   }
 
-  onSubmit(team: Team): void {
+  editTeam(team: Team): void {
     if (this.teamForm.valid) {
       team.teamId = this.teamObject.teamId;
       team.leagueName = this.leagueObject.leagueName;
       team.teamRoute = this.getTeamRoute(team);
       // TODO Route to team after joining
-      if(confirm(`Edit the team ${this.teamObject.teamName}?`)) {
+      if(confirm(`Edit the team: ${this.teamObject.teamName}?`)) {
         alert(`Successfully edited: ${this.teamForm.value.teamName}`);
         this.teamService
           .editTeam(team)
@@ -77,7 +77,7 @@ export class EditDeleteTeamComponent implements OnInit {
 
   deleteTeam() {
     let teamId = this.teamObject.teamId;
-    if(confirm(`Delete the team ${this.teamObject.teamName}?`)) {
+    if(confirm(`Delete the team: ${this.teamObject.teamName}?`)) {
       alert(`Successfully deleted: ${this.teamObject.teamName}`)
       this.teamService
         .deleteTeamById(teamId)

@@ -10,6 +10,7 @@ import { LeagueService } from '../services/league.service';
   styleUrls: ['./leagues.component.css']
 })
 export class LeaguesComponent implements OnInit {
+  
   allLeagues: League[];
 
   router: Router;

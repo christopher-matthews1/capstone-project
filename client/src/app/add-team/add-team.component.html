@@ -1,12 +1,16 @@
+<!-- Title -->
 <h2>Create a Team!</h2>
 <section>
   <aside>
+    <!-- Image and Info -->
     <img src="{{ leagueObject?.image }}" alt="{{ leagueObject?.leagueName }}" />
     <h3>{{ leagueObject?.leagueName }}</h3>
     <p class="descriptionShort">{{ leagueObject?.descriptionShort }}</p>
   </aside>
   <div>
+    <!-- Form -->
     <form [formGroup]="teamForm" (ngSubmit)="onSubmit(teamForm.value)" autocomplete="off">
+      <!-- Labels and Inputs -->
       <label for="teamName">Team Name:</label>
       <input type="text" id="teamName" formControlName="teamName" />
       <label for="coachName">Coach Name:</label>
@@ -15,7 +19,7 @@
       <input type="text" id="coachPhone" formControlName="coachPhone" />
       <label for="coachEmail">Coach Email:</label>
       <input type="text" id="coachEmail" formControlName="coachEmail" />
-      <div></div>
+      <!-- Buttons -->
       <div class="buttons">
         <input type="submit" id="register-team" value="Create Team!" />
         <input
@@ -27,6 +31,7 @@
       </div>
     </form>
     <div>
+      <!-- Note -->
       <p class="descriptionShort">Note: If you want to also play on your team you must join the team as a player after creating.</p>
     </div>
   </div>

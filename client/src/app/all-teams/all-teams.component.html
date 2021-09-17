@@ -1,14 +1,20 @@
+<!-- Title -->
 <h2>Teams</h2>
 <section class="league">
+  <!-- Loop through all leagues -->
   <div *ngFor="let league of allLeagues">
+    <!-- Image and Info -->
     <img routerLink="/leagues/{{league.leagueRoute}}" src="{{ league.image }}" alt="{{ league.leagueName }} Photo">
         <h3 routerLink="/leagues/{{league.leagueRoute}}">{{ league.leagueName }}</h3>
         <p class="descriptionShort">{{ league.gameSchedule }}</p>
+        <!-- Loop through all team in each league -->
     <section class="team" *ngFor="let team of getTeamByLeague(league.leagueName)">
+      <!-- Team Name -->
       <h4 class="team-name" routerLink="{{ team.teamRoute }}">
         {{ team.teamName }}
       </h4>
       <div>
+        <!-- Team Info -->
         <p>Coach: {{ team.coachName }}</p>
         <p *ngIf="team.players.length === 10">Team Size: <span>FULL</span></p>
         <p *ngIf="team.players.length !== 10">Team Size: {{ team.players.length }}/10</p>

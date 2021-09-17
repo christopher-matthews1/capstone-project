@@ -27,6 +27,10 @@ input[type=text], select {
     text-align: left;
   }
 
+  div.buttons {
+      grid-column: 2;
+  }
+
 /* MAX SCREEN WIDTH 850PX */
 
 @media (max-width: 850px) {

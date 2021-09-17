@@ -2,7 +2,7 @@
 <h2>Edit Player</h2>
 <section>
     <aside>
-        <!-- Image -->
+        <!-- Image and Info -->
         <img src="{{ leagueObject?.image }}" alt="{{ leagueObject?.leagueName }}">
         <h3>{{ leagueObject?.leagueName }}</h3>
         <p class="descriptionShort">{{ leagueObject?.descriptionShort }}</p>
@@ -10,8 +10,9 @@
     <main>
         <!-- Team Name -->
         <h4>Team: {{ teamObject?.teamName }}</h4>
+        <!-- Form -->
         <form [formGroup]="playerForm" (ngSubmit)="onSubmit(playerForm.value)">
-            <!-- Form Labels and Inputs -->
+            <!-- Labels and Inputs -->
             <label for="playerName">Player Name:</label>
             <input type="text" id="playerName" formControlName="playerName">
             <label for="playerEmail">Player Email:</label>

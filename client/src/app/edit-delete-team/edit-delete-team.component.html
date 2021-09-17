@@ -1,13 +1,18 @@
+<!-- Title -->
 <h2>Edit Team</h2>
 <section>
   <aside>
+    <!-- Image and Info -->
     <img src="{{ leagueObject?.image }}" alt="{{ leagueObject?.leagueName }}" />
     <h3>{{ leagueObject?.leagueName }}</h3>
     <p class="descriptionShort">{{ leagueObject?.descriptionShort }}</p>
   </aside>
   <div>
+    <!-- Team Name -->
     <h4>Team: {{ teamObject?.teamName }}</h4>
+    <!-- Form -->
     <form [formGroup]="teamForm" (ngSubmit)="onSubmit(teamForm.value)">
+      <!-- Labels and Inputs -->
       <label for="teamName">Team Name:</label>
       <input type="text" id="teamName" formControlName="teamName" />
       <label for="coachName">Coach Name:</label>
@@ -16,6 +21,7 @@
       <input type="text" id="coachEmail" formControlName="coachEmail" />
       <label for="coachPhone">Coach Phone:</label>
       <input type="text" id="coachPhone" formControlName="coachPhone" />
+      <!-- Buttons -->
       <div class="buttons">
         <input type="submit" id="edit-player" value="Edit" />
         <input

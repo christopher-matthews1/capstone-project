@@ -1,18 +1,24 @@
+<!-- Title -->
 <h2 innerText="{{ teamObject?.teamName }}"></h2>
 <section>
     <div>
+        <!-- Image and Info -->
         <img src="{{ leagueObject?.image }}" alt="{{ teamObject?.leagueName }}">
         <h2 innerText="{{ leagueObject?.leagueName }}"></h2>
         <p class="descriptionShort" innerText="{{ leagueObject?.descriptionShort }}"></p>
+        <!-- Team: Edit/Delete Button -->
         <div class="button">
             <button routerLink="edit-delete-team">Edit - Delete Team</button>
         </div>
     </div>
     <div class="players">
+        <!-- Loop through all players on team -->
         <div *ngFor="let player of teamObject?.players">
+            <!-- Player info -->
             <h4>Player: {{ player.playerName }}</h4>
             <p>Email: {{ player.playerEmail }}</p>
             <p>Phone Number: {{ player.playerPhone }}</p>
+            <!-- Player: Edit/Delete Button -->
             <div class="button">
                 <button routerLink="{{ player.playerRoute }}">Edit - Delete</button>
             </div>

@@ -1,6 +1,9 @@
+<!-- Titles -->
 <h2 id="leagues" [hidden]="!(this.router.url === '/leagues')">Leagues</h2>
 <section>
+    <!-- Loop through all leagues -->
     <div *ngFor="let leagues of allLeagues">
+        <!-- Image and Info -->
         <img class="smallImg" routerLink="/leagues/{{leagues.leagueRoute}}" src="{{leagues.image}}" alt="{{leagues.leagueName}}">
         <h3 routerLink="/leagues/{{leagues.leagueRoute}}">{{leagues.leagueName}}</h3>
         <h4>{{leagues.gameSchedule}}</h4>

@@ -1,5 +1,7 @@
+<!-- PC Navigation -->
 <nav class="web">
     <section class="webContainer">
+        <!-- Links -->
         <div class="webLinks" routerLink="/home" routerLinkActive="active">
             <p>Home</p>
         </div>
@@ -22,10 +24,12 @@
         </div>
     </section>
 </nav>
+<!-- Mobile Navigation -->
 <nav class="mobile">
     <div class="mobileContainer">
+        <!-- Hamburger Icon -->
         <p class="icon" (click)="displayToggle()">&#9776;</p>
-
+        <!-- Links -->
         <div class="mobileLinks">
             <p [ngClass]="[display]" routerLink="" (click)="displayNone()">Home</p>
             <p [ngClass]="[display]" routerLink="/leagues" (click)="displayNone()">Leagues</p>

@@ -18,6 +18,10 @@ section {
     padding: .5em;
 }
 
+div.image {
+    padding-top: 10px;
+}
+
 div.button {
     display: flex;
     justify-content: center;
@@ -72,6 +76,7 @@ div button:hover {
     section>div>img {
         width: 50%;
     }
+
     .players>div {
         text-align: center;
         padding: .5em;
@@ -79,5 +84,11 @@ div button:hover {
 
     h2 {
         font-size: 1.5em;
+    }
+}
+
+@media (max-width: 400px) {
+    section>div>img {
+        width: 80%;
     }
 }

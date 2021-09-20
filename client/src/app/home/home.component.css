@@ -72,6 +72,10 @@ section {
     .image {
         padding-bottom: 45%;
     }
+
+    article {
+        padding: 1em .5em;
+    }
 }
 
 /* IMAGE ANIMATIONS */

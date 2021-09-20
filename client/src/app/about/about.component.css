@@ -8,6 +8,10 @@ section {
     justify-content: space-around; 
 }
 
+div {
+    padding-top: 10px;
+}
+
 /* MAX SCREEN WIDTH 850PX */
 
 @media (max-width: 850px) {
